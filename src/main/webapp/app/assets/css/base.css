@@ -1,0 +1,6 @@
+.not-show-ui-until-ready-angular{
+    visibility: hidden;
+}
+.show-ui-after-ready-angular{
+    visibility: visible !important;
+}

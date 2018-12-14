@@ -1,0 +1,113 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ng-quill",
+        "scope": null,
+        "escapedName": "ng-quill",
+        "name": "ng-quill",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "E:\\ViratechProject\\New folder"
+    ]
+  ],
+  "_from": "ng-quill@latest",
+  "_id": "ng-quill@3.1.0",
+  "_inCache": true,
+  "_location": "/ng-quill",
+  "_nodeVersion": "7.7.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/ng-quill-3.1.0.tgz_1491117283481_0.7819405302871019"
+  },
+  "_npmUser": {
+    "name": "killercodemonkey",
+    "email": "bengtler@gmail.com"
+  },
+  "_npmVersion": "4.1.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ng-quill",
+    "scope": null,
+    "escapedName": "ng-quill",
+    "name": "ng-quill",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng-quill/-/ng-quill-3.1.0.tgz",
+  "_shasum": "15fd2603d93222ce4923660e30af69a7f2d6b337",
+  "_shrinkwrap": null,
+  "_spec": "ng-quill",
+  "_where": "E:\\ViratechProject\\New folder",
+  "author": {
+    "name": "Bengt Weiße",
+    "email": "bengtler@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/KillerCodeMonkey/ngQuill/issues"
+  },
+  "contributors": [
+    {
+      "name": "Bengt Weiße"
+    }
+  ],
+  "dependencies": {
+    "angular": "^1.5.3",
+    "quill": "^1.2.0"
+  },
+  "description": "Angular directive for rich text editor Quill",
+  "devDependencies": {
+    "angular-mocks": "^1.5.3",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-mocha-reporter": "2.2.1",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "uglify-js": "^2.4.10"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "15fd2603d93222ce4923660e30af69a7f2d6b337",
+    "tarball": "https://registry.npmjs.org/ng-quill/-/ng-quill-3.1.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "gitHead": "74817e66f9f2727d9e7635805cdf6cf5d3a0242f",
+  "homepage": "https://github.com/KillerCodeMonkey/ngQuill",
+  "keywords": [
+    "editor",
+    "rich text",
+    "wysiwyg",
+    "angular",
+    "directive"
+  ],
+  "license": "MIT",
+  "main": "dist/ng-quill.js",
+  "maintainers": [
+    {
+      "name": "killercodemonkey",
+      "email": "bengtler@gmail.com"
+    }
+  ],
+  "name": "ng-quill",
+  "optionalDependencies": {},
+  "readme": "# ng-quill [![Build Status](https://travis-ci.org/KillerCodeMonkey/ng-quill.svg?branch=develop)](https://travis-ci.org/KillerCodeMonkey/ng-quill)\r\n\r\n<img src=\"https://cloud.githubusercontent.com/assets/2264672/12809927/fd4c3416-cb22-11e5-9b02-80ebd9138255.png\" width=\"120\">\r\n\r\n[![NPM](https://nodei.co/npm/ng-quill.png)](https://nodei.co/npm/ng-quill/)\r\n\r\nng-quill is an [Angular.js](http://angularjs.org/) component for [Quill](http://quilljs.com/) rich text editor.\r\nYou can get an ugly as hell demo here: [ngQuill in action](https://killercodemonkey.github.io/ng-quill/demo.html)\r\nor with AMD (RequireJS) [ngQuill requirejs](https://killercodemonkey.github.io/ng-quill/demoamd.html)\r\n\r\nThe new version is complete rewritten and is using QuillJS 1.x.\r\nFor the latest old version (0.20.1) checkout the special branch for it.\r\n\r\nInstallation\r\n============\r\n- `npm install ng-quill`\r\n- or download zip from release page: https://github.com/KillerCodeMonkey/ngQuill/releases\r\n- or grab the latest release from cdn: https://cdnjs.com/libraries/ng-quill\r\n\r\n\r\nContribution\r\n============\r\n\r\nI am using GitFlow --> All Changes and Pull-Requests have to be on develop-branch!\r\nChanges directly in the master branch are not longer allowed and will be rejected.\r\n\r\nUsage\r\n=====\r\n- load angular, quill, ngquill scripts in your index.html\r\n- original sources are in src-folder, build files are in dist-folder\r\n- add dependency to your app module `var myAppModule = angular.module('quillTest', ['ngQuill']);`\r\n- use ngQuillConfigProvider to overwrite global settings in your config-Block\r\n- use ngquill directive in your html\r\n`<ng-quill-editor ng-model=\"message\"></ng-quill-editor>`\r\n- add this line to your css `[ng-quill-editor] { display: block; }`\r\n- if you use it in a form and you are resetting it via $setPristine() -> you have to set editor.setHTML('') -> it will add the error class only, if the model has ng-dirty class\r\n- add a custom toolbar using `ng-quill-toolbar` - it uses transclusion to add toolbar, avoids flickering and sets the modules toolbar config to the custom toolbar automatically:\r\n```\r\n<ng-quill-editor\r\n    ng-model=\"title\"\r\n>\r\n    <ng-quill-toolbar>\r\n        <div>\r\n            <span class=\"ql-formats\">\r\n                <button class=\"ql-bold\" ng-attr-title=\"{{'Bold'}}\"></button>\r\n            </span>\r\n            <span class=\"ql-formats\">\r\n                <select class=\"ql-align\" ng-attr-title=\"{{'Aligment'}}\">\r\n                    <option selected></option>\r\n                    <option value=\"center\"></option>\r\n                    <option value=\"right\"></option>\r\n                    <option value=\"justify\"></option>\r\n                </select>\r\n                <select class=\"ql-align\">\r\n                    <option selected></option>\r\n                    <option value=\"center\"></option>\r\n                    <option value=\"right\"></option>\r\n                    <option value=\"justify\"></option>\r\n                </select>\r\n            </span>\r\n        </div>\r\n    </ng-quill-toolbar>\r\n</ng-quill-editor>\r\n\r\n```\r\n\r\nConfiguration\r\n=============\r\n\r\n- use ngQuillConfigProvider.set({modules: { ... }, theme: 'snow', placeholder: 'placeholder', formats: { ... }, bounds: document.body, readyOnly: false) to config toolbar module, other modules, default theme, allowed formats, ...\r\n- set theme name: `theme=\"snow\"` (default: 'snow')\r\n- set readOnly: `read-only=\"\"` (default: false) - requires true or false\r\n- overwrite global config for each editor: `modules=\"modulesConfig\"`\r\n- set placeholder: `placeholder=\"Inser your text here\"`\r\n- override formats: `formats=\"formatsArray\"`, per default all quill formats are allowed\r\n- set max-length: `max-length=\"5\"`, adds validation for maxlength (sets model state to `invalid` and adds `ng-invalid-maxlength` class)\r\n- set max-length: `min-length=\"5\"`, adds validation for minlength (sets model state to `invalid` and adds `ng-invalid-minlength` class), only works for values > 1, if you only want to check if there is a value --> use required/ng-required\r\n\r\nCallback/Outputs\r\n================\r\n\r\n- onEditorCreated: triggered after editor is created and provides editor-object `on-editor-created=\"myCallback(editor)\"`\r\n- onContentChanged: triggered after changes in the editor. Provides editor-object, html representation and text representation `on-content-changed=\"myCallback(editor, html, text, delta, oldDelta, source)\"`\r\n- onSelectionChanged: triggered after text selection changed `on-selection-changed=\"myCallback(editor, range, oldRange, source)\"`\r\n\r\nAdvanced Usage and Configuration\r\n================================\r\n\r\nAfter editor creation you can use everything from the ordinary quill editor -> listen to editorCreated and work with the editor instance in your controller like you want ;).\r\nAdd modules, use the quill API or listen to Events. Keep in mind to use $timeout if you are listening / working with quill-Events and updating some $scope stuff to notify angular about it ;).\r\n[Quill Documentation](http://quilljs.com/docs/quickstart/)\r\n\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KillerCodeMonkey/ngQuill.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && mkdir dist && cp src/ng-quill.js dist/ && cat dist/ng-quill.js | uglifyjs > dist/ng-quill.min.js && echo \";\" >> dist/ng-quill.js",
+    "test": "karma start"
+  },
+  "version": "3.1.0"
+}

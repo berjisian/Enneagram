@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="Enneagram.png" type="image/ico">
+    <title>انیاگرام</title>
+
+    <!--&lt;!&ndash; bower:css &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="app/lib/AngularJS-Toaster/toaster.css"/>-->
+    <link rel="stylesheet" href="app/lib/bootstrap/dist/css/bootstrap.css"/>
+    <!--<link rel="stylesheet" href="app/lib/bootstrap-rtl/dist/css/bootstrap-rtl.css"/>-->
+    <!--<link rel="stylesheet" href="app/lib/AngularJS-Toaster/toaster.css"/>-->
+    <!--<link rel="stylesheet" href="app/lib/angular-ui-select/dist/select.min.css"/>-->
+    <!--<link rel="stylesheet" href="app/lib/openlayers/ol.css"/>-->
+    <!--<link rel="stylesheet" href="app/lib/plyr/plyr.css"/>-->
+    <!--<link rel="stylesheet" type="text/css" href="app/lib/angularjs-slider/dist/rzslider.min.css"/>-->
+    <!--&lt;!&ndash; endbower &ndash;&gt;-->
+
+    <!--&lt;!&ndash; build:css &ndash;&gt;-->
+    <link href="app/assets/css/base.css" rel="stylesheet" media="screen">
+    <!--<link href="app/lib/angular-hotkeys/build/hotkeys.min.css" rel="stylesheet"/>-->
+    <!--&lt;!&ndash; endbuild &ndash;&gt;-->
+
+    <!--&lt;!&ndash; bower:js &ndash;&gt;-->
+    <!--<script src="app/lib/jquery/dist/jquery.js"></script>-->
+    <!--<script src="app/lib/openlayers/ol.js"></script>-->
+    <script src="app/lib/angular/angular.js"></script>
+    <!--<script src="app/lib/angular-sanitize/angular-sanitize.min.js"></script>-->
+    <!--<script src="app/lib/angular-ui-router/release/angular-ui-router.js"></script>-->
+    <!--<script src="app/lib/angular-animate/angular-animate.js"></script>-->
+    <!--<script src="app/lib/AngularJS-Toaster/toaster.js"></script>-->
+    <script src="app/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <!--<script src="app/lib/lodash/lodash.js"></script>-->
+    <!--<script src="app/lib/restangular/dist/restangular.js"></script>-->
+    <!--<script src="app/lib/momentjs/moment.js"></script>-->
+    <!--<script src="app/lib/moment/moment.js"></script>-->
+    <!--<script src="app/lib/moment/moment-timezone-with-data.min.js"></script>-->
+    <!--<script src="app/lib/moment-jalaali/build/moment-jalaali.js"></script>-->
+    <!--<script src="app/lib/angular-ui-utils/keypress.js"></script>-->
+    <!--<script src="app/lib/indeterminate/vtTriStateCheckbox.js"></script>-->
+    <!--<script src="app/lib/angular-ui-select/dist/select.min.js"></script>-->
+    <!--<script src="app/lib/chart.js/dist/Chart.min.js"></script>-->
+    <!--<script src="app/lib/angular-chart.js/dist/angular-chart.min.js"></script>-->
+    <!--&lt;!&ndash; rtmap &ndash;&gt;-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/rtmapModule.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/directives/layerPanel/layerPanelDirective.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/directives/layerPanel/sortableLayerPanelDirective.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/directives/pan/panDirective.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/directives/playback/playbackDirective.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/directives/playback/playbackSrvc.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/services/olMapDefaultsSrvc.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/services/olPopupTemplateSrvc.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/services/mapSrvc.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/classes/olMap.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/classes/olFeature.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/classes/olPopup.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/classes/olPoint.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/classes/olPolygon.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/classes/olLine.js"></script>-->
+    <!--<script type="text/javascript" src="app/lib/rtmap/classes/olLayer.js"></script>-->
+    <!--&lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Dependency Scripts &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;-->
+    <!--<script src="app/lib/jquery-ui/jquery-ui.min.js"></script>-->
+    <!--<script src="app/lib/angular-hotkeys/build/hotkeys.min.js"></script>-->
+    <!--<script src="app/lib/angularjs-dropdown-multiselect/src/angularjs-dropdown-multiselect.js"></script>-->
+    <!--<script src="app/lib/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>-->
+    <!--<script src="app/lib/angular-nicescroll/angular-nicescroll.js"></script>-->
+    <!--<script src="app/lib/bootstrap-filestyle/src/bootstrap-filestyle.js"></script>-->
+    <!--<script src="app/lib/angular-dragdrop/src/angular-dragdrop.js"></script>-->
+    <!--<script src="app/lib/angular-ui-sortable/sortable.js"></script>-->
+    <!--<script src="app/lib/ng-file-upload/ng-file-upload.min.js"></script>-->
+    <!--<script src="app/lib/ng-tags-input/ng-tags-input.min.js"></script>-->
+    <!--<script src="app/lib/angularjs-slider/dist/rzslider.min.js"></script>-->
+    <!--<script src="app/lib/clipboard/dist/clipboard.js"></script>-->
+    <!--<script src="app/lib/ngclipboard/dist/ngclipboard.js"></script>-->
+    <!-- endbower -->
+
+    <!-- Enneagram -->
+    <!-- home -->
+    <script src="app/modules/home/homeSrvc.js"></script>
+    <script src="app/modules/home/homeCtrl.js"></script>
+    <script src="app/modules/home/homeConfig.js"></script>
+
+    <script src="app/config.js"></script>
+    <script src="app/run.js"></script>
+    <script src="app/app.js"></script>
+
+
+</head>
+<body ui-view class="not-show-ui-until-ready-angular" ng-class="{'show-ui-after-ready-angular' : true}"></body>
+</html>
