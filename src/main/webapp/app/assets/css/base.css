@@ -4,3 +4,20 @@
 .show-ui-after-ready-angular{
     visibility: visible !important;
 }
+.header {
+    margin-top: 20px;
+    border-radius: 40px;
+    background: rgb(9,76,114);
+    background: -webkit-radial-gradient(circle cover,  rgb(9,76,114) 0%,rgb(1,41,63) 100%);
+    background: -webkit-radial-gradient(circle, rgb(9,76,114) 0%, rgb(1,41,63) 100%);
+    background: -webkit-radial-gradient(circle, rgb(9,76,114) 0%, rgb(1,41,63) 100%);
+    background: radial-gradient(circle,  rgb(9,76,114) 0%,rgb(1,41,63) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#094c72', endColorstr='#01293f',GradientType=1 );
+    text-align: center;
+}
+.header-image {
+    max-height: 80px;
+}
+.body-main {
+    padding: 20px;
+}
