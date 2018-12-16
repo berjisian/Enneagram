@@ -1,10 +1,34 @@
-<div class="row" style="background: #f1f1f1">
+<div class="row home">
     <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1"></div>
     <div class="col-xs-10 col-lg-10 col-md-10 col-sm-10">
         <div class="header">
-            <img class="header-image" src="app/assets/images/header.png">
+            <!--TODO: What about small devices?-->
+            <div class="row main-header">
+                <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1"></div>
+                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
+                    <a ui-sref="home.detection">تعیین شخصیت</a>
+                </div>
+                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
+                    <a ui-sref="home.library.types">گروه‌های شخصیتی</a>
+                </div>
+                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2">
+                    <img class="image" ui-sref="home" src="app/assets/images/header.png">
+                </div>
+                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
+                    <a ui-sref="home.library">کتابخانه</a>
+                </div>
+                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
+                    <a ui-sref="home.blog">بلاگ</a>
+                </div>
+                <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5"></div>
+                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 title" ui-sref="home">انیاگرام</div>
+                <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5"></div>
+            </div>
         </div>
-        <div class="body-main">
+        <div class="body">
             <div>
                 <a ui-sref="home.detection">To Detection!</a>,
                 <a ui-sref="home.library">To Library!</a>,
