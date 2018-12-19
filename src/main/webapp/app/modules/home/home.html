@@ -12,7 +12,7 @@
                     <a ui-sref="home.library.types">گروه‌های شخصیتی</a>
                 </div>
                 <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2">
-                    <img class="image" ui-sref="home" src="app/assets/images/header.png">
+                    <img class="image" ui-sref="home" src="app/assets/images/header G.png">
                 </div>
                 <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
                     <a ui-sref="home.library">کتابخانه</a>
@@ -29,12 +29,46 @@
             </div>
         </div>
         <div class="body">
-            <div>
-                <a ui-sref="home.detection">To Detection!</a>,
-                <a ui-sref="home.library">To Library!</a>,
-                <a ui-sref="home.blog">To Blog!</a>
+            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12" ui-view>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card introduction-card">
+                            <div class="container">
+                                <h4><b>انیاگرام اصلا چی هست؟</b></h4>
+                                <div class="home-card-img">
+                                    <img src="/app/assets/images/what-is-enneagram.gif" alt="معرفی انیاگرام">
+                                </div>
+                                <p>آره، همین طوره</p>
+                                <a ui-sref="home.library.basics">To Library!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card recognition-card">
+                            <div class="container">
+                                <div class="home-card-img">
+                                    <img src="/app/assets/images/what-is-it.png" alt="تعیین شخصیت">
+                                </div>
+                                <h4><b>گروه شخصیتی خود را پیدا کنید</b></h4>
+                                <p>آره، همین طوره</p>
+                                <a ui-sref="home.detection">To Detection!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="container blog-card">
+                                <h4><b>داستان این سایت چیه؟</b></h4>
+                                <div class="home-card-img">
+                                    <img src="/app/assets/images/blogging.png" alt="اینجا کجاست؟">
+                                </div>
+                                <p>آره، همین طوره</p>
+                                <a ui-sref="home.blog">To Blog!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12" ui-view></div>
         </div>
     </div>
     <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1"></div>
