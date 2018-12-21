@@ -6,8 +6,8 @@
 }
 .home {
     direction: rtl;
-    font-family: "B Nazanin";
-    font-size: 18px;
+    font-family: sans-serif;
+    font-size: 17px;
     background-color: #ebebeb;
     margin-left: auto;
     margin-right: auto;
@@ -45,7 +45,7 @@
     font-size: 18px;
 }
 .title {
-    font-size: 25px;
+    font-size: 21px;
     background: #174C72;
     color: #BABABA;
     padding: 1px 10px 10px 10px;
@@ -62,24 +62,45 @@
     margin-bottom: 20px;
 }
 .home-card-img img {
-    width: 80%;
+    width: 240px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 80%;
+    height: auto;
+    width: auto\9;
 }
 .card .container p {
     float: right;
 }
-.card .container h4 {
+.card .container h5 {
     text-align: center;
     margin-top: 15px;
 }
-.introduction-card {
+.introduction-card, .recognition-card, .blog-card {
+    padding-bottom: 20px;
+}
+.introduction-card .card {
     background-color: #6588a8;
 }
-.recognition-card {
+.recognition-card .card {
     background-color: #6cbbb3;
 }
-.blog-card {
+.blog-card .card {
     background-color: #a0dee5;
+}
+.card {
+    border-radius: .25rem .25rem 0 0;
+}
+.card-link {
+    text-align: center;
+    color: white;
+    background-color: #1e1e1e;
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0 0 .25rem .25rem;
+    cursor: pointer;
+}
+.recognition-card .card-link {
+    background-color: #b23535;
 }
