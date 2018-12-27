@@ -1,0 +1,11 @@
+.detection-page .pre-explanation {
+    text-align: center;
+}
+.detection-page .pre-explanation .pre-explanation-main {
+    font-size: 22px;
+    margin: 15px;
+}
+.detection-page .pre-explanation .pre-explanation-extra {
+    color: #505050;
+    margin: 15px;
+}

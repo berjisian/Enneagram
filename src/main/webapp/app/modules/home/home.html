@@ -9,13 +9,13 @@
                     <a ui-sref="home.library">کتابخانه</a>
                 </div>
                 <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
-                    <a ui-sref="home.library.types">گروه‌های شخصیتی</a>
+                    <a ui-sref="home.library.types">گروه‌ها</a>
                 </div>
                 <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2">
                     <img class="image" ui-sref="home" src="app/assets/images/header G.png">
                 </div>
                 <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
-                    <a ui-sref="home.detection">تعیین شخصیت</a>
+                    <a ui-sref="home.detection">شناسایی</a>
                 </div>
                 <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
                     <a ui-sref="home.blog">بلاگ</a>
@@ -31,7 +31,26 @@
         <div class="body">
             <div class="col-sm-12" ui-view>
                 <div class="row">
-                    <div class="col-md-4 introduction-card">
+                    <div class="col-md-12 recognition-card">
+                        <div class="card">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <h5>تا به حال چیزی از انیاگرام نشنیده‌اید؟</h5>
+                                        <div class="card-description">آره، همین طوره</div>
+                                        <div ui-sref="home.detection" class="card-link">در آزمون شرکت کنید</div>
+                                    </div>
+                                    <div class="col-sm-4 home-card-img">
+                                        <img src="/app/assets/images/what-is-it.png" alt="تعیین شخصیت">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4 introduction-card">
                         <div class="card">
                             <div class="container">
                                 <h5>انیاگرام اصلا چی هست؟</h5>
@@ -43,19 +62,7 @@
                         </div>
                         <div ui-sref="home.library.basics" class="card-link">با انیاگرام آشنا بشوید</div>
                     </div>
-                    <div class="col-md-4 recognition-card">
-                        <div class="card">
-                            <div class="container">
-                                <h5>گروه شخصیتی خود را پیدا کنید</h5>
-                                <div class="home-card-img">
-                                    <img src="/app/assets/images/what-is-it.png" alt="تعیین شخصیت">
-                                </div>
-                                <p>آره، همین طوره</p>
-                            </div>
-                        </div>
-                        <div ui-sref="home.detection" class="card-link">در آزمون شرکت کنید</div>
-                    </div>
-                    <div class="col-md-4 blog-card">
+                    <div class="col-sm-4 blog-card">
                         <div class="card">
                             <div class="container">
                                 <h5>داستان این سایت چیه؟</h5>
@@ -67,6 +74,7 @@
                         </div>
                         <div ui-sref="home.blog" class="card-link">یک سر به بلاگ بزنید</div>
                     </div>
+                    <div class="col-sm-2"></div>
                 </div>
             </div>
         </div>

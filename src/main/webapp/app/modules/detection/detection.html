@@ -1,8 +1,16 @@
-Detection Page!
-<br><br>Need explanation?
-<div><a ui-sref="home.library.basics">To Basics!</a></div>
-<br>Taking the exam ...
-<br><br>Here are your results!
-<div><a ui-sref="home.library.types">To Types!</a></div>
-<br>Here are your results compared to other personality detection systems out there!
-<div><a ui-sref="home.library.comparisons">To Comparisons!</a></div>
+<div class="detection-page">
+    <div class="row pre-explanation">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="pre-explanation-main">
+                قبل از این که بریم سراغ سؤال‌ها، دوست داری یک نگاه به گروه‌های مختلف بندازی؟
+            </div>
+            <div class="pre-explanation-extra">
+                توضیحات اضافه!
+            </div>
+            <button type="button" class="btn btn-success">چرا که نه!</button>
+            <button type="button" class="btn btn-danger" ng-click="Func.onCancelExplanationClick()">باشه برای بعد</button>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>

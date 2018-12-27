@@ -1,5 +1,5 @@
 angular.module('detectionModule').config(['$stateProvider', function($stateProvider) {
-    var detectionStates = [
+    const detectionStates = [
         {
             name: "home.detection",
             url: "/detection",

@@ -68,7 +68,7 @@
     margin-right: auto;
     max-width: 80%;
     height: auto;
-    width: auto\9;
+    width: auto;
 }
 .card .container p {
     float: right;
@@ -102,5 +102,10 @@
     cursor: pointer;
 }
 .recognition-card .card-link {
+    border-radius: .25rem .25rem .25rem .25rem;
     background-color: #b23535;
+    float: left;
+}
+.card-description {
+    float: right;
 }

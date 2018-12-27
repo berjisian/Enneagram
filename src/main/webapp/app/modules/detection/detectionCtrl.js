@@ -1,10 +1,14 @@
-angular.module('detectionModule').controller('detectionCtrl', function ($scope) {
+angular.module('detectionModule').controller('detectionCtrl', function ($scope, $uibModal) {
 
     $scope.Data = {};
 
-    $scope.Func = {};
+    $scope.Func = {
+        onCancelExplanationClick: function () {
+            $(".pre-explanation").slideUp("slow");
+        }
+    };
 
-    var Run = function () {};
+    const Run = function () {};
 
     Run();
 });
