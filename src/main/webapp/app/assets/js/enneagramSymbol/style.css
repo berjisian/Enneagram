@@ -1,0 +1,47 @@
+.enneagram-symbol-block {
+    text-align: center;
+    margin-top: 40px;
+}
+.enneagram-symbol-block [class*=flaticon-number] {
+    position: relative;
+}
+.enneagram-symbol-block [class*=flaticon-number]:before {
+    font-size: 37px;
+    color: #bababa;
+}
+.enneagram-symbol-block .flaticon-number-1 {
+    top: -454px;
+    right: -357px;
+}
+.enneagram-symbol-block .flaticon-number-2 {
+    top: -313px;
+    right: -385px;
+}
+.enneagram-symbol-block .flaticon-number-3 {
+    top: -137px;
+    right: -295px;
+}
+.enneagram-symbol-block .flaticon-number-4 {
+    top: -18px;
+    right: -67px;
+}
+.enneagram-symbol-block .flaticon-number-5 {
+    top: -18px;
+    right: 90px;
+}
+.enneagram-symbol-block .flaticon-number-6 {
+    top: -137px;
+    right: 320px;
+}
+.enneagram-symbol-block .flaticon-number-7 {
+    top: -315px;
+    right: 410px;
+}
+.enneagram-symbol-block .flaticon-number-8 {
+    top: -450px;
+    right: 391px;
+}
+.enneagram-symbol-block .flaticon-number-9 {
+    top: -565px;
+    right: 15px;
+}
