@@ -1,12 +1,7 @@
 <div class="enneagram-symbol-block">
-    <img class="image" src="app/assets/images/header.png">
-    <i class="flaticon-number-1"></i>
-    <i class="flaticon-number-2"></i>
-    <i class="flaticon-number-3"></i>
-    <i class="flaticon-number-4"></i>
-    <i class="flaticon-number-5"></i>
-    <i class="flaticon-number-6"></i>
-    <i class="flaticon-number-7"></i>
-    <i class="flaticon-number-8"></i>
-    <i class="flaticon-number-9"></i>
+    <div ng-class="{'view-mode': api.mode === 'none', 'selected-mode': api.mode === 'selected'}">
+        <img class="image" src="app/assets/images/header.png">
+        <i ng-repeat="group in Data.groups" class="flaticon-number-{{group}}" ng-class="{'selected-group': api.selectedGroup == group}"
+           ng-click="Func.onGroupSelect(group)"></i>
+    </div>
 </div>

@@ -9,11 +9,11 @@
     color: #505050;
     margin: 15px;
 }
-.pre-explanation-modal {
+.pre-explanation-modal .view-mode {
     text-align: center;
     padding: 15px;
     background-color: #d9f2f1;
 }
-.pre-explanation-modal h5 {
+.pre-explanation-modal .view-mode h5 {
     padding-bottom: 10px;
 }

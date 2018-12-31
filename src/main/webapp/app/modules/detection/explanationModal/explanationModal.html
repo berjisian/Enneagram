@@ -1,10 +1,15 @@
 <div class="pre-explanation-modal">
-    <h5>برای آشنایی با هرکدام از گروه‌ها روی آن کلیک کنید</h5>
-    <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
-            <enneagram-symbol></enneagram-symbol>
+    <div ng-class="{'view-mode': Data.mode === 'none', 'selected-mode': Data.mode === 'selected'}">
+        <h5 ng-if="Data.mode === 'none'">برای آشنایی با هرکدام از گروه‌ها روی آن کلیک کنید</h5>
+        <div class="row">
+            <div ng-if="Data.mode === 'none'" class="col-sm-2"></div>
+            <div ng-class="{'col-sm-8': Data.mode === 'none', 'col-sm-2': Data.mode === 'selected'}">
+                <enneagram-symbol api="Controller.symbolDirective"></enneagram-symbol>
+            </div>
+            <div ng-if="Data.mode === 'none'" class="col-sm-2"></div>
+            <div ng-if="Data.mode === 'selected'" class="col-sm-10">
+                بند مقدماتی :دی
+            </div>
         </div>
-        <div class="col-sm-2"></div>
-        </div>
+    </div>
 </div>

@@ -1,47 +1,51 @@
-.enneagram-symbol-block {
+.enneagram-symbol-block .view-mode {
     text-align: center;
     margin-top: 40px;
 }
 .enneagram-symbol-block [class*=flaticon-number] {
     position: relative;
+    cursor: pointer;
 }
-.enneagram-symbol-block [class*=flaticon-number]:before {
+.enneagram-symbol-block .view-mode [class*=flaticon-number]:before {
     font-size: 37px;
     color: #bababa;
 }
-.enneagram-symbol-block .flaticon-number-1 {
-    top: -454px;
-    right: -357px;
-}
-.enneagram-symbol-block .flaticon-number-2 {
-    top: -313px;
-    right: -385px;
-}
-.enneagram-symbol-block .flaticon-number-3 {
-    top: -137px;
-    right: -295px;
-}
-.enneagram-symbol-block .flaticon-number-4 {
-    top: -18px;
-    right: -67px;
-}
-.enneagram-symbol-block .flaticon-number-5 {
-    top: -18px;
-    right: 90px;
-}
-.enneagram-symbol-block .flaticon-number-6 {
-    top: -137px;
-    right: 320px;
-}
-.enneagram-symbol-block .flaticon-number-7 {
-    top: -315px;
-    right: 410px;
-}
-.enneagram-symbol-block .flaticon-number-8 {
+.enneagram-symbol-block .view-mode .flaticon-number-1 {
     top: -450px;
-    right: 391px;
+    right: -367px;
 }
-.enneagram-symbol-block .flaticon-number-9 {
-    top: -565px;
-    right: 15px;
+.enneagram-symbol-block .view-mode .flaticon-number-2 {
+    top: -313px;
+    right: -395px;
+}
+.enneagram-symbol-block .view-mode .flaticon-number-3 {
+    top: -135px;
+    right: -312px;
+}
+.enneagram-symbol-block .view-mode .flaticon-number-4 {
+    top: -19px;
+    right: -90px;
+}
+.enneagram-symbol-block .view-mode .flaticon-number-5 {
+    top: -19px;
+    right: 66px;
+}
+.enneagram-symbol-block .view-mode .flaticon-number-6 {
+    top: -136px;
+    right: 289px;
+}
+.enneagram-symbol-block .view-mode .flaticon-number-7 {
+    top: -314px;
+    right: 375px;
+}
+.enneagram-symbol-block .view-mode .flaticon-number-8 {
+    top: -449px;
+    right: 352px;
+}
+.enneagram-symbol-block .view-mode .flaticon-number-9 {
+    top: -509px;
+    right: 249px;
+}
+.enneagram-symbol-block .selected-mode .selected-group {
+    color: red;
 }
