@@ -2,7 +2,46 @@ angular.module('detectionModule').controller('explanationModalCtrl', function ($
 
     $scope.Data = {
         mode: "none",
-        selectedGroup: ""
+        selectedGroup: "",
+        groups: [
+            {
+                num: 1,
+                name: "asb"
+            },
+            {
+                num: 2,
+                name: "asb"
+            },
+            {
+                num: 3,
+                name: "asb"
+            },
+            {
+                num: 4,
+                name: "asb"
+            },
+            {
+                num: 5,
+                name: "asb"
+            },
+            {
+                num: 6,
+                name: "asb"
+            },
+            {
+                num: 7,
+                name: "asb"
+            },
+            {
+                num: 8,
+                name: "asb"
+            },
+            {
+                num: 9,
+                name: "asb"
+            }
+        ],
+        selectedGroups: []
     };
 
     $scope.Func = {

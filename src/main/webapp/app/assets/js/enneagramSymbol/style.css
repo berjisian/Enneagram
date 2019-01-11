@@ -6,46 +6,89 @@
     position: relative;
     cursor: pointer;
 }
-.enneagram-symbol-block .view-mode [class*=flaticon-number]:before {
-    font-size: 37px;
+.enneagram-symbol-block [class*=flaticon-number]:before {
     color: #bababa;
 }
+.enneagram-symbol-block .view-mode [class*=flaticon-number]:before {
+    font-size: 37px;
+}
 .enneagram-symbol-block .view-mode .flaticon-number-1 {
-    top: -450px;
-    right: -367px;
+    top: -451px;
+    right: -352px;
 }
 .enneagram-symbol-block .view-mode .flaticon-number-2 {
-    top: -313px;
-    right: -395px;
+    top: -314px;
+    right: -378px;
 }
 .enneagram-symbol-block .view-mode .flaticon-number-3 {
-    top: -135px;
-    right: -312px;
+    top: -137px;
+    right: -297px;
 }
 .enneagram-symbol-block .view-mode .flaticon-number-4 {
     top: -19px;
-    right: -90px;
+    right: -73px;
 }
 .enneagram-symbol-block .view-mode .flaticon-number-5 {
-    top: -19px;
-    right: 66px;
+    top: -18px;
+    right: 80px;
 }
 .enneagram-symbol-block .view-mode .flaticon-number-6 {
-    top: -136px;
-    right: 289px;
+    top: -135px;
+    right: 304px;
 }
 .enneagram-symbol-block .view-mode .flaticon-number-7 {
     top: -314px;
-    right: 375px;
+    right: 391px;
 }
 .enneagram-symbol-block .view-mode .flaticon-number-8 {
     top: -449px;
-    right: 352px;
+    right: 367px;
 }
 .enneagram-symbol-block .view-mode .flaticon-number-9 {
     top: -509px;
-    right: 249px;
+    right: 264px;
 }
-.enneagram-symbol-block .selected-mode .selected-group {
-    color: red;
+.enneagram-symbol-block .selected-mode .selected-group[class*=flaticon-number]:before {
+    color: red !important;
+}
+.enneagram-symbol-block .selected-mode .enneagram-image {
+    max-height: 100px;
+    margin-left: -15px;
+    margin-top: 24px;
+}
+.enneagram-symbol-block .selected-mode .flaticon-number-1 {
+    top: -111px;
+    right: -44px;
+}
+.enneagram-symbol-block .selected-mode .flaticon-number-2 {
+    top: -77px;
+    right: -24px;
+}
+.enneagram-symbol-block .selected-mode .flaticon-number-3 {
+    top: -34px;
+    right: 23px;
+}
+.enneagram-symbol-block .selected-mode .flaticon-number-4 {
+    top: -6px;
+    right: 102px;
+}
+.enneagram-symbol-block .selected-mode .flaticon-number-5 {
+    top: -6px;
+    right: 166px;
+}
+.enneagram-symbol-block .selected-mode .flaticon-number-6 {
+    top: -32px;
+    right: 246px;
+}
+.enneagram-symbol-block .selected-mode .flaticon-number-7 {
+    top: -77px;
+    right: 295px;
+}
+.enneagram-symbol-block .selected-mode .flaticon-number-8 {
+    top: -111px;
+    right: 315px;
+}
+.enneagram-symbol-block .selected-mode .flaticon-number-9 {
+    top: -124px;
+    right: 315px;
 }

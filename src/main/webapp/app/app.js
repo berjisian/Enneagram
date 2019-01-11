@@ -1,7 +1,7 @@
 var enneagram = enneagram || {};
 
 enneagram.externalDependencies = [
-  "ui.bootstrap", "ui.router", "ngSanitize"
+  "ui.bootstrap", "ui.router", "ui.select", "ngSanitize"
 ];
 enneagram.internalDependency = [];
 enneagram.modulesDependency = [
