@@ -12,6 +12,9 @@
 .pre-explanation-modal {
     background-color: #d9f2f1;
 }
+.pre-explanation-modal .cancel-btn {
+
+}
 .pre-explanation-modal .explanation-block {
     text-align: right;
 }

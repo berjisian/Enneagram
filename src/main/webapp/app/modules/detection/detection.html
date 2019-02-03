@@ -1,7 +1,7 @@
 <div class="detection-page">
     <div class="row pre-explanation">
         <div class="col-sm-3"></div>
-        <div class="col-sm-6">
+        <div class="col-sm-6" ng-if="Data.mode === 'none'">
             <div class="pre-explanation-main">
                 قبل از این که بریم سراغ سؤال‌ها، دوست داری یک نگاه به گروه‌های مختلف بندازی؟
             </div>
@@ -10,6 +10,9 @@
             </div>
             <button type="button" class="btn btn-success" ng-click="Func.onOpenExplanationClick()">چرا که نه!</button>
             <button type="button" class="btn btn-danger" ng-click="Func.onCancelExplanationClick()">باشه برای بعد</button>
+        </div>
+        <div ng-if="Data.mode === 'selectProbable'">
+            salaam!
         </div>
         <div class="col-sm-3"></div>
     </div>

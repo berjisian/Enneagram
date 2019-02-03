@@ -1,6 +1,9 @@
 <div class="pre-explanation-modal">
+    <div class="modal-header" style="border-bottom: 1px solid cadetblue;">
+        <button class="btn btn-danger btn-text cancel-btn" type="button" ng-click="Func.onCancelClick()">X</button>
+        <h5 class="pull-right">آشنایی با گروه‌ها</h5>
+    </div>
     <div ng-class="{'view-mode': Data.mode === 'none', 'selected-mode': Data.mode === 'selected'}">
-        <h5 ng-if="Data.mode === 'none'">برای آشنایی با هرکدام از گروه‌ها روی آن کلیک کنید</h5>
         <div class="row">
             <div ng-if="Data.mode === 'selected'" class="col-sm-10 explanation-block">
                 بند مقدماتی :دی
@@ -16,12 +19,5 @@
             <div>توضیحات اضافه‌تر!</div>
             <div>توضیحات اضافه‌تر‌تر!</div>
         </div>
-        <ui-select multiple ng-model="Data.selectedGroups" theme="bootstrap" sortable="true" close-on-select="false">
-            <ui-select-match placeholder="فکر می‌کنید در کدام گروه باشید؟">{{$item.num}} &lt;{{$item.name}}&gt;</ui-select-match>
-            <ui-select-choices repeat="item in Data.groups">
-                <div>{{item.num}}</div>
-                <small>{{item.name}}</small>
-            </ui-select-choices>
-        </ui-select>
     </div>
 </div>

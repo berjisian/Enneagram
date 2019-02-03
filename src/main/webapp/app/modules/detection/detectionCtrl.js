@@ -1,6 +1,8 @@
 angular.module('detectionModule').controller('detectionCtrl', function ($scope, $uibModal) {
 
-    $scope.Data = {};
+    $scope.Data = {
+        mode: "none"
+    };
 
     $scope.Func = {
         onOpenExplanationClick: function () {
@@ -12,8 +14,10 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
                 animation: true,
                 resolve: {}
             }).result.then(function () {
+                $scope.Data.mode = "selectProbable";
+            }, function () {
                 $scope.Func.onCancelExplanationClick();
-            }, angular.noop);
+            });
         },
         onCancelExplanationClick: function () {
             $(".pre-explanation").slideUp("slow");
