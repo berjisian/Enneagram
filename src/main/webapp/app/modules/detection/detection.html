@@ -11,8 +11,21 @@
             <button type="button" class="btn btn-success" ng-click="Func.onOpenExplanationClick()">چرا که نه!</button>
             <button type="button" class="btn btn-danger" ng-click="Func.onCancelExplanationClick()">باشه برای بعد</button>
         </div>
-        <div ng-if="Data.mode === 'selectProbable'">
-            salaam!
+        <div class="col-sm-6" ng-if="Data.mode === 'selectProbableGroups'">
+            <div class="pre-explanation-main">
+                فکر میکنی توی کدوم یکی از گروه‌ها باشی؟
+            </div>
+            <div>
+                <span ng-repeat="group in Data.groups" ng-if="group.value<4" class="group-btn"
+                      ng-click="Func.onGroupClick(group.value)" ng-class="{'active-btn': group.active}">{{group.value}}</span>
+                <br>
+                <span ng-repeat="group in Data.groups" ng-if="group.value>3 && group.value<7" class="group-btn"
+                      ng-click="Func.onGroupClick(group.value)" ng-class="{'active-btn': group.active}">{{group.value}}</span>
+                <br>
+                <span ng-repeat="group in Data.groups" ng-if="group.value>6" class="group-btn"
+                      ng-click="Func.onGroupClick(group.value)" ng-class="{'active-btn': group.active}">{{group.value}}</span>
+            </div>
+            <button type="button" class="btn btn-success" ng-click="Func.onCancelExplanationClick()">تأیید</button>
         </div>
         <div class="col-sm-3"></div>
     </div>
