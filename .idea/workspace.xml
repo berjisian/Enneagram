@@ -6,14 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4da4db68-a8f4-4402-9dbb-62d52da7dd70" name="Default" comment="pre-explanation, phase 2">
+    <list default="true" id="4da4db68-a8f4-4402-9dbb-62d52da7dd70" name="Default" comment="Almost finished with pre-explanation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbol.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,32 +23,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/style.css">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-              <folding>
-                <element signature="e#1143#1147#0" expanded="true" />
-                <element signature="e#1156#1160#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+            <state relative-caret-position="119">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -59,17 +34,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="539">
+              <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state relative-caret-position="389">
+              <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -77,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            <state relative-caret-position="160">
+              <caret line="79" column="71" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -97,10 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>app</find>
-      <find>export</find>
-      <find>`</find>
-      <find>newsNetwork</find>
       <find>detection</find>
       <find>libraryModule</find>
       <find>library</find>
@@ -109,7 +80,6 @@
       <find>cryptiles</find>
       <find>base.css</find>
       <find>bxshadow-small</find>
-      <find>font</find>
       <find>h4</find>
       <find>h3</find>
       <find>h5</find>
@@ -127,6 +97,11 @@
       <find>rtl</find>
       <find>asb</find>
       <find>&lt;ui-select</find>
+      <find>selected</find>
+      <find>selected-mode</find>
+      <find>font</find>
+      <find>Data.gr</find>
+      <find>data.g</find>
     </findStrings>
     <replaceStrings>
       <replace>Enneagram</replace>
@@ -196,18 +171,18 @@
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/home/home.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbolDirective.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbol.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/ExplanationModalCtrl.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbolDirective.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbol.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/app.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html" />
       </list>
     </option>
   </component>
@@ -279,7 +254,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -357,6 +331,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -670,7 +645,13 @@
       <workItem from="1546254046890" duration="718000" />
       <workItem from="1546275129687" duration="4887000" />
       <workItem from="1546319443547" duration="238000" />
-      <workItem from="1547219086607" duration="4823000" />
+      <workItem from="1547219086607" duration="4978000" />
+      <workItem from="1547270632165" duration="388000" />
+      <workItem from="1549208818357" duration="3984000" />
+      <workItem from="1549257348396" duration="67000" />
+      <workItem from="1549293259925" duration="4358000" />
+      <workItem from="1549344371927" duration="28000" />
+      <workItem from="1550465982098" duration="13150000" />
     </task>
     <task id="LOCAL-00001" summary="Designed a little bit of header.">
       <created>1544899454495</created>
@@ -721,17 +702,38 @@
       <option name="project" value="LOCAL" />
       <updated>1546280029809</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Almost finished with pre-explanation">
+      <created>1547224015017</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1547224015017</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Almost finished with pre-explanation">
+      <created>1549213321691</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1549213321691</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Finished with pre-explanation">
+      <created>1549300019912</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1549300019912</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95160000" />
+    <option name="totallyTimeSpent" value="117290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49436393" visible="true" weight="0.30257186" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49436393" visible="true" weight="0.33131617" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -748,14 +750,14 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32850242" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3236715" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32850242" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32850242" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="SonarLint" order="15" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32850242" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32850242" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="SonarLint" order="14" />
+      <window_info anchor="bottom" id="Terminal" order="15" weight="0.3236715" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -781,20 +783,15 @@
     <MESSAGE value="Basic Detection Page" />
     <MESSAGE value="Initial pre-explanation modal." />
     <MESSAGE value="pre-explanation, phase 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="pre-explanation, phase 2" />
+    <MESSAGE value="Almost finished with pre-explanation" />
+    <MESSAGE value="Finished with pre-explanation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished with pre-explanation" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/library/types/typeTpl/typeTplSrvc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/library/types/typeTpl/ctrls/3Ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1046,13 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
@@ -1060,40 +1050,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbolDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="-209">
+          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="204">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/app.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        <state relative-caret-position="221">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="49" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+        <state relative-caret-position="119">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbolDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/emoticons/font/flaticon.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbol.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1102,35 +1098,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state relative-caret-position="476">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="77" selection-start-line="13" selection-start-column="77" selection-end-line="13" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="160">
+          <caret line="79" column="71" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          <folding>
-            <element signature="e#1143#1147#0" expanded="true" />
-            <element signature="e#1156#1160#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="389">
+          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
         </state>
       </provider>
     </entry>
