@@ -12,9 +12,6 @@
 .pre-explanation-modal {
     background-color: #d9f2f1;
 }
-.pre-explanation-modal .cancel-btn {
-
-}
 .pre-explanation-modal .explanation-block {
     text-align: right;
 }
@@ -39,4 +36,49 @@
 .detection-page .active-btn {
     border: 1px solid indianred;
     background-color: indianred;
+}
+.detection-page .question-part {
+    text-align: center;
+}
+.detection-page .question-part ul {
+    list-style: none;
+    padding-right: 0;
+}
+.detection-page .question-part li {
+    margin: 20px;
+}
+.detection-page .question-part .answer-emoticons {
+    padding: 5px;
+}
+.detection-page .question-part .answer-emoticons .flaticon-smile-1:before,
+.detection-page .question-part .answer-emoticons .flaticon-pain:before {
+    font-size: 50px;
+    cursor: pointer;
+}
+.detection-page .question-part .answer-emoticons .flaticon-smile:before,
+.detection-page .question-part .answer-emoticons .flaticon-sad:before {
+    font-size: 40px;
+    cursor: pointer;
+}
+.detection-page .question-part .answer-emoticons .flaticon-meh:before {
+    font-size: 30px;
+    color: lightslategrey;
+    cursor: pointer;
+}
+.detection-page .question-part .answer-emoticons .flaticon-smile-1:before {
+    color: green;
+}
+.detection-page .question-part .answer-emoticons .flaticon-pain:before {
+    color: red;
+}
+.detection-page .question-part .answer-emoticons .flaticon-smile:before {
+    color: limegreen;
+}
+.detection-page .question-part .answer-emoticons .flaticon-sad:before {
+    color: lightcoral;
+}
+.detection-page .question-part .answer-emoticons .selected-answer:before {
+    border: 3px solid;
+    padding: 5px;
+    border-radius: 50%;
 }

@@ -2,17 +2,37 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
 
     $scope.Data = {
         mode: "none",
-        groups: [],
-        probableGroups: []
+        tempProbableGroups: [],
+        tempPreferredGroups: [],
+        probableGroups: [],
+        preferredGroups: [],
+        questions: [],
+        currentQuestions: [],
+        page: {
+            size: 10,
+            num: 0
+        },
+        result: ""
     };
 
     $scope.Func = {
         prepareGroups: function () {
             for (let i = 1; i < 10; i++)
-                $scope.Data.groups.push({
+                $scope.Data.tempProbableGroups.push({
                     value: i,
                     active: false
                 });
+            $scope.Data.tempPreferredGroups = angular.copy($scope.Data.tempProbableGroups);
+        },
+        prepareQuestions: function () {
+            for (let i = 0; i < 100; i++) {
+                $scope.Data.questions.push({
+                    num: i,
+                    value: "سؤال " + (i+1),
+                    answer: 0
+                })
+            }
+            $scope.Func.prepareCurrentQuestions();
         },
         onOpenExplanationClick: function () {
             $uibModal.open({
@@ -31,22 +51,53 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
         onCancelExplanationClick: function () {
             $(".pre-explanation").slideUp("slow");
         },
-        onGroupClick: function (group) {
+        onGroupClick: function (type, group) {
             let omitted = false;
-            for (let i = 0; i < $scope.Data.probableGroups.length; i++) {
-                if ($scope.Data.probableGroups[i] === group) {
-                    $scope.Data.probableGroups.splice(i, 1);
+            let list = [];
+            if (type === 'probable')
+                list = $scope.Data.probableGroups;
+            else
+                list = $scope.Data.preferredGroups;
+            for (let i = 0; i < list.length; i++) {
+                if (list[i] === group) {
+                    list.splice(i, 1);
                     omitted = true;
                 }
             }
             if (!omitted)
-                $scope.Data.probableGroups.push(group);
-            $scope.Data.groups[group - 1].active = !$scope.Data.groups[group - 1].active;
+                list.push(group);
+            if (type === 'probable')
+                $scope.Data.tempProbableGroups[group - 1].active = !$scope.Data.tempProbableGroups[group - 1].active;
+            else
+                $scope.Data.tempPreferredGroups[group - 1].active = !$scope.Data.tempPreferredGroups[group - 1].active;
+        },
+        onAnswerSelect: function (answer, questionNum) {
+            for (let i = 0; i < $scope.Data.questions.length; i++) {
+                if (questionNum === $scope.Data.questions[i].num)
+                    $scope.Data.questions[i].answer = answer;
+            }
+            for (let i = 0; i < $scope.Data.currentQuestions.length; i++) {
+                if (questionNum === $scope.Data.currentQuestions[i].num)
+                    $scope.Data.currentQuestions[i].answer = answer;
+            }
+        },
+        prepareCurrentQuestions: function () {
+            let start = $scope.Data.page.num * $scope.Data.page.size;
+            $scope.Data.currentQuestions = angular.copy($scope.Data.questions.slice(start, start + $scope.Data.page.size));
+            $scope.Data.page.num++;
+            if ($scope.Data.page.num === ($scope.Data.questions.length / $scope.Data.page.size))
+                $scope.Data.lastPage = true;
+        },
+        calculateResult: function () {
+        //    TODO: Result Calculation
+            $scope.Data.result = 1;
+            $scope.Data.mode = "showAnswer";
         }
     };
 
     const Run = function () {
         $scope.Func.prepareGroups();
+        $scope.Func.prepareQuestions();
     };
 
     Run();
