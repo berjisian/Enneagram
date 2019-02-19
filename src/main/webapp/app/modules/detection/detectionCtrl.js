@@ -6,13 +6,19 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
         tempPreferredGroups: [],
         probableGroups: [],
         preferredGroups: [],
+        resultGroups: [],
+        mbtiGroups: ["INTJ", "INTP", "INFJ", "INFP", "ISTJ", "ISTP", "ISFJ", "ISFP",
+                    "ENTJ", "ENTP", "ENFJ", "ENFP", "ESTJ", "ESTP", "ESFJ", "ESFP"],
+        approvedMbtiGroup: "",
+        discGroups: ["D", "I", "S", "C"],
+        approvedDiscGroup: "",
+        finalResult: "",
         questions: [],
         currentQuestions: [],
         page: {
             size: 10,
             num: 0
         },
-        result: ""
     };
 
     $scope.Func = {
@@ -88,10 +94,18 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             if ($scope.Data.page.num === ($scope.Data.questions.length / $scope.Data.page.size))
                 $scope.Data.lastPage = true;
         },
-        calculateResult: function () {
+        calculateTestResult: function () {
         //    TODO: Result Calculation
-            $scope.Data.result = 1;
+            for (let i = 0; i < 9; i++) {
+                $scope.Data.resultGroups[i] = {
+                    value: i+1,
+                    result: 1
+                }
+            }
             $scope.Data.mode = "showAnswer";
+        },
+        calculateFinalResult: function () {
+            $scope.Data.finalResult = "1";
         }
     };
 

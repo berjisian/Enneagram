@@ -82,3 +82,62 @@
     padding: 5px;
     border-radius: 50%;
 }
+.detection-page .answer-part {
+    text-align: center;
+}
+.detection-page .answer-part .answer-part-header {
+    padding: 10px;
+    margin: 20px;
+    background: palevioletred;
+}
+.detection-page .answer-part .answer-part-probable,
+.detection-page .answer-part .answer-part-preferred,
+.detection-page .answer-part .answer-part-result,
+.detection-page .answer-part .answer-part-mbti,
+.detection-page .answer-part .answer-part-disc,
+.detection-page .answer-part .answer-part-conclusion {
+    padding: 10px;
+}
+.detection-page .answer-part .answer-part-probable {
+    background-color: cornflowerblue;
+}
+.detection-page .answer-part .answer-part-preferred {
+    background-color: lightskyblue;
+}
+.detection-page .answer-part .answer-part-result {
+    background-color: lightblue;
+}
+.detection-page .answer-part .answer-part-mbti {
+    background-color: darkseagreen;
+}
+.detection-page .answer-part .answer-part-disc {
+    background-color: mediumseagreen;
+}
+.detection-page .answer-part .answer-part-conclusion {
+    background-color: indianred;
+}
+.detection-page .answer-part .ui-select-container {
+    z-index: 120;
+    margin: 10px;
+    cursor: pointer;
+}
+.detection-page .answer-part .ui-select-container input {
+    width: 100% !important;
+    cursor: pointer;
+}
+.detection-page .answer-part .ui-select-container .ui-select-choices {
+    top: 0 !important;
+    width: 50%;
+    background: wheat;
+}
+.detection-page .answer-part .ui-select-container .selectize-input {
+    background: white;
+    border: 1px solid grey;
+}
+.detection-page .answer-part a {
+    color: aliceblue;
+}
+.detection-page .answer-part a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
