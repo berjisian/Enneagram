@@ -160,10 +160,15 @@
                 <h5>نتیجه نهایی</h5>
                 <span>اگر تمام نتایج بالا رو در نظر بگیریم، بالاخره توی کدوم یکی از گروه‌های شخصیتی انیاگرام جا میگیری؟</span>
                 <br><br>
-                <h3 ng-show="Data.finalResult">شما توی گروه {{Data.finalResult}} قرار داری!</h3>
-                <button type="button" class="btn btn-success" ng-show="!Data.finalResult" ng-click="Func.calculateFinalResult()">
+                <button type="button" class="btn btn-success" ng-show="!Data.finalResult"
+                        ng-click="Func.calculateFinalResult()">
                     بررسی
                 </button>
+                <div ng-show="Data.finalResult">
+                    <h3>شما توی گروه {{Data.finalResult.num}} قرار داری!</h3>
+                    <br>
+                    <a ng-href="#/library/types/{{Data.finalResult.name}}">دوست داری راجع به گروه {{Data.finalResult.num}} بیشتر بدونی؟</a>
+                </div>
                 <!--TODO: Roll to page-top on each button click-->
             </div>
         </div>

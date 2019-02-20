@@ -105,7 +105,10 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             $scope.Data.mode = "showAnswer";
         },
         calculateFinalResult: function () {
-            $scope.Data.finalResult = "1";
+            $scope.Data.finalResult = {
+                num: "1",
+                name: "one"
+            };
         }
     };
 

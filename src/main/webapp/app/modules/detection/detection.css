@@ -127,6 +127,7 @@
 }
 .detection-page .answer-part .ui-select-container .ui-select-choices {
     top: 0 !important;
+    z-index: 120;
     width: 50%;
     background: wheat;
 }
