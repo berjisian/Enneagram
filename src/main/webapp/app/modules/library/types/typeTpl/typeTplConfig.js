@@ -1,5 +1,5 @@
 angular.module('typeTplModule').config(['$stateProvider', function($stateProvider) {
-    var oneStates = [
+    let oneStates = [
         {
             name: "home.library.typeTpl",
             url: "",
@@ -9,47 +9,47 @@ angular.module('typeTplModule').config(['$stateProvider', function($stateProvide
             name: "home.library.typeTpl.one",
             url: "/types/one",
             templateUrl: "app/modules/library/types/typeTpl/typePage.html",
-            controller: 'oneCtrl'
+            controller: 'typeTplCtrl'
         },{
             name: "home.library.typeTpl.two",
             url: "/types/two",
             templateUrl: "app/modules/library/types/typeTpl/typePage.html",
-            controller: 'twoCtrl'
+            controller: 'typeTplCtrl'
         },{
             name: "home.library.typeTpl.three",
             url: "/types/three",
             templateUrl: "app/modules/library/types/typeTpl/typePage.html",
-            controller: 'threeCtrl'
+            controller: 'typeTplCtrl'
         },{
             name: "home.library.typeTpl.four",
             url: "/types/four",
             templateUrl: "app/modules/library/types/typeTpl/typePage.html",
-            controller: 'fourCtrl'
+            controller: 'typeTplCtrl'
         },{
             name: "home.library.typeTpl.five",
             url: "/types/five",
             templateUrl: "app/modules/library/types/typeTpl/typePage.html",
-            controller: 'fiveCtrl'
+            controller: 'typeTplCtrl'
         },{
             name: "home.library.typeTpl.six",
             url: "/types/six",
             templateUrl: "app/modules/library/types/typeTpl/typePage.html",
-            controller: 'sixCtrl'
+            controller: 'typeTplCtrl'
         },{
             name: "home.library.typeTpl.seven",
             url: "/types/seven",
             templateUrl: "app/modules/library/types/typeTpl/typePage.html",
-            controller: 'sevenCtrl'
+            controller: 'typeTplCtrl'
         },{
             name: "home.library.typeTpl.eight",
             url: "/types/eight",
             templateUrl: "app/modules/library/types/typeTpl/typePage.html",
-            controller: 'eightCtrl'
+            controller: 'typeTplCtrl'
         },{
             name: "home.library.typeTpl.nine",
             url: "/types/nine",
             templateUrl: "app/modules/library/types/typeTpl/typePage.html",
-            controller: 'nineCtrl'
+            controller: 'typeTplCtrl'
         }];
     oneStates.forEach(function(state) {
         $stateProvider.state(state);

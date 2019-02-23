@@ -1,6 +1,24 @@
 .type-tpl-page #type-navigation-bar * {
     float: right;
 }
+.type-tpl-page #type-navigation-bar ul {
+    list-style: none;
+    margin-top: 10px;
+    padding-right: 0;
+    width: 300px;
+
+}
+.type-tpl-page #type-navigation-bar li {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background-color: lightblue;
+    border: 2px outset;
+    cursor: pointer;
+}
+.type-tpl-page #type-navigation-bar .li-selected {
+    border: 2px solid midnightblue;
+}
 .sticky {
     position: fixed;
     top: 0;
