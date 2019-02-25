@@ -1,0 +1,10 @@
+.all-types-page .right-side-text {
+    text-align: center;
+    padding: 10px;
+}
+.all-types-page .right-side-text * {
+    padding: 10px;
+}
+.all-types-page .right-side-text h1 {
+    background-color: blueviolet;
+}

@@ -6,7 +6,7 @@
             <div class="row main-header">
                 <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1"></div>
                 <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
-                    <a ui-sref="home.library">کتابخانه</a>
+                    <a ui-sref="home.library.basics">معرفی</a>
                 </div>
                 <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
                     <a ui-sref="home.library.types">گروه‌ها</a>
@@ -78,7 +78,24 @@
                 </div>
             </div>
         </div>
+        <div class="footer">
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 call-me">
+                    <h6>تماس با من</h6>
+                    <p>به اینجا ایمیل بزنید</p>
+                </div>
+                <div class="col-sm-12 col-md-4 blog-updates">
+                    <h6>آخرین مطالب بلاگ</h6>
+                    <!--TODO: Query on existing blog posts to extract headers.-->
+                </div>
+                <div class="col-sm-12 col-md-4 footer-enneagram">
+                    <h6>انیاگرام</h6>
+                    <p>سایت ما خیلی خوبه!</p>
+                    <button ui-sref="home.detection" class="btn btn-primary">شرکت در آزمون</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1"></div>
 </div>
-<!--TODO: Need a footer.-->

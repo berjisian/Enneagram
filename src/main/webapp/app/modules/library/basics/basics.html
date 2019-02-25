@@ -1,1 +1,26 @@
-Basics Page!
+<div class="basics-page">
+    <div class="row">
+        <div class="col-sm-4">
+            <div id="basics-navigation-bar">
+                <ul>
+                    <li ng-click="Func.onPageSelect('introduction')"
+                        ng-class="{'li-selected': Data.page === 'introduction'}">معرفی
+                    </li>
+                    <li ng-click="Func.onPageSelect('triads')"
+                        ng-class="{'li-selected': Data.page === 'triads'}">سه‌گانه‌ها
+                    </li>
+                    <li ng-click="Func.onPageSelect('wings')"
+                        ng-class="{'li-selected': Data.page === 'wings'}">بال‌ها
+                    </li>
+                    <li ng-click="Func.onPageSelect('transformation')"
+                        ng-class="{'li-selected': Data.page === 'transformation'}">مراحل تغییرات
+                    </li>
+                    <li ng-click="Func.onPageSelect('dynamics')"
+                        ng-class="{'li-selected': Data.page === 'dynamics'}">گسست و پیوست
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-8" id="basics-content-div"></div>
+    </div>
+</div>
