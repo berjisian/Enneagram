@@ -38,6 +38,11 @@ body {
     max-height: 100px;
     cursor: pointer;
 }
+@media (max-width: 700px) {
+    .main-header .image {
+        max-height: 85px;
+    }
+}
 .main-header .link {
     padding: 30px 0;
 }

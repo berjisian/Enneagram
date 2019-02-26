@@ -2,6 +2,7 @@
     border: 1px solid;
     border-radius: 10px;
     padding: 7px;
+    margin-top: 10px;
     background-color: lightgray;
 }
 .blog-page .blog-post-container .blog-post-body-divider {
@@ -9,6 +10,6 @@
     margin: 5px 15px;
     background-color: black;
 }
-.blog-page .blog-post-container .blog-post-body * {
+.blog-page .blog-post-container .blog-post-content * {
     float: right;
 }

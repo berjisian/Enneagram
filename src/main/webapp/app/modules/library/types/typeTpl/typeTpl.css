@@ -8,6 +8,11 @@
     width: 300px;
 
 }
+@media (max-width: 700px) {
+    .type-tpl-page #type-navigation-bar ul {
+        width: 150px;
+    }
+}
 .type-tpl-page #type-navigation-bar li {
     width: 100%;
     text-align: center;

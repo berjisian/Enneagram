@@ -1,46 +1,42 @@
 <div class="row home">
-    <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1"></div>
-    <div class="col-xs-10 col-lg-10 col-md-10 col-sm-10">
+    <div class="col-md-10 col-sm-10 col-md-offset-right-1 col-sm-offset-right-1">
         <div class="header">
-            <!--TODO: What about small devices?-->
             <div class="row main-header">
-                <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1"></div>
-                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
+                <div class="col-md-1 col-sm-1"></div>
+                <div class="col-md-2 col-sm-2 link">
                     <a ui-sref="home.library.basics">معرفی</a>
                 </div>
-                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
+                <div class="col-md-2 col-sm-2 link">
                     <a ui-sref="home.library.types">گروه‌ها</a>
                 </div>
-                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2">
+                <div class="col-md-2 col-sm-2">
                     <img class="image" ui-sref="home" src="app/assets/images/header G.png">
                 </div>
-                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
+                <div class="col-md-2 col-sm-2 link">
                     <a ui-sref="home.detection">شناسایی</a>
                 </div>
-                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 link">
+                <div class="col-md-2 col-sm-2 link">
                     <a ui-sref="home.blog">بلاگ</a>
                 </div>
-                <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1"></div>
+                <div class="col-md-1 col-sm-1"></div>
             </div>
             <div class="row">
-                <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5"></div>
-                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 title" ui-sref="home">انیاگرام</div>
-                <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5"></div>
+                <div class="col-md-2 col-sm-2 col-md-offset-right-5 col-sm-offset-right-5 title" ui-sref="home">انیاگرام</div>
             </div>
         </div>
         <div class="body">
-            <div class="col-sm-12" ui-view>
+            <div class="col-md-12 col-sm-12" ui-view>
                 <div class="row">
-                    <div class="col-md-12 recognition-card">
+                    <div class="col-md-12 col-sm-12 recognition-card">
                         <div class="card">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-sm-8">
+                                    <div class="col-md-8 col-sm-8">
                                         <h5>تا به حال چیزی از انیاگرام نشنیده‌اید؟</h5>
                                         <div class="card-description">آره، همین طوره</div>
                                         <div ui-sref="home.detection" class="card-link">در آزمون شرکت کنید</div>
                                     </div>
-                                    <div class="col-sm-4 home-card-img">
+                                    <div class="col-md-4 col-sm-4 home-card-img">
                                         <img src="/app/assets/images/what-is-it.png" alt="تعیین شخصیت">
                                     </div>
                                 </div>
@@ -49,8 +45,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-4 introduction-card">
+                    <div class="col-md-4 col-sm-6 col-md-offset-right-2 introduction-card">
                         <div class="card">
                             <div class="container">
                                 <h5>انیاگرام اصلا چی هست؟</h5>
@@ -62,7 +57,7 @@
                         </div>
                         <div ui-sref="home.library.basics" class="card-link">با انیاگرام آشنا بشوید</div>
                     </div>
-                    <div class="col-sm-4 blog-card">
+                    <div class="col-md-4 col-sm-6 blog-card">
                         <div class="card">
                             <div class="container">
                                 <h5>داستان این سایت چیه؟</h5>
@@ -74,22 +69,17 @@
                         </div>
                         <div ui-sref="home.blog" class="card-link">یک سر به بلاگ بزنید</div>
                     </div>
-                    <div class="col-sm-2"></div>
                 </div>
             </div>
         </div>
         <div class="footer">
             <hr class="footer-divider">
             <div class="row">
-                <div class="col-sm-12 col-md-4 call-me">
+                <div class="col-sm-12 col-md-6 call-me">
                     <h6>تماس با من</h6>
                     <p>به اینجا ایمیل بزنید</p>
                 </div>
-                <div class="col-sm-12 col-md-4 blog-updates">
-                    <h6>آخرین مطالب بلاگ</h6>
-                    <!--TODO: Query on existing blog posts to extract headers.-->
-                </div>
-                <div class="col-sm-12 col-md-4 footer-enneagram">
+                <div class="col-sm-12 col-md-6 footer-enneagram">
                     <h6>انیاگرام</h6>
                     <p>سایت ما خیلی خوبه!</p>
                     <button ui-sref="home.detection" class="btn btn-primary">شرکت در آزمون</button>
@@ -97,5 +87,4 @@
             </div>
         </div>
     </div>
-    <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1"></div>
 </div>

@@ -1,10 +1,20 @@
-angular.module('blogModule').controller('blogCtrl', function ($scope) {
+angular.module('blogModule').controller('blogCtrl', function ($scope, blogSrvc) {
 
-    $scope.Data = {};
+    $scope.Data = {
+        posts: []
+    };
 
-    $scope.Func = {};
+    $scope.Func = {
+        getBlogPosts: function () {
+            blogSrvc.getData().done(function(data) {
+                $scope.Data.posts = data;
+            });
+        }
+    };
 
-    var Run = function () {};
+    let Run = function () {
+        $scope.Func.getBlogPosts();
+    };
 
     Run();
 });

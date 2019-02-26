@@ -1,16 +1,13 @@
 <div class="blog-page row">
-    <div class="col-sm-12 col-md-6">
+    <div ng-repeat="post in Data.posts" class="col-sm-12 col-md-6">
         <div class="blog-post-container">
-            <!--TODO: Read blog posts from file.-->
             <div class="row">
                 <div class="col-sm-12 blog-post-header">
-                    <span class="blog-post-title pull-right">سلام</span>
-                    <span class="blog-post-date">2 تیر</span>
+                    <span class="blog-post-title pull-right">{{post.title}}</span>
+                    <span class="blog-post-date">{{post.date}}</span>
                 </div>
                 <hr class="blog-post-body-divider">
-                <div class="col-sm-12 blog-post-body">
-                    <p>این اولین پست بلاگ است.</p>
-                </div>
+                <div class="col-sm-12 blog-post-content" ng-bind-html="post.content"></div>
             </div>
         </div>
     </div>
