@@ -9,11 +9,7 @@ angular.module('typesModule').controller('typesCtrl', function ($scope) {
     $scope.Controller = {
         symbolDirective: {
             mode: "none",
-            selectedGroup: "",
-            style: [{
-                module: "enneagram-image",
-                css: "padding-right:42px"
-            }]
+            selectedGroup: ""
         }
     };
 

@@ -1,6 +1,5 @@
-.enneagram-symbol-block .view-mode {
+.enneagram-symbol-block {
     text-align: center;
-    margin-top: 40px;
 }
 .enneagram-symbol-block [class*=flaticon-number] {
     position: relative;
@@ -9,86 +8,161 @@
 .enneagram-symbol-block [class*=flaticon-number]:before {
     color: #bababa;
 }
-.enneagram-symbol-block .view-mode [class*=flaticon-number]:before {
+.all-types-page .enneagram-symbol-block [class*=flaticon-number]:before {
     font-size: 37px;
 }
-.enneagram-symbol-block .view-mode .flaticon-number-1 {
+.all-types-page .enneagram-symbol-block [class*=flaticon-number]:before {
+    font-size: 37px;
+}
+.all-types-page .enneagram-symbol-block .flaticon-number-1 {
     top: -451px;
-    right: -352px;
+    right: -373px;
 }
-.enneagram-symbol-block .view-mode .flaticon-number-2 {
+.all-types-page .enneagram-symbol-block .flaticon-number-2 {
     top: -314px;
-    right: -378px;
+    right: -399px;
 }
-.enneagram-symbol-block .view-mode .flaticon-number-3 {
+.all-types-page .enneagram-symbol-block .flaticon-number-3 {
     top: -137px;
-    right: -297px;
+    right: -318px;
 }
-.enneagram-symbol-block .view-mode .flaticon-number-4 {
+.all-types-page .enneagram-symbol-block .flaticon-number-4 {
     top: -19px;
-    right: -73px;
+    right: -94px;
 }
-.enneagram-symbol-block .view-mode .flaticon-number-5 {
+.all-types-page .enneagram-symbol-block .flaticon-number-5 {
     top: -18px;
-    right: 80px;
+    right: 59px;
 }
-.enneagram-symbol-block .view-mode .flaticon-number-6 {
+.all-types-page .enneagram-symbol-block .flaticon-number-6 {
     top: -135px;
-    right: 304px;
+    right: 283px;
 }
-.enneagram-symbol-block .view-mode .flaticon-number-7 {
+.all-types-page .enneagram-symbol-block .flaticon-number-7 {
     top: -314px;
-    right: 391px;
+    right: 370px;
 }
-.enneagram-symbol-block .view-mode .flaticon-number-8 {
+.all-types-page .enneagram-symbol-block .flaticon-number-8 {
     top: -449px;
-    right: 367px;
+    right: 346px;
 }
-.enneagram-symbol-block .view-mode .flaticon-number-9 {
+.all-types-page .enneagram-symbol-block .flaticon-number-9 {
     top: -509px;
-    right: 264px;
+    right: 243px;
 }
-.enneagram-symbol-block .selected-mode .selected-group[class*=flaticon-number]:before {
+.pre-explanation-modal .enneagram-symbol-block .selected-group[class*=flaticon-number]:before {
     color: red !important;
 }
-.enneagram-symbol-block .selected-mode .enneagram-image {
+.pre-explanation-modal .enneagram-symbol-block .enneagram-image {
     max-height: 100px;
-    margin-left: -15px;
-    margin-top: 24px;
 }
-.enneagram-symbol-block .selected-mode .flaticon-number-1 {
+.pre-explanation-modal .enneagram-symbol-block .flaticon-number-1 {
     top: -111px;
-    right: -44px;
+    right: -281px;
 }
-.enneagram-symbol-block .selected-mode .flaticon-number-2 {
+.pre-explanation-modal .enneagram-symbol-block .flaticon-number-2 {
     top: -77px;
-    right: -24px;
+    right: -261px;
 }
-.enneagram-symbol-block .selected-mode .flaticon-number-3 {
+.pre-explanation-modal .enneagram-symbol-block .flaticon-number-3 {
     top: -34px;
-    right: 23px;
+    right: -214px;
 }
-.enneagram-symbol-block .selected-mode .flaticon-number-4 {
+.pre-explanation-modal .enneagram-symbol-block .flaticon-number-4 {
     top: -6px;
-    right: 102px;
+    right: -135px;
 }
-.enneagram-symbol-block .selected-mode .flaticon-number-5 {
+.pre-explanation-modal .enneagram-symbol-block .flaticon-number-5 {
     top: -6px;
-    right: 166px;
+    right: -71px;
 }
-.enneagram-symbol-block .selected-mode .flaticon-number-6 {
+.pre-explanation-modal .enneagram-symbol-block .flaticon-number-6 {
     top: -32px;
-    right: 246px;
+    right: 9px;
 }
-.enneagram-symbol-block .selected-mode .flaticon-number-7 {
+.pre-explanation-modal .enneagram-symbol-block .flaticon-number-7 {
     top: -77px;
-    right: 295px;
+    right: 58px;
 }
-.enneagram-symbol-block .selected-mode .flaticon-number-8 {
+.pre-explanation-modal .enneagram-symbol-block .flaticon-number-8 {
     top: -111px;
-    right: 315px;
+    right: 78px;
 }
-.enneagram-symbol-block .selected-mode .flaticon-number-9 {
+.pre-explanation-modal .enneagram-symbol-block .flaticon-number-9 {
     top: -124px;
-    right: 315px;
+    right: 78px;
+}
+@media (max-width: 700px) {
+    .all-types-page .enneagram-symbol-block .flaticon-number-1 {
+        top: -451px;
+        right: -398px;
+    }
+    .all-types-page .enneagram-symbol-block .flaticon-number-2 {
+        top: -314px;
+        right: -424px;
+    }
+    .all-types-page .enneagram-symbol-block .flaticon-number-3 {
+        top: -137px;
+        right: -343px;
+    }
+    .all-types-page .enneagram-symbol-block .flaticon-number-4 {
+        top: -19px;
+        right: -119px;
+    }
+    .all-types-page .enneagram-symbol-block .flaticon-number-5 {
+        top: -18px;
+        right: 34px;
+    }
+    .all-types-page .enneagram-symbol-block .flaticon-number-6 {
+        top: -135px;
+        right: 258px;
+    }
+    .all-types-page .enneagram-symbol-block .flaticon-number-7 {
+        top: -314px;
+        right: 345px;
+    }
+    .all-types-page .enneagram-symbol-block .flaticon-number-8 {
+        top: -449px;
+        right: 321px;
+    }
+    .all-types-page .enneagram-symbol-block .flaticon-number-9 {
+        top: -509px;
+        right: 218px;
+    }
+    .pre-explanation-modal .enneagram-symbol-block .flaticon-number-1 {
+        top: -111px;
+        right: -296px;
+    }
+    .pre-explanation-modal .enneagram-symbol-block .flaticon-number-2 {
+        top: -77px;
+        right: -276px;
+    }
+    .pre-explanation-modal .enneagram-symbol-block .flaticon-number-3 {
+        top: -34px;
+        right: -229px;
+    }
+    .pre-explanation-modal .enneagram-symbol-block .flaticon-number-4 {
+        top: -6px;
+        right: -150px;
+    }
+    .pre-explanation-modal .enneagram-symbol-block .flaticon-number-5 {
+        top: -6px;
+        right: -86px;
+    }
+    .pre-explanation-modal .enneagram-symbol-block .flaticon-number-6 {
+        top: -32px;
+        right: -6px;
+    }
+    .pre-explanation-modal .enneagram-symbol-block .flaticon-number-7 {
+        top: -77px;
+        right: 43px;
+    }
+    .pre-explanation-modal .enneagram-symbol-block .flaticon-number-8 {
+        top: -111px;
+        right: 63px;
+    }
+    .pre-explanation-modal .enneagram-symbol-block .flaticon-number-9 {
+        top: -124px;
+        right: 63px;
+    }
 }

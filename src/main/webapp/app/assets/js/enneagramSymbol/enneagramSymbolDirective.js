@@ -20,22 +20,11 @@ angular.module("enneagramSymbol", []).directive('enneagramSymbol', function() {
                 onGroupSelect: function (groupNum) {
                     $scope.api.selectedGroup = groupNum;
                     $scope.api.mode = "selected"
-                },
-                styleHandler: function () {
-                    if ($scope.api && $scope.api.style) {
-                        _.each($scope.api.style, function (style) {
-                            let module = style.module;
-                            let cssTag = style.css.split(":")[0];
-                            let cssValue = style.css.split(":")[1];
-                            $("."+module).css(cssTag, cssValue);
-                        });
-                    }
                 }
             };
 
             const Run = function () {
                 $scope.Func.prepareGroups();
-                $scope.Func.styleHandler();
             };
 
             Run()

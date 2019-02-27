@@ -93,6 +93,7 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             $scope.Data.page.num++;
             if ($scope.Data.page.num === ($scope.Data.questions.length / $scope.Data.page.size))
                 $scope.Data.lastPage = true;
+            window.scrollTo(0, 0);
         },
         calculateTestResult: function () {
         //    TODO: Result Calculation
@@ -103,6 +104,7 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
                 }
             }
             $scope.Data.mode = "showAnswer";
+            window.scrollTo(0, 0);
         },
         calculateFinalResult: function () {
             $scope.Data.finalResult = {

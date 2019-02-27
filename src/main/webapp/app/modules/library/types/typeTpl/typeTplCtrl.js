@@ -18,6 +18,7 @@ angular.module('typeTplModule').controller('typeTplCtrl', function ($scope, $sta
             $scope.Data.page = page;
             let currentGroup = $state.current.name.split(".")[3];
             typeTplSrvc.getData(page, currentGroup);
+            window.scrollTo(0, 0);
         }
     };
 

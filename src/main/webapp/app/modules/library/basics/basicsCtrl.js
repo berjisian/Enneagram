@@ -17,6 +17,7 @@ angular.module('basicsModule').controller('basicsCtrl', function ($scope, basics
         onPageSelect: function (page) {
             $scope.Data.page = page;
             basicsSrvc.getData(page);
+            window.scrollTo(0, 0);
         }
     };
 
