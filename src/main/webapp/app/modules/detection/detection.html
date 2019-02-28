@@ -63,7 +63,8 @@
         <div class="col-md-6 col-sm-12 col-md-offset-right-3">
             <div class="question-part">
                 <ul>
-                    <li ng-repeat="question in Data.currentQuestions">
+                    <li ng-repeat="question in Data.currentQuestions" id="question-{{question.num}}"
+                        ng-class="{'not-answered': Data.goingNextPage && (question.answer === 0)}">
                         {{question.value}}
                         <div class="answer-emoticons">
                             <i class="flaticon-pain" ng-click="Func.onAnswerSelect(1, question.num)"
@@ -90,38 +91,14 @@
     </div>
     <div class="answer-part row" ng-if="Data.mode == 'showAnswer'">
         <div class="col-sm-12 answer-part-header">
-            <h2>بالاخره کدوم گروه؟</h2>
+            <h2>جمع‌بندی</h2>
         </div>
-        <div class="col-md-11 col-sm-12 col-md-offset-right-1 answer-part-body row">
-            <div class="col-md-6 col-sm-12 answer-part-probable" ng-if="Data.probableGroups && Data.probableGroups.length">
-                <h5>شما احتمال میدادی که در گروه‌های زیر باشی</h5>
-                <span ng-repeat="group in Data.probableGroups" class="group-btn">{{group}}</span>
+        <div class="col-md-10 col-sm-12 col-md-offset-right-1 answer-part-body row">
+            <div class="col-md-12 col-sm-12 answer-part-explanation">توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
+                توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
+                توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
             </div>
-            <div class="col-md-6 col-sm-12 answer-part-preferred" ng-if="Data.preferredGroups && Data.preferredGroups.length">
-                <h5>دوست داشتی که در یکی از گروه‌های زیر باشی</h5>
-                <span ng-repeat="group in Data.preferredGroups" class="group-btn">{{group}}</span>
-            </div>
-            <div class="col-md-6 col-sm-12 answer-part-result">
-                <h5>با توجه به آزمون نتایج زیر برای هرکدام از گروه‌ها به دست آمد</h5>
-                <span>هرچه امتیاز گروهی بیشتر باشد، احتمال این که شما از آن گروه باشید، بالاتر است</span>
-                <div>
-                <span ng-repeat="group in Data.resultGroups" ng-if="group.value < 4">
-                    <span class="group-btn">{{group.value}}</span>
-                    <span>{{group.result}}</span>
-                </span>
-                    <br>
-                    <span ng-repeat="group in Data.resultGroups" ng-if="group.value > 3 && group.value < 7">
-                    <span class="group-btn">{{group.value}}</span>
-                    <span>{{group.result}}</span>
-                </span>
-                    <br>
-                    <span ng-repeat="group in Data.resultGroups" ng-if="group.value > 6">
-                    <span class="group-btn">{{group.value}}</span>
-                    <span>{{group.result}}</span>
-                </span>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12 answer-part-mbti">
+            <div class="col-md-5 col-sm-12 answer-part-mbti">
                 <h5>در قیاس با MBTI</h5>
                 <span>اگر میدونی توی کدوم یکی از گروه‌های ۱۶گانه MBTI قرار داری، میتونی اون رو هم مشخص کنی تا با نتیجه انیاگرام مقایسه بشه.</span>
                 <ui-select ng-model="Data.approvedMbtiGroup" theme="selectize">
@@ -136,7 +113,7 @@
                 <br><br>
                 <a href="https://www.16personalities.com/" target="_blank">آزمون MBTI</a>
             </div>
-            <div class="col-md-6 col-sm-12 answer-part-disc">
+            <div class="col-md-5 col-sm-12 col-md-offset-right-2 answer-part-disc">
                 <h5>در قیاس با DISC</h5>
                 <span>اگر میدونی گروه غالبت توی DISC چیه، میتونی اون رو هم مشخص کنی تا با نتیجه انیاگرام مقایسه بشه.</span>
                 <ui-select ng-model="Data.approvedDiscGroup" theme="selectize">
@@ -151,20 +128,7 @@
                 <br><br>
                 <a href="https://discpersonalitytesting.com/free-disc-test/" target="_blank">آزمون DISC</a>
             </div>
-            <div class="col-md-6 col-sm-12 answer-part-conclusion">
-                <h5>نتیجه نهایی</h5>
-                <span>اگر تمام نتایج بالا رو در نظر بگیریم، بالاخره توی کدوم یکی از گروه‌های شخصیتی انیاگرام جا میگیری؟</span>
-                <br><br>
-                <button type="button" class="btn btn-success" ng-show="!Data.finalResult"
-                        ng-click="Func.calculateFinalResult()">
-                    بررسی
-                </button>
-                <div ng-show="Data.finalResult">
-                    <h3>شما توی گروه {{Data.finalResult.num}} قرار داری!</h3>
-                    <br>
-                    <a ng-href="#/library/types/{{Data.finalResult.name}}">دوست داری راجع به گروه {{Data.finalResult.num}} بیشتر بدونی؟</a>
-                </div>
-            </div>
+            <!--TODO: Add results table.-->
         </div>
     </div>
 </div>

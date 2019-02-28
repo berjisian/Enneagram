@@ -80,39 +80,25 @@
     padding: 5px;
     border-radius: 50%;
 }
+.detection-page .question-part .not-answered {
+    border: 1px solid red;
+    padding: 10px;
+}
 .detection-page .answer-part {
     text-align: center;
 }
 .detection-page .answer-part .answer-part-header {
     padding: 10px;
-    margin: 20px;
-    background: palevioletred;
+    margin-bottom: 20px;
+    border-bottom: 1px solid;
 }
-.detection-page .answer-part .answer-part-probable,
-.detection-page .answer-part .answer-part-preferred,
-.detection-page .answer-part .answer-part-result,
+.detection-page .answer-part .answer-part-explanation {
+    margin-bottom: 20px;
+}
 .detection-page .answer-part .answer-part-mbti,
-.detection-page .answer-part .answer-part-disc,
-.detection-page .answer-part .answer-part-conclusion {
-    padding: 10px;
-}
-.detection-page .answer-part .answer-part-probable {
-    background-color: cornflowerblue;
-}
-.detection-page .answer-part .answer-part-preferred {
-    background-color: lightskyblue;
-}
-.detection-page .answer-part .answer-part-result {
-    background-color: lightblue;
-}
-.detection-page .answer-part .answer-part-mbti {
-    background-color: darkseagreen;
-}
 .detection-page .answer-part .answer-part-disc {
-    background-color: mediumseagreen;
-}
-.detection-page .answer-part .answer-part-conclusion {
-    background-color: indianred;
+    padding: 10px;
+    background-color: darkgrey;
 }
 .detection-page .answer-part .ui-select-container {
     z-index: 120;
@@ -135,20 +121,15 @@
 }
 @media (max-width: 700px) {
     .detection-page .answer-part .answer-part-body {
-        margin: 0 20px;
-        padding: 0 20px;
+        margin: 0;
     }
-    .detection-page .answer-part .answer-part-probable,
-    .detection-page .answer-part .answer-part-preferred,
-    .detection-page .answer-part .answer-part-result,
     .detection-page .answer-part .answer-part-mbti,
-    .detection-page .answer-part .answer-part-disc,
-    .detection-page .answer-part .answer-part-conclusion {
+    .detection-page .answer-part .answer-part-disc {
         margin-top: 10px;
     }
 }
 .detection-page .answer-part a {
-    color: aliceblue;
+    color: snow;
 }
 .detection-page .answer-part a:hover {
     color: #0056b3;

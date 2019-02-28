@@ -1,4 +1,4 @@
-angular.module('detectionModule').controller('detectionCtrl', function ($scope, $uibModal) {
+angular.module('detectionModule').controller('detectionCtrl', function ($scope, $uibModal, detectionSrvc) {
 
     $scope.Data = {
         mode: "none",
@@ -6,6 +6,7 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
         tempPreferredGroups: [],
         probableGroups: [],
         preferredGroups: [],
+        tempResultGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         resultGroups: [],
         mbtiGroups: ["INTJ", "INTP", "INFJ", "INFP", "ISTJ", "ISTP", "ISFJ", "ISFP",
                     "ENTJ", "ENTP", "ENFJ", "ENFP", "ESTJ", "ESTP", "ESFJ", "ESFP"],
@@ -16,9 +17,9 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
         questions: [],
         currentQuestions: [],
         page: {
-            size: 10,
+            size: 15,
             num: 0
-        },
+        }
     };
 
     $scope.Func = {
@@ -31,14 +32,19 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             $scope.Data.tempPreferredGroups = angular.copy($scope.Data.tempProbableGroups);
         },
         prepareQuestions: function () {
-            for (let i = 0; i < 100; i++) {
-                $scope.Data.questions.push({
-                    num: i,
-                    value: "سؤال " + (i+1),
-                    answer: 0
-                })
-            }
-            $scope.Func.prepareCurrentQuestions();
+            detectionSrvc.getQuestions().done(function (questionsString) {
+                let questions = questionsString.split("\n");
+                let i = 0;
+                _.each(questions, function (question) {
+                    $scope.Data.questions.push({
+                        num: i,
+                        value: (i+1) + ". " + question,
+                        answer: 0
+                    });
+                    i++;
+                });
+                $scope.Func.prepareCurrentQuestions();
+            });
         },
         onOpenExplanationClick: function () {
             $uibModal.open({
@@ -88,23 +94,45 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             }
         },
         prepareCurrentQuestions: function () {
-            let start = $scope.Data.page.num * $scope.Data.page.size;
-            $scope.Data.currentQuestions = angular.copy($scope.Data.questions.slice(start, start + $scope.Data.page.size));
-            $scope.Data.page.num++;
-            if ($scope.Data.page.num === ($scope.Data.questions.length / $scope.Data.page.size))
-                $scope.Data.lastPage = true;
-            window.scrollTo(0, 0);
+            let answer = $scope.Func.isAllAnswered();
+            if (answer === "answered") {
+                $scope.Data.goingNextPage = false;
+                let start = $scope.Data.page.num * $scope.Data.page.size;
+                $scope.Data.currentQuestions = angular.copy($scope.Data.questions.slice(start, start + $scope.Data.page.size));
+                $scope.Data.page.num++;
+                if ($scope.Data.page.num === ($scope.Data.questions.length / $scope.Data.page.size))
+                    $scope.Data.lastPage = true;
+                $scope.Func.scrollToTop();
+            } else {
+                $scope.Data.goingNextPage = true;
+                $("html, body").animate({scrollTop: $('#question-' + answer.num).offset().top }, 500);
+            }
+        },
+        isAllAnswered: function () {
+            let answer = "";
+            _.each($scope.Data.currentQuestions, function (question) {
+                if (!answer && question.answer === 0)
+                    answer = question;
+            });
+            if (!answer || !$scope.Data.currentQuestions.length)
+                answer = "answered";
+            return "answered";
         },
         calculateTestResult: function () {
-        //    TODO: Result Calculation
+            _.each($scope.Data.questions, function (question) {
+                $scope.Data.tempResultGroups[question.num % 9] += question.answer;
+            });
             for (let i = 0; i < 9; i++) {
                 $scope.Data.resultGroups[i] = {
                     value: i+1,
-                    result: 1
+                    result: Math.floor($scope.Data.tempResultGroups[i] / 15) - 3
                 }
             }
             $scope.Data.mode = "showAnswer";
-            window.scrollTo(0, 0);
+            $scope.Func.scrollToTop();
+        },
+        scrollToTop: function () {
+            // window.scrollTo(0, 0);
         },
         calculateFinalResult: function () {
             $scope.Data.finalResult = {
