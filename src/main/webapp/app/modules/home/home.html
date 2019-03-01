@@ -1,25 +1,29 @@
 <div class="row home">
-    <div class="col-md-10 col-sm-10 col-md-offset-right-1 col-sm-offset-right-1">
+    <!--TODO: Small devices.-->
+    <div class="col-md-10 col-sm-12 col-md-offset-right-1">
         <div class="header">
-            <div class="row main-header">
-                <div class="col-md-2 col-sm-2 col-md-offset-right-1 col-sm-offset-right-1 link">
-                    <a ui-sref="home.library.basics">معرفی</a>
+            <div class="row image-header">
+                <div class="col-md-3 col-sm-4 link">
+                    <img class="image" ui-sref="home" src="app/assets/images/header.png">
+                    <span class="title link" ui-sref="home">انیاگرام</span>
                 </div>
-                <div class="col-md-2 col-sm-2 link">
-                    <a ui-sref="home.library.types">گروه‌ها</a>
-                </div>
-                <div class="col-md-2 col-sm-2">
-                    <img class="image" ui-sref="home" src="app/assets/images/header G.png">
-                </div>
-                <div class="col-md-2 col-sm-2 link">
-                    <a ui-sref="home.detection">شناسایی</a>
-                </div>
-                <div class="col-md-2 col-sm-2 link">
-                    <a ui-sref="home.blog">بلاگ</a>
+                <div class="col-md-9 col-sm-8 take-exam">
+                    <button ui-sref="home.detection" class="btn btn-danger pull-left">شرکت در آزمون</button>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-2 col-sm-2 col-md-offset-right-5 col-sm-offset-right-5 title" ui-sref="home">انیاگرام</div>
+            <div class="row main-header">
+                <div class="col-md-3 col-sm-3 link" ui-sref="home.library.basics">
+                    معرفی
+                </div>
+                <div class="col-md-3 col-sm-3 link" ui-sref="home.library.types">
+                    گروه‌ها
+                </div>
+                <div class="col-md-3 col-sm-3 link" ui-sref="home.detection">
+                    آزمون
+                </div>
+                <div class="col-md-3 col-sm-3 link" ui-sref="home.blog">
+                    بلاگ
+                </div>
             </div>
         </div>
         <div class="body">
@@ -29,9 +33,16 @@
                         <div class="card">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-8 col-sm-8">
+                                    <div class="col-md-8 col-sm-8 card-data">
                                         <h5>تا به حال چیزی از انیاگرام نشنیده‌اید؟</h5>
-                                        <div class="card-description">آره، همین طوره</div>
+                                        <div class="card-description">توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
+                                            توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
+                                            توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
+                                            توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
+                                            توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
+                                            توضیحات توضیحات توضیحات توضیحات
+                                            توضیحات
+                                        </div>
                                         <div ui-sref="home.detection" class="card-link">در آزمون شرکت کنید</div>
                                     </div>
                                     <div class="col-md-4 col-sm-4 home-card-img">

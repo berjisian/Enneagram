@@ -1,67 +1,34 @@
 angular.module('detectionModule').controller('explanationModalCtrl', function ($scope, $uibModalInstance) {
 
     $scope.Data = {
-        mode: "none",
         selectedGroup: "",
-        groups: [
-            {
-                num: 1,
-                name: "asb"
-            },
-            {
-                num: 2,
-                name: "asb"
-            },
-            {
-                num: 3,
-                name: "asb"
-            },
-            {
-                num: 4,
-                name: "asb"
-            },
-            {
-                num: 5,
-                name: "asb"
-            },
-            {
-                num: 6,
-                name: "asb"
-            },
-            {
-                num: 7,
-                name: "asb"
-            },
-            {
-                num: 8,
-                name: "asb"
-            },
-            {
-                num: 9,
-                name: "asb"
-            }
-        ],
+        groups: [],
         selectedGroups: []
     };
 
     $scope.Func = {
+        prepareGroups: function () {
+            for (let i = 1; i < 10; i++)
+                $scope.Data.groups.push({
+                    value: i,
+                    active: false
+                });
+        },
+        onGroupClick: function (selectedGroup) {
+            _.each($scope.Data.groups, function (group) {
+                if (group === selectedGroup)
+                    group.active = true;
+                else
+                    group.active = false;
+            });
+        },
         onCancelClick: function () {
             $uibModalInstance.close(false);
         }
     };
 
-    $scope.Controller = {
-        symbolDirective: {
-            mode: "none",
-            selectedGroup: ""
-        }
-    };
-
-    const Run = function () {
-        $scope.$watch("Controller.symbolDirective.selectedGroup", function () {
-            $scope.Data.mode = $scope.Controller.symbolDirective.mode;
-            $scope.Data.selectedGroup = $scope.Controller.symbolDirective.selectedGroup;
-        }, true);
+    let Run = function () {
+        $scope.Func.prepareGroups();
     };
 
     Run()

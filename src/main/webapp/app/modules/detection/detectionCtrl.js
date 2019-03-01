@@ -4,16 +4,18 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
         mode: "none",
         tempProbableGroups: [],
         tempPreferredGroups: [],
-        probableGroups: [],
-        preferredGroups: [],
+        probableGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        preferredGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         tempResultGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         resultGroups: [],
         mbtiGroups: ["INTJ", "INTP", "INFJ", "INFP", "ISTJ", "ISTP", "ISFJ", "ISFP",
                     "ENTJ", "ENTP", "ENFJ", "ENFP", "ESTJ", "ESTP", "ESFJ", "ESFP"],
         approvedMbtiGroup: "",
+        transferredMbtiResult: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         discGroups: ["D", "I", "S", "C"],
         approvedDiscGroup: "",
-        finalResult: "",
+        transferredDiscResult: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        finalResult: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         questions: [],
         currentQuestions: [],
         page: {
@@ -64,20 +66,12 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             $(".pre-explanation").slideUp("slow");
         },
         onGroupClick: function (type, group) {
-            let omitted = false;
             let list = [];
             if (type === 'probable')
                 list = $scope.Data.probableGroups;
             else
                 list = $scope.Data.preferredGroups;
-            for (let i = 0; i < list.length; i++) {
-                if (list[i] === group) {
-                    list.splice(i, 1);
-                    omitted = true;
-                }
-            }
-            if (!omitted)
-                list.push(group);
+            list[group - 1] = list[group - 1] ? 0 : 1;
             if (type === 'probable')
                 $scope.Data.tempProbableGroups[group - 1].active = !$scope.Data.tempProbableGroups[group - 1].active;
             else
@@ -131,20 +125,126 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             $scope.Data.mode = "showAnswer";
             $scope.Func.scrollToTop();
         },
+        transferMbtiResult: function () {
+            switch ($scope.Data.approvedMbtiGroup) {
+                case "INTP":
+                    $scope.Data.transferredMbtiResult[3] = 1;
+                    $scope.Data.transferredMbtiResult[4] = 1;
+                    break;
+                case "INFP":
+                case "INFJ":
+                    $scope.Data.transferredMbtiResult[3] = 1;
+                    $scope.Data.transferredMbtiResult[8] = 1;
+                    break;
+                case "INTJ":
+                    $scope.Data.transferredMbtiResult[0] = 1;
+                    $scope.Data.transferredMbtiResult[4] = 1;
+                    break;
+                case "ISTP":
+                    $scope.Data.transferredMbtiResult[4] = 1;
+                    $scope.Data.transferredMbtiResult[5] = 1;
+                    break;
+                case "ISFP":
+                case "ISFJ":
+                    $scope.Data.transferredMbtiResult[5] = 1;
+                    $scope.Data.transferredMbtiResult[8] = 1;
+                    break;
+                case "ISTJ":
+                    $scope.Data.transferredMbtiResult[0] = 1;
+                    $scope.Data.transferredMbtiResult[5] = 1;
+                    break;
+                case "ENTP":
+                    $scope.Data.transferredMbtiResult[6] = 1;
+                    $scope.Data.transferredMbtiResult[2] = 1;
+                    break;
+                case "ENFP":
+                    $scope.Data.transferredMbtiResult[6] = 1;
+                    $scope.Data.transferredMbtiResult[1] = 1;
+                    break;
+                case "ENTJ":
+                case "ESTJ":
+                    $scope.Data.transferredMbtiResult[7] = 1;
+                    $scope.Data.transferredMbtiResult[2] = 1;
+                    break;
+                case "ENFJ":
+                    $scope.Data.transferredMbtiResult[2] = 1;
+                    $scope.Data.transferredMbtiResult[1] = 1;
+                    break;
+                case "ESTP":
+                    // No solid results
+                    break;
+                case "ESFP":
+                    $scope.Data.transferredMbtiResult[1] = 1;
+                    $scope.Data.transferredMbtiResult[6] = 1;
+                    break;
+                case "ESFJ":
+                    $scope.Data.transferredMbtiResult[1] = 1;
+                    $scope.Data.transferredMbtiResult[5] = 1;
+                    break;
+            }
+        },
+        transferDiscResult: function () {
+            switch ($scope.Data.approvedDiscGroup) {
+                case "D":
+                    $scope.Data.transferredDiscResult[2] = 1;
+                    $scope.Data.transferredDiscResult[6] = 1;
+                    $scope.Data.transferredDiscResult[7] = 1;
+                    break;
+                case "I":
+                    $scope.Data.transferredDiscResult[1] = 1;
+                    $scope.Data.transferredDiscResult[2] = 1;
+                    $scope.Data.transferredDiscResult[6] = 1;
+                    break;
+                case "S":
+                    $scope.Data.transferredDiscResult[3] = 1;
+                    $scope.Data.transferredDiscResult[5] = 1;
+                    $scope.Data.transferredDiscResult[8] = 1;
+                    break;
+                case "C":
+                    $scope.Data.transferredDiscResult[0] = 1;
+                    $scope.Data.transferredDiscResult[4] = 1;
+                    $scope.Data.transferredDiscResult[5] = 1;
+                    break;
+            }
+        },
         scrollToTop: function () {
             // window.scrollTo(0, 0);
+            // window.onbeforeunload = function () {
+            //     window.scrollTo(0, 0);
+            // }
         },
         calculateFinalResult: function () {
-            $scope.Data.finalResult = {
-                num: "1",
-                name: "one"
-            };
+            for (let i = 0; i < 9; i++) {
+                if ($scope.Data.resultGroups[i])
+                    $scope.Data.finalResult[i] =
+                        $scope.Data.resultGroups[i].result +
+                        $scope.Data.probableGroups[i] +
+                        $scope.Data.preferredGroups[i] +
+                        $scope.Data.transferredMbtiResult[i] +
+                        $scope.Data.transferredDiscResult[i];
+            }
         }
     };
 
     const Run = function () {
+        $scope.Func.scrollToTop();
         $scope.Func.prepareGroups();
         $scope.Func.prepareQuestions();
+        $scope.$watch("Data.resultGroups", function () {
+            $scope.Func.calculateFinalResult();
+        }, true);
+        $scope.$watch("Data.probableGroups", function () {
+            $scope.Func.calculateFinalResult();
+        }, true);
+        $scope.$watch("Data.preferredGroups", function () {
+            $scope.Func.calculateFinalResult();
+        }, true);
+        $scope.$watch("Data.transferredMbtiResult", function () {
+            $scope.Func.calculateFinalResult();
+        }, true);
+        $scope.$watch("Data.transferredDiscResult", function () {
+            $scope.Func.calculateFinalResult();
+        }, true);
     };
 
     Run();

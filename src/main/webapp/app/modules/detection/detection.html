@@ -50,6 +50,7 @@
                         <span ng-repeat="group in Data.tempPreferredGroups" ng-if="group.value>6" class="group-btn"
                               ng-click="Func.onGroupClick('preferred', group.value)"
                               ng-class="{'active-btn': group.active}">{{group.value}}</span>
+                        <br>
                     </div>
                 </div>
                 <div class="col-sm-12">
@@ -67,16 +68,16 @@
                         ng-class="{'not-answered': Data.goingNextPage && (question.answer === 0)}">
                         {{question.value}}
                         <div class="answer-emoticons">
-                            <i class="flaticon-pain" ng-click="Func.onAnswerSelect(1, question.num)"
-                               ng-class="{'selected-answer': question.answer == 1}"></i>
-                            <i class="flaticon-sad" ng-click="Func.onAnswerSelect(2, question.num)"
-                               ng-class="{'selected-answer': question.answer == 2}"></i>
-                            <i class="flaticon-meh" ng-click="Func.onAnswerSelect(3, question.num)"
-                               ng-class="{'selected-answer': question.answer == 3}"></i>
-                            <i class="flaticon-smile" ng-click="Func.onAnswerSelect(4, question.num)"
-                               ng-class="{'selected-answer': question.answer == 4}"></i>
                             <i class="flaticon-smile-1" ng-click="Func.onAnswerSelect(5, question.num)"
                                ng-class="{'selected-answer': question.answer == 5}"></i>
+                            <i class="flaticon-smile" ng-click="Func.onAnswerSelect(4, question.num)"
+                               ng-class="{'selected-answer': question.answer == 4}"></i>
+                            <i class="flaticon-meh" ng-click="Func.onAnswerSelect(3, question.num)"
+                            ng-class="{'selected-answer': question.answer == 3}"></i>
+                            <i class="flaticon-sad" ng-click="Func.onAnswerSelect(2, question.num)"
+                               ng-class="{'selected-answer': question.answer == 2}"></i>
+                            <i class="flaticon-pain" ng-click="Func.onAnswerSelect(1, question.num)"
+                               ng-class="{'selected-answer': question.answer == 1}"></i>
                         </div>
                     </li>
                 </ul>
@@ -91,7 +92,7 @@
     </div>
     <div class="answer-part row" ng-if="Data.mode == 'showAnswer'">
         <div class="col-sm-12 answer-part-header">
-            <h2>جمع‌بندی</h2>
+            <h2>نتیجه</h2>
         </div>
         <div class="col-md-10 col-sm-12 col-md-offset-right-1 answer-part-body row">
             <div class="col-md-12 col-sm-12 answer-part-explanation">توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
@@ -101,7 +102,7 @@
             <div class="col-md-5 col-sm-12 answer-part-mbti">
                 <h5>در قیاس با MBTI</h5>
                 <span>اگر میدونی توی کدوم یکی از گروه‌های ۱۶گانه MBTI قرار داری، میتونی اون رو هم مشخص کنی تا با نتیجه انیاگرام مقایسه بشه.</span>
-                <ui-select ng-model="Data.approvedMbtiGroup" theme="selectize">
+                <ui-select ng-model="Data.approvedMbtiGroup" theme="selectize" on-select="Func.transferMbtiResult()">
                     <ui-select-match placeholder="گروه‌های MBTI">
                         {{$select.selected}}
                     </ui-select-match>
@@ -116,7 +117,7 @@
             <div class="col-md-5 col-sm-12 col-md-offset-right-2 answer-part-disc">
                 <h5>در قیاس با DISC</h5>
                 <span>اگر میدونی گروه غالبت توی DISC چیه، میتونی اون رو هم مشخص کنی تا با نتیجه انیاگرام مقایسه بشه.</span>
-                <ui-select ng-model="Data.approvedDiscGroup" theme="selectize">
+                <ui-select ng-model="Data.approvedDiscGroup" theme="selectize" on-select="Func.transferDiscResult()">
                     <ui-select-match placeholder="گروه‌های DISC">
                         {{$select.selected}}
                     </ui-select-match>
@@ -128,7 +129,45 @@
                 <br><br>
                 <a href="https://discpersonalitytesting.com/free-disc-test/" target="_blank">آزمون DISC</a>
             </div>
-            <!--TODO: Add results table.-->
+            <table class="table table-striped result-table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th ng-repeat="group in Data.resultGroups">{{group.value}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>امتیازات آزمون</th>
+                    <th ng-repeat="group in Data.resultGroups">{{group.result}}</th>
+                </tr>
+                <tr>
+                    <th>گروه‌های احتمالی</th>
+                    <th ng-repeat="group in Data.probableGroups track by $index">{{group}}</th>
+                </tr>
+                <tr>
+                    <th>گروه‌های موردعلاقه</th>
+                    <th ng-repeat="group in Data.preferredGroups track by $index">{{group}}</th>
+                </tr>
+                <tr>
+                    <th>گروه‌‌های هم‌ارز MBTI</th>
+                    <th ng-repeat="group in Data.transferredMbtiResult track by $index">{{group}}</th>
+                </tr>
+                <tr>
+                    <th>گروه‌‌های هم‌ارز DISC</th>
+                    <th ng-repeat="group in Data.transferredDiscResult track by $index">{{group}}</th>
+                </tr>
+                <tr class="final-result-row">
+                    <th>نتیجه نهایی</th>
+                    <th ng-repeat="group in Data.finalResult track by $index">{{group}}</th>
+                </tr>
+                </tbody>
+            </table>
+            <div class="col-md-4 col-sm-12 col-md-offset-right-4 move-to-groups">
+                <span>دوست داری گروه خودتو بهتر بشناسی؟</span>
+                <br><br>
+                <button class="btn btn-success" ui-sref="home.library.types">آشنایی با گروه‌ها</button>
+            </div>
         </div>
     </div>
 </div>

@@ -5,14 +5,28 @@
     </div>
     <div>
         <div class="row">
+            <div class="col-md-3 col-sm-4 symbol-block">
+                <div>
+                    <span ng-repeat="group in Data.groups" ng-if="group.value<4" class="group-btn"
+                          ng-click="Func.onGroupClick(group)"
+                          ng-class="{'active-btn': group.active}">{{group.value}}</span>
+                    <br>
+                    <span ng-repeat="group in Data.groups" ng-if="group.value>3 && group.value<7"
+                          class="group-btn"
+                          ng-click="Func.onGroupClick(group)"
+                          ng-class="{'active-btn': group.active}">{{group.value}}</span>
+                    <br>
+                    <span ng-repeat="group in Data.groups" ng-if="group.value>6" class="group-btn"
+                          ng-click="Func.onGroupClick(group)"
+                          ng-class="{'active-btn': group.active}">{{group.value}}</span>
+                    <br>
+                </div>
+            </div>
             <div class="col-md-9 col-sm-8 explanation-block">
                 <div>توضیحات اضافه توضیحات اضافه توضیحات اضافه توضیحات اضافه توضیحات اضافه توضیحات اضافه توضیحات اضافه
                     توضیحات اضافه توضیحات اضافه توضیحات اضافه توضیحات اضافه توضیحات اضافه توضیحات اضافه توضیحات اضافه
                     توضیحات اضافه
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-4 symbol-block">
-                <enneagram-symbol api="Controller.symbolDirective"></enneagram-symbol>
             </div>
         </div>
     </div>

@@ -1,5 +1,19 @@
 <div class="all-types-page row">
-    <div class="col-md-4 col-sm-12 right-side-text">
+    <div class="col-md-4 col-sm-12">
+        <div class="groups-div">
+            <span ng-repeat="group in Data.groups" ng-if="group.value<4" class="group-btn"
+                  ng-click="Func.onGroupClick(group)">{{group.value}}</span>
+            <br>
+            <span ng-repeat="group in Data.groups" ng-if="group.value>3 && group.value<7"
+                  class="group-btn"
+                  ng-click="Func.onGroupClick(group)">{{group.value}}</span>
+            <br>
+            <span ng-repeat="group in Data.groups" ng-if="group.value>6" class="group-btn"
+                  ng-click="Func.onGroupClick(group)">{{group.value}}</span>
+            <br>
+        </div>
+    </div>
+    <div class="col-md-8 col-sm-12 right-side-text">
         <h1>گروه‌ها</h1>
         <div>
             توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات،
@@ -7,8 +21,5 @@
             توضیحات، توضیحات، توضیحات، توضیحات،
             توضیحات،
         </div>
-    </div>
-    <div class="col-md-8 col-sm-12">
-        <enneagram-symbol api="Controller.symbolDirective"></enneagram-symbol>
     </div>
 </div>

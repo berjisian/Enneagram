@@ -5,9 +5,27 @@
 .all-types-page .right-side-text * {
     padding: 10px;
 }
-.all-types-page .right-side-text h1 {
-    background-color: blueviolet;
+.all-types-page .groups-div {
+    padding: 40px;
 }
-.all-types-page .enneagram-symbol-block {
-    margin-top: 20px;
+.all-types-page .group-btn {
+    border: 1px solid lightsteelblue;
+    padding: 23px 29px;
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    font-size: x-large;
+    background-color: lightsteelblue;
+    margin: 1px;
+    cursor: pointer;
+}
+@media (max-width: 700px) {
+    .all-types-page .group-btn {
+        width: 40px;
+        height: 40px;
+        font-size: larger;
+    }
+    .all-types-page .group-btn {
+        padding: 5px 13px;
+    }
 }
