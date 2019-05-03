@@ -55,7 +55,7 @@ background-color: indianred;
     }
 }
 .detection-page .question-part {
-text-align: center;
+    text-align: center;
 }
 .detection-page .question-part ul {
     list-style: none;
@@ -64,42 +64,18 @@ text-align: center;
 .detection-page .question-part li {
     margin: 20px;
 }
-.detection-page .question-part .answer-emoticons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.detection-page .question-part .answer-emoticons .flaticon-smile-1:before,
-.detection-page .question-part .answer-emoticons .flaticon-pain:before {
-    font-size: 50px;
-    cursor: pointer;
-}
-.detection-page .question-part .answer-emoticons .flaticon-smile:before,
-.detection-page .question-part .answer-emoticons .flaticon-sad:before {
-    font-size: 40px;
-    cursor: pointer;
-}
-.detection-page .question-part .answer-emoticons .flaticon-meh:before {
-    font-size: 30px;
-    color: lightslategrey;
-    cursor: pointer;
-}
-.detection-page .question-part .answer-emoticons .flaticon-smile-1:before {
-    color: green;
-}
-.detection-page .question-part .answer-emoticons .flaticon-pain:before {
-    color: red;
-}
-.detection-page .question-part .answer-emoticons .flaticon-smile:before {
-    color: limegreen;
-}
-.detection-page .question-part .answer-emoticons .flaticon-sad:before {
-    color: lightcoral;
-}
-.detection-page .question-part .answer-emoticons .selected-answer:before {
-    border: 3px solid;
+.detection-page .question-phrase {
+    border-bottom: 1px solid;
     padding: 5px;
-    border-radius: 50%;
+    cursor: pointer;
+}
+.detection-page .question-phrase:hover {
+    background-color: cadetblue;
+    border-bottom: 1px solid cadetblue;
+}
+.detection-page .selected-answer {
+    background-color: cadetblue;
+    border-bottom: 1px solid cadetblue;
 }
 .detection-page .question-part .not-answered {
     border: 1px solid red;
@@ -158,6 +134,9 @@ text-align: center;
 }
 .detection-page .answer-part .result-table {
     margin-top: 50px;
+}
+.detection-page .answer-part .result-table .table-header {
+    background-color: darkgrey;
 }
 .detection-page .answer-part .result-table th {
     border-top: none;
