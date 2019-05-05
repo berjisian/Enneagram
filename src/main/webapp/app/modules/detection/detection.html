@@ -1,12 +1,12 @@
 <div class="detection-page">
     <div class="row pre-explanation">
-        <div class="col-md-6 col-sm-12 col-md-offset-right-3">
+        <div class="col-md-8 col-sm-12 col-md-offset-right-2">
             <div ng-if="Data.mode === 'none'">
                 <div class="pre-explanation-main">
-                    قبل از این که بریم سراغ سؤال‌ها، دوست داری یک نگاه به گروه‌های مختلف بندازی؟
+                    پیش از بررسی آزمون، دوست دارید با هرکدام از گروه‌ها کمی آشنا بشوید؟
                 </div>
                 <div class="pre-explanation-extra">
-                    توضیحات اضافه!
+                    انیاگرام نه گروه شخصیتی دارد. اگر دوست داشته باشید، می‌توانید قبل از این که سراغ آزمون بروید، توضیح مختصری از هرکدام از گروه‌ها بخوانید. شاید این توضیحات به شما کمک کنند بدون آزمون گروه شخصیتی خود را تشخیص دهید.
                 </div>
                 <button type="button" class="btn btn-success" ng-click="Func.onOpenExplanationClick()">چرا که نه!
                 </button>
@@ -16,7 +16,10 @@
             <div ng-if="Data.mode === 'selectProbableGroups'" class="row">
                 <div class="col-sm-6">
                     <div class="pre-explanation-main">
-                        فکر میکنی توی کدوم یکی از گروه‌ها باشی؟
+                        فکر می‌کنید توی کدام گروه جا داشته باشید؟
+                    </div>
+                    <div class="pre-explanation-extra">
+                        حالا که با گروه‌ها یک مقدار آشنا شدید، فکر می‌کنید توی کدامشان باشید؟ اگر گروهی را پیدا کرده‌اید که شبیه شماست، آن را مشخص کنید تا در تعیین نهایی شخصیت شما امتیاز بالاتری به این گروه تعلق گیرد.
                     </div>
                     <div>
                     <span ng-repeat="group in Data.tempProbableGroups" ng-if="group.value<4" class="group-btn"
@@ -35,7 +38,10 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="pre-explanation-main">
-                        دوست داشتی توی کدوم گروه باشی؟
+                        دوست داشتید توی کدام یکی از گروه‌ها باشید؟
+                    </div>
+                    <div class="pre-explanation-extra">
+                        وقتی توضیحات را می‌خواندید، گروهی پیدا کردید که دلتان بخواهد عضو آن باشید؟ اگر با چنین گروهی مواجه شدید، می‌توانید آن را هم مشخص کنید تا در تعیین نهایی شخصیت شما امتیاز بالاتری به این گروه تعلق گیرد.
                     </div>
                     <div>
                     <span ng-repeat="group in Data.tempPreferredGroups" ng-if="group.value<4" class="group-btn"

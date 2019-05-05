@@ -4,7 +4,7 @@
 }
 .detection-page .pre-explanation .pre-explanation-main {
     font-size: 22px;
-    margin: 15px;
+    margin: 30px;
 }
 .detection-page .pre-explanation .pre-explanation-extra {
     color: #505050;
@@ -20,7 +20,12 @@
 }
 .pre-explanation-modal .explanation-block {
     text-align: right;
-    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+.pre-explanation-modal .explanation-block .white-space-pre-line {
+    white-space: pre-line;
 }
 .detection-page .group-btn,
 .pre-explanation-modal .group-btn {
@@ -62,20 +67,18 @@ background-color: indianred;
     padding-right: 0;
 }
 .detection-page .question-part li {
-    margin: 20px;
+    margin: 50px 10px;
 }
 .detection-page .question-phrase {
     border-bottom: 1px solid;
-    padding: 5px;
+    padding: 15px 5px;
     cursor: pointer;
 }
 .detection-page .question-phrase:hover {
-    background-color: cadetblue;
-    border-bottom: 1px solid cadetblue;
+    border: 2px solid rgb(9,76,114);
 }
 .detection-page .selected-answer {
-    background-color: cadetblue;
-    border-bottom: 1px solid cadetblue;
+    border: 2px solid rgb(9,76,114);
 }
 .detection-page .question-part .not-answered {
     border: 1px solid red;
