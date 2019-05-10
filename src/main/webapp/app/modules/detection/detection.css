@@ -1,63 +1,59 @@
 .detection-page .pre-explanation {
-    text-align: center;
     margin-bottom: 30px;
 }
 .detection-page .pre-explanation .pre-explanation-main {
+    text-align: right;
     font-size: 22px;
-    margin: 30px;
+    margin: 20px;
 }
-.detection-page .pre-explanation .pre-explanation-extra {
+.detection-page .pre-explanation .main-introduction-title {
+    text-align: center !important;
+}
+.detection-page .pre-explanation .probable-group {
+    background-color: #218838;
+    border-color: #1e7e34;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.detection-page .pre-explanation .selected-probable-group {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+.detection-page  .pre-explanation-extra {
+    text-align: center;
     color: #505050;
     margin: 15px;
 }
-.pre-explanation-modal {
-    background-color: #d9f2f1;
-    padding-bottom: 10px;
+.detection-page .images-block .group-images {
+    width: 10%;
+    border: 2px solid;
+    margin-right: 2px;
 }
-.pre-explanation-modal .cancel-btn {
-    font-size: 11px;
-    margin: -5px;
+.detection-page .images-block .active-image {
+    border: 2px solid indianred;
 }
-.pre-explanation-modal .explanation-block {
-    text-align: right;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 30px;
+.detection-page .images-block:first-child {
+    margin-right: 50px;
 }
-.pre-explanation-modal .explanation-block .white-space-pre-line {
-    white-space: pre-line;
-}
-.detection-page .group-btn,
-.pre-explanation-modal .group-btn {
-    border: 1px solid lightsteelblue;
-    padding: 5px;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    font-size: x-large;
-    background-color: lightsteelblue;
-    margin: 10px;
+.detection-page .images-block .group-images img {
+    max-width: 80px;
     cursor: pointer;
 }
-.pre-explanation-modal .group-btn {
-    padding: 5px 17px;
-    margin: 1px;
-}
-.detection-page .active-btn,
-.pre-explanation-modal .active-btn {
-border: 1px solid indianred;
-background-color: indianred;
-}
 @media (max-width: 700px) {
-    .detection-page .group-btn,
-    .pre-explanation-modal .group-btn {
-        width: 40px;
-        height: 40px;
-        font-size: larger;
+    .detection-page .images-block:first-child {
+        margin-right: 23px;
     }
-    .pre-explanation-modal .group-btn {
-        padding: 5px 13px;
+    .detection-page .images-block .group-images img {
+        max-width: 55px;
+        cursor: pointer;
     }
+}
+.detection-page .explanation-card {
+    text-align: center;
+    color: #505050;
+    padding: 10px;
 }
 .detection-page .question-part {
     text-align: center;
@@ -84,56 +80,69 @@ background-color: indianred;
     border: 1px solid red;
     padding: 10px;
 }
+.detection-page .comparison-part,
 .detection-page .answer-part {
     text-align: center;
 }
-.detection-page .answer-part .answer-part-header {
-    padding: 10px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid;
-}
-.detection-page .answer-part .answer-part-explanation {
+.detection-page .comparison-part .comparison-part-explanation {
     margin-bottom: 20px;
 }
-.detection-page .answer-part .answer-part-mbti,
-.detection-page .answer-part .answer-part-disc {
+.detection-page .comparison-part .comparison-part-big .btn-group {
+    direction: ltr;
+}
+.detection-page .comparison-part .comparison-part-mbti,
+.detection-page .comparison-part .comparison-part-disc,
+.detection-page .comparison-part .comparison-part-big {
     padding: 10px;
     background-color: darkgrey;
 }
-.detection-page .answer-part .ui-select-container {
+.detection-page .comparison-part .comparison-part-disc,
+.detection-page .comparison-part .comparison-part-big {
+    border-right: 1px solid;
+}
+.detection-page .comparison-part .ui-select-container {
     z-index: 120;
     margin: 10px;
     cursor: pointer;
 }
-.detection-page .answer-part .ui-select-container input {
+.detection-page .comparison-part .ui-select-container input {
     width: 100% !important;
     cursor: pointer;
 }
-.detection-page .answer-part .ui-select-container .ui-select-choices {
+.detection-page .comparison-part .ui-select-container .ui-select-choices {
     top: 0 !important;
     z-index: 120;
     width: 50%;
     background: wheat;
 }
-.detection-page .answer-part .ui-select-container .selectize-input {
+.detection-page .comparison-part .ui-select-container .selectize-input {
     background: white;
     border: 1px solid grey;
 }
 @media (max-width: 700px) {
-    .detection-page .answer-part .answer-part-body {
+    .detection-page .comparison-part .comparison-part-body {
         margin: 0;
     }
-    .detection-page .answer-part .answer-part-mbti,
-    .detection-page .answer-part .answer-part-disc {
+    .detection-page .comparison-part .comparison-part-mbti,
+    .detection-page .comparison-part .comparison-part-disc {
         margin-top: 10px;
     }
 }
-.detection-page .answer-part a {
+.detection-page .comparison-part a {
     color: snow;
 }
-.detection-page .answer-part a:hover {
+.detection-page .comparison-part a:hover {
     color: #0056b3;
     text-decoration: none;
+}
+.detection-page .comparison-part .show-result-button {
+    text-align: center;
+    margin-top: 10px;
+}
+.detection-page .answer-part .answer-part-header {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid;
 }
 .detection-page .answer-part .result-table {
     margin-top: 50px;

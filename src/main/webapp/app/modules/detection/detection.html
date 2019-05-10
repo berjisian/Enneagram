@@ -1,72 +1,45 @@
 <div class="detection-page">
-    <div class="row pre-explanation">
-        <div class="col-md-8 col-sm-12 col-md-offset-right-2">
-            <div ng-if="Data.mode === 'none'">
-                <div class="pre-explanation-main">
-                    پیش از بررسی آزمون، دوست دارید با هرکدام از گروه‌ها کمی آشنا بشوید؟
+    <div class="row pre-explanation" ng-if="Data.mode === 'none'">
+        <div class="col-md-10 col-sm-12 col-md-offset-right-1">
+            <div class="row images-block">
+                <div class="group-images" ng-repeat="group in Data.introductionGroups"
+                     ng-click="Func.onIntroductionSelect(group)" ng-class="{'active-image': group.active}">
+                    <img src="/app/assets/images/{{group.value}}.png" alt="تعیین شخصیت">
                 </div>
-                <div class="pre-explanation-extra">
-                    انیاگرام نه گروه شخصیتی دارد. اگر دوست داشته باشید، می‌توانید قبل از این که سراغ آزمون بروید، توضیح مختصری از هرکدام از گروه‌ها بخوانید. شاید این توضیحات به شما کمک کنند بدون آزمون گروه شخصیتی خود را تشخیص دهید.
-                </div>
-                <button type="button" class="btn btn-success" ng-click="Func.onOpenExplanationClick()">چرا که نه!
-                </button>
-                <button type="button" class="btn btn-danger" ng-click="Func.onCancelExplanationClick()">باشه برای بعد
+            </div>
+            <div class="pre-explanation-main"
+                 ng-class="{'main-introduction-title': (Data.selectedGroupValue == 0)}">
+                {{Data.selectedTitle}}
+                <button class="pull-left btn probable-group"
+                        ng-class="{'selected-probable-group': Data.tempProbableGroups[Data.selectedGroupValue - 1].active}"
+                        ng-click="Func.onGroupClick('probable', Data.selectedGroupValue)"
+                        ng-if="Data.selectedGroupValue !== 0">{{Data.tempProbableGroups[Data.selectedGroupValue -
+                    1].active ? Data.selectedMessage[1] : Data.selectedMessage[0]}}
                 </button>
             </div>
-            <div ng-if="Data.mode === 'selectProbableGroups'" class="row">
-                <div class="col-sm-6">
-                    <div class="pre-explanation-main">
-                        فکر می‌کنید توی کدام گروه جا داشته باشید؟
-                    </div>
-                    <div class="pre-explanation-extra">
-                        حالا که با گروه‌ها یک مقدار آشنا شدید، فکر می‌کنید توی کدامشان باشید؟ اگر گروهی را پیدا کرده‌اید که شبیه شماست، آن را مشخص کنید تا در تعیین نهایی شخصیت شما امتیاز بالاتری به این گروه تعلق گیرد.
-                    </div>
-                    <div>
-                    <span ng-repeat="group in Data.tempProbableGroups" ng-if="group.value<4" class="group-btn"
-                          ng-click="Func.onGroupClick('probable', group.value)"
-                          ng-class="{'active-btn': group.active}">{{group.value}}</span>
-                        <br>
-                        <span ng-repeat="group in Data.tempProbableGroups" ng-if="group.value>3 && group.value<7"
-                              class="group-btn"
-                              ng-click="Func.onGroupClick('probable', group.value)"
-                              ng-class="{'active-btn': group.active}">{{group.value}}</span>
-                        <br>
-                        <span ng-repeat="group in Data.tempProbableGroups" ng-if="group.value>6" class="group-btn"
-                              ng-click="Func.onGroupClick('probable', group.value)"
-                              ng-class="{'active-btn': group.active}">{{group.value}}</span>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="pre-explanation-main">
-                        دوست داشتید توی کدام یکی از گروه‌ها باشید؟
-                    </div>
-                    <div class="pre-explanation-extra">
-                        وقتی توضیحات را می‌خواندید، گروهی پیدا کردید که دلتان بخواهد عضو آن باشید؟ اگر با چنین گروهی مواجه شدید، می‌توانید آن را هم مشخص کنید تا در تعیین نهایی شخصیت شما امتیاز بالاتری به این گروه تعلق گیرد.
-                    </div>
-                    <div>
-                    <span ng-repeat="group in Data.tempPreferredGroups" ng-if="group.value<4" class="group-btn"
-                          ng-click="Func.onGroupClick('preferred', group.value)"
-                          ng-class="{'active-btn': group.active}">{{group.value}}</span>
-                        <br>
-                        <span ng-repeat="group in Data.tempPreferredGroups" ng-if="group.value>3 && group.value<7"
-                              class="group-btn"
-                              ng-click="Func.onGroupClick('preferred', group.value)"
-                              ng-class="{'active-btn': group.active}">{{group.value}}</span>
-                        <br>
-                        <span ng-repeat="group in Data.tempPreferredGroups" ng-if="group.value>6" class="group-btn"
-                              ng-click="Func.onGroupClick('preferred', group.value)"
-                              ng-class="{'active-btn': group.active}">{{group.value}}</span>
-                        <br>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <button type="button" class="btn btn-success" ng-click="Func.onCancelExplanationClick()">تأیید
-                    </button>
+            <div class="pre-explanation-extra">
+                {{Data.selectedIntroduction}}
+            </div>
+            <button type="button" class="btn btn-success" ng-click="Func.showQuestions()">
+                پیش به سوی آزمون
+            </button>
+        </div>
+    </div>
+    <div class="row" ng-if="Data.mode === 'showQuestions'">
+        <div class="col-md-10 col-sm-12 col-md-offset-right-1">
+            <div class="pre-explanation-extra">
+                آزمون ذیل ترجمه‌ای از آزمون RHTEI نسخه‌ی ۲.۵ است که توسط دان ریچارد ریسو و راس هادسون طراحی شده. این
+                آزمون
+                شامل ۳۲ پرسش ۲ گزینه‌ای است. در هرپرسش گزینه‌ای را انتخاب کنید که با رفتارهای شما بیشتر مطابقت دارد.
+            </div>
+            <div class="row">
+                <div class="col-sm-4 explanation-card" style="background-color: #6cbbb3">به تمام سؤالات پاسخ دهید.</div>
+                <div class="col-sm-4 explanation-card" style="background-color: #6588a8">صادقانه جواب دهید.</div>
+                <div class="col-sm-4 explanation-card" style="background-color: #a0dee5">آزمون کمتر از ده دقیقه زمان
+                    لازم دارد.
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row" ng-if="Data.mode != 'showAnswer'">
         <div class="col-md-6 col-sm-12 col-md-offset-right-3 row">
             <div class="question-part">
                 <ul>
@@ -84,8 +57,111 @@
                         </div>
                     </li>
                 </ul>
-                <button type="button" class="btn btn-success" ng-click="Func.calculateTestResult()">
+                <button type="button" class="btn btn-success" ng-click="Func.toComparison()">
                     اتمام
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="comparison-part row" ng-if="Data.mode == 'comparison'">
+        <div class="col-md-10 col-sm-12 col-md-offset-right-1 comparison-part-body row">
+            <div class="col-md-12 col-sm-12 comparison-part-explanation">
+                شاید اطلاع داشته باشید که سیستم‌های شخصیت‌شناسی به‌نامی نظیر MBTI، DISC و یا Big 5 موجودند. بنابر
+                بررسی‌های انجام‌شده روی نتایج آزمون‌های افراد مختلف در این سیستم‌ها، بین نتایج این سه سیستم و انیاگرام
+                هم‌بستگی وجود دارد. بنابراین اگر کنجکاوید که بدانید بین شخصیت شما در هریک از این سه سیستم و شخصیت شما در
+                انیاگرام چقدر تشابه وجود دارد، می‌توانید اطلاعات نتایج خود در این آزمون‌ها را هم وارد کنید تا به
+                گروه‌های انیاگرام نظیر شوند.
+            </div>
+            <div class="col-md-4 col-sm-12 comparison-part-mbti">
+                <h5>در قیاس با MBTI</h5>
+                <span>اگر گروه غالب خود در MBTI را می‌دانید، می‌توانید آن را هم مشخص کنید تا با نتیجه‌ی انیاگرام مقایسه بشود.</span>
+                <br><br>
+                <ui-select ng-model="Data.approvedMbtiGroup" theme="selectize">
+                    <ui-select-match placeholder="گروه‌های MBTI">
+                        {{$select.selected}}
+                    </ui-select-match>
+                    <ui-select-choices repeat="group in Data.mbtiGroups">
+                        {{group}}
+                    </ui-select-choices>
+                </ui-select>
+                <span>اگر نه، به سایت زیر سر بزنید.</span>
+                <br><br>
+                <a href="https://www.16personalities.com/" target="_blank">آزمون MBTI</a>
+            </div>
+            <div class="col-md-4 col-sm-12 comparison-part-big">
+                <h5>در قیاس با Big 5</h5>
+                <span>اگر نتایج آزمون Big 5 خود را می‌دانید، می‌توانید آن‌ها را هم مشخص کنید تا با نتیجه‌ی انیاگرام مقایسه بشود.</span>
+                <br><br>
+                <div>
+                    <span>گشودگی به تجربه(Openness): </span>
+                    <div class="btn-group">
+                        <label class="btn btn-primary" ng-model="Data.big.openness" uib-btn-radio="'high'">زیاد</label>
+                        <label class="btn btn-primary" ng-model="Data.big.openness"
+                               uib-btn-radio="'middle'">متوسط</label>
+                        <label class="btn btn-primary" ng-model="Data.big.openness" uib-btn-radio="'low'">کم</label>
+                    </div>
+                </div>
+                <div>
+                    <span>مسئولیت‌پذیری(Conscientiousness): </span>
+                    <div class="btn-group">
+                        <label class="btn btn-primary" ng-model="Data.big.conscientiousness"
+                               uib-btn-radio="'high'">زیاد</label>
+                        <label class="btn btn-primary" ng-model="Data.big.conscientiousness" uib-btn-radio="'middle'">متوسط</label>
+                        <label class="btn btn-primary" ng-model="Data.big.conscientiousness"
+                               uib-btn-radio="'low'">کم</label>
+                    </div>
+                </div>
+                <div>
+                    <span>برون‌گرایی(Extraversion): </span>
+                    <div class="btn-group">
+                        <label class="btn btn-primary" ng-model="Data.big.extraversion"
+                               uib-btn-radio="'high'">زیاد</label>
+                        <label class="btn btn-primary" ng-model="Data.big.extraversion"
+                               uib-btn-radio="'middle'">متوسط</label>
+                        <label class="btn btn-primary" ng-model="Data.big.extraversion" uib-btn-radio="'low'">کم</label>
+                    </div>
+                </div>
+                <div>
+                    <span>توافق‌گرایی(Agreeableness): </span>
+                    <div class="btn-group">
+                        <label class="btn btn-primary" ng-model="Data.big.agreeableness"
+                               uib-btn-radio="'high'">زیاد</label>
+                        <label class="btn btn-primary" ng-model="Data.big.agreeableness"
+                               uib-btn-radio="'middle'">متوسط</label>
+                        <label class="btn btn-primary" ng-model="Data.big.agreeableness"
+                               uib-btn-radio="'low'">کم</label>
+                    </div>
+                </div>
+                <div>
+                    <span>روان‌رنجور‌خویی(Neuroticism): </span>
+                    <div class="btn-group">
+                        <label class="btn btn-primary" ng-model="Data.big.neuroticism"
+                               uib-btn-radio="'high'">زیاد</label>
+                        <label class="btn btn-primary" ng-model="Data.big.neuroticism"
+                               uib-btn-radio="'middle'">متوسط</label>
+                        <label class="btn btn-primary" ng-model="Data.big.neuroticism" uib-btn-radio="'low'">کم</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 comparison-part-disc">
+                <h5>در قیاس با DISC</h5>
+                <span>اگر گروه غالب خود در DISC را می‌دانید، می‌توانید آن را هم مشخص کنید تا با نتیجه‌ی انیاگرام مقایسه بشود.</span>
+                <br><br>
+                <ui-select ng-model="Data.approvedDiscGroup" theme="selectize">
+                    <ui-select-match placeholder="گروه‌های DISC">
+                        {{$select.selected}}
+                    </ui-select-match>
+                    <ui-select-choices repeat="group in Data.discGroups">
+                        {{group}}
+                    </ui-select-choices>
+                </ui-select>
+                <span>اگر نه، به سایت زیر سر بزنید.</span>
+                <br><br>
+                <a href="https://discpersonalitytesting.com/free-disc-test/" target="_blank">آزمون DISC</a>
+            </div>
+            <div class="col-sm-12 show-result-button">
+                <button type="button" class="btn btn-success" ng-click="Func.calculateResults()">
+                    نمایش نتایج
                 </button>
             </div>
         </div>
@@ -95,40 +171,6 @@
             <h2>نتیجه</h2>
         </div>
         <div class="col-md-10 col-sm-12 col-md-offset-right-1 answer-part-body row">
-            <div class="col-md-12 col-sm-12 answer-part-explanation">توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
-                توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
-                توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات توضیحات
-            </div>
-            <div class="col-md-5 col-sm-12 answer-part-mbti">
-                <h5>در قیاس با MBTI</h5>
-                <span>اگر میدونی توی کدوم یکی از گروه‌های ۱۶گانه MBTI قرار داری، میتونی اون رو هم مشخص کنی تا با نتیجه انیاگرام مقایسه بشه.</span>
-                <ui-select ng-model="Data.approvedMbtiGroup" theme="selectize" on-select="Func.transferMbtiResult()">
-                    <ui-select-match placeholder="گروه‌های MBTI">
-                        {{$select.selected}}
-                    </ui-select-match>
-                    <ui-select-choices repeat="group in Data.mbtiGroups">
-                        {{group}}
-                    </ui-select-choices>
-                </ui-select>
-                <span>اگر گروه MBTI خودت رو نمیدونی، میتونی از سایت زیر پیداش کنی!</span>
-                <br><br>
-                <a href="https://www.16personalities.com/" target="_blank">آزمون MBTI</a>
-            </div>
-            <div class="col-md-5 col-sm-12 col-md-offset-right-2 answer-part-disc">
-                <h5>در قیاس با DISC</h5>
-                <span>اگر میدونی گروه غالبت توی DISC چیه، میتونی اون رو هم مشخص کنی تا با نتیجه انیاگرام مقایسه بشه.</span>
-                <ui-select ng-model="Data.approvedDiscGroup" theme="selectize" on-select="Func.transferDiscResult()">
-                    <ui-select-match placeholder="گروه‌های DISC">
-                        {{$select.selected}}
-                    </ui-select-match>
-                    <ui-select-choices repeat="group in Data.discGroups">
-                        {{group}}
-                    </ui-select-choices>
-                </ui-select>
-                <span>اگر گروه DISC خودت رو نمیدونی، میتونی از سایت زیر پیداش کنی!</span>
-                <br><br>
-                <a href="https://discpersonalitytesting.com/free-disc-test/" target="_blank">آزمون DISC</a>
-            </div>
             <table class="table table-striped result-table">
                 <thead class="table-header">
                 <tr>
