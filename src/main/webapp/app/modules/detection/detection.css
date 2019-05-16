@@ -153,8 +153,19 @@
 .detection-page .answer-part .result-table th {
     border-top: none;
 }
-.detection-page .answer-part .result-table .final-result-row {
-    color: red;
+.detection-page .answer-part .result-table .first-cell-header {
+    background-color: #ebebeb;
+    border-bottom-width: 0;
+}
+.detection-page .answer-part .result-table .result-images {
+    width: 10%;
+    margin-right: 2px;
+}
+.detection-page .answer-part .result-table .result-images img {
+    max-width: 80px;
+}
+.detection-page .answer-part .result-table .result-marker {
+    font-size: 20px;
 }
 .detection-page .answer-part .move-to-groups {
     margin-top: 20px;

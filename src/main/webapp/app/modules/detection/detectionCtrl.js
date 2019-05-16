@@ -31,11 +31,9 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
         selectedIntroduction: "",
         selectedTitle: "",
         tempProbableGroups: [],
-        tempPreferredGroups: [],
         introductionGroups: [],
         groups: [1, 2, 3, 4, 5, 6, 7, 8, 9],
         probableGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        preferredGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         resultGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         mbtiGroups: ["INTJ", "INTP", "INFJ", "INFP", "ISTJ", "ISTP", "ISFJ", "ISFP",
                     "ENTJ", "ENTP", "ENFJ", "ENFP", "ESTJ", "ESTP", "ESFJ", "ESFP"],
@@ -142,7 +140,6 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
                     value: i,
                     active: false
                 });
-            $scope.Data.tempPreferredGroups = angular.copy($scope.Data.tempProbableGroups);
             $scope.Data.introductionGroups = angular.copy($scope.Data.tempProbableGroups);
             $scope.Data.selectedTitle = $scope.Data.groupsTitle[0];
             $scope.Data.selectedIntroduction = $scope.Data.groupsIntroduction[0];
@@ -180,17 +177,9 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             $scope.Data.mode = "showQuestions";
             $scope.Func.scrollToTop();
         },
-        onGroupClick: function (type, group) {
-            let list = [];
-            if (type === 'probable')
-                list = $scope.Data.probableGroups;
-            else
-                list = $scope.Data.preferredGroups;
-            list[group - 1] = list[group - 1] ? 0 : 1;
-            if (type === 'probable')
-                $scope.Data.tempProbableGroups[group - 1].active = !$scope.Data.tempProbableGroups[group - 1].active;
-            else
-                $scope.Data.tempPreferredGroups[group - 1].active = !$scope.Data.tempPreferredGroups[group - 1].active;
+        onSelectProbableGroup: function (group) {
+            $scope.Data.probableGroups[group - 1] = $scope.Data.probableGroups[group - 1] ? 0 : 1;
+            $scope.Data.tempProbableGroups[group - 1].active = !$scope.Data.tempProbableGroups[group - 1].active;
         },
         onAnswerSelect: function (question, value) {
             if (question.answer !== value) {
@@ -225,13 +214,42 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             $scope.Func.transferDiscResult();
             $scope.Func.transferMbtiResult();
             $scope.Func.transferBigResult();
-            $scope.Func.calculateFinalResult();
             $scope.Data.mode = "showAnswer";
             $scope.Func.scrollToTop();
         },
         transferBigResult: function () {
-            $scope.Data.transferredBigResult[3] = 1;
-        //    TODO: Complete transfers.
+            if (($scope.Data.big.openness === "low" || $scope.Data.big.openness === "middle") &&
+                ($scope.Data.big.neuroticism === "middle" || $scope.Data.big.neuroticism === "high") &&
+                $scope.Data.big.conscientiousness === "high")
+                $scope.Data.transferredBigResult[0] = 1;
+            if (($scope.Data.big.conscientiousness === "middle" || $scope.Data.big.conscientiousness === "high") &&
+                $scope.Data.big.extraversion === "high" && $scope.Data.big.agreeableness === "high")
+                $scope.Data.transferredBigResult[1] = 1;
+            if ($scope.Data.big.conscientiousness === "middle" && $scope.Data.big.extraversion === "high")
+                $scope.Data.transferredBigResult[2] = 1;
+            if ($scope.Data.big.openness === "high" && $scope.Data.big.extraversion === "low" &&
+                ($scope.Data.big.agreeableness === "low" || $scope.Data.big.agreeableness === "middle") &&
+                $scope.Data.big.neuroticism === "high")
+                $scope.Data.transferredBigResult[3] = 1;
+            if ($scope.Data.big.openness === "high" && $scope.Data.big.extraversion === "low" &&
+                ($scope.Data.big.conscientiousness === "low" || $scope.Data.big.conscientiousness === "middle") &&
+                $scope.Data.big.agreeableness === "low" && $scope.Data.big.neuroticism === "low")
+                $scope.Data.transferredBigResult[4] = 1;
+            if (($scope.Data.big.openness === "low" || $scope.Data.big.openness === "middle") &&
+                $scope.Data.big.conscientiousness === "high" && $scope.Data.big.neuroticism === "high" &&
+                ($scope.Data.big.agreeableness === "low" || $scope.Data.big.agreeableness === "middle"))
+                $scope.Data.transferredBigResult[5] = 1;
+            if ($scope.Data.big.openness === "high" && $scope.Data.big.conscientiousness === "low" &&
+                $scope.Data.big.extraversion === "high")
+                $scope.Data.transferredBigResult[6] = 1;
+            if ($scope.Data.big.neuroticism === "high" && $scope.Data.big.agreeableness === "low" &&
+                $scope.Data.big.extraversion === "high")
+                $scope.Data.transferredBigResult[7] = 1;
+            if ($scope.Data.big.agreeableness === "high" && $scope.Data.big.extraversion === "low" &&
+                ($scope.Data.big.conscientiousness === "low" || $scope.Data.big.conscientiousness === "middle") &&
+                ($scope.Data.big.openness === "low" || $scope.Data.big.openness === "middle") &&
+                $scope.Data.big.neuroticism === "low")
+                $scope.Data.transferredBigResult[8] = 1;
         },
         transferMbtiResult: function () {
             switch ($scope.Data.approvedMbtiGroup) {
@@ -321,18 +339,6 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
                 window.scrollTo(0, 0);
             }
         },
-        calculateFinalResult: function () {
-            for (let i = 0; i < 9; i++) {
-                if (!$scope.Data.resultGroups[i])
-                    $scope.Data.resultGroups[i] = 0;
-                $scope.Data.finalResult[i] =
-                        $scope.Data.resultGroups[i] +
-                        $scope.Data.probableGroups[i] +
-                        $scope.Data.preferredGroups[i] +
-                        $scope.Data.transferredMbtiResult[i] +
-                        $scope.Data.transferredDiscResult[i];
-            }
-        }
     };
 
     const Run = function () {

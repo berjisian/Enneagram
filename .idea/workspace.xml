@@ -6,12 +6,18 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4da4db68-a8f4-4402-9dbb-62d52da7dd70" name="Default" comment="Changed the test!">
+    <list default="true" id="4da4db68-a8f4-4402-9dbb-62d52da7dd70" name="Default" comment="Added introduction on groups.">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/assets/Data/RHETI.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/assets/Data/blog.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/assets/Data/questions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Hesam.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Hesam.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/modules/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/modules/home/home.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3026">
-              <caret line="178" column="42" selection-start-line="178" selection-start-column="42" selection-end-line="178" selection-end-column="42" />
+            <state relative-caret-position="3604">
+              <caret line="212" column="12" selection-start-line="212" selection-start-column="12" selection-end-line="212" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -34,38 +40,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="87" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
+            <state relative-caret-position="306">
+              <caret line="153" column="111" selection-start-line="153" selection-start-column="111" selection-end-line="153" selection-end-column="111" />
               <folding>
-                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="46" column="77" selection-start-line="46" selection-start-column="77" selection-end-line="46" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/home/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="95" column="48" selection-start-line="95" selection-start-column="48" selection-end-line="95" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="179" column="26" selection-start-line="179" selection-start-column="26" selection-end-line="179" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+            <state relative-caret-position="2890">
+              <caret line="170" column="21" selection-start-line="170" selection-start-column="21" selection-end-line="170" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -84,24 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>window.scrollTo</find>
-      <find>answer-part-result</find>
-      <find>$watch</find>
-      <find>answer-emo</find>
-      <find>image</find>
-      <find>rec</find>
-      <find>fonts</find>
-      <find>url('</find>
-      <find>font</find>
-      <find>card</find>
-      <find>pre-ex</find>
-      <find>container</find>
-      <find>mode</find>
-      <find>group</find>
-      <find>detection-page</find>
-      <find>righ</find>
-      <find>resultGroups</find>
-      <find>1,</find>
       <find>question-part</find>
       <find>calculateTe</find>
       <find>selected-answer</find>
@@ -114,6 +104,24 @@
       <find>value</find>
       <find>question.ans</find>
       <find>final</find>
+      <find>child</find>
+      <find>1st_c</find>
+      <find>group</find>
+      <find>br&gt;</find>
+      <find>$timeout(</find>
+      <find>answer</find>
+      <find>Answer</find>
+      <find>explanation-modal</find>
+      <find>modal</find>
+      <find>enneagramSy</find>
+      <find>pref</find>
+      <find>onGroupClick</find>
+      <find>prefer</find>
+      <find>onGroupC</find>
+      <find>glyphico</find>
+      <find>calc</find>
+      <find>card-header</find>
+      <find>enne</find>
     </findStrings>
     <replaceStrings>
       <replace>Enneagram</replace>
@@ -144,6 +152,7 @@
       <replace>f112</replace>
       <replace>f113</replace>
       <replace>url('../fonts/</replace>
+      <replace>comparison</replace>
     </replaceStrings>
     <dirStrings>
       <dir>F:\Projects\Enneagram\src\main\webapp\app\modules</dir>
@@ -176,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/library/comparisons/comparisons.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/library/types/typeTpl/typeTplSrvc.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/library/basics/basicsSrvc.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/app.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/blog/blogSrvc.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/blog/blog.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/assets/css/rightOffset.css" />
@@ -197,19 +205,20 @@
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/blog/blogCtrl.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/library/libraryCtrl.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/library/library.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/assets/css/font.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/library/types/typesCtrl.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/library/types/types.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/library/types/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/home/home.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/app.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/modules/home/home.html" />
       </list>
     </option>
   </component>
@@ -250,8 +259,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-10" />
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
@@ -315,49 +323,7 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="detection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Enneagram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Enneagram" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="detection" type="462c0819:PsiDirectoryNode" />
-              <item name="explanationModal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Enneagram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Enneagram" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Enneagram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Enneagram" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Enneagram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Enneagram" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
-              <item name="types" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -371,7 +337,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556517090070" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557727710327" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.protractor.protractor_package" value="" />
@@ -711,7 +677,19 @@
       <workItem from="1556950269839" duration="3542000" />
       <workItem from="1556971567666" duration="592000" />
       <workItem from="1557031598798" duration="136000" />
-      <workItem from="1557050629068" duration="9509000" />
+      <workItem from="1557050629068" duration="9604000" />
+      <workItem from="1557142975007" duration="883000" />
+      <workItem from="1557205245392" duration="250000" />
+      <workItem from="1557310004750" duration="3914000" />
+      <workItem from="1557395264184" duration="7560000" />
+      <workItem from="1557475618349" duration="11638000" />
+      <workItem from="1557556026993" duration="140000" />
+      <workItem from="1557556750985" duration="2695000" />
+      <workItem from="1557638562540" duration="4709000" />
+      <workItem from="1557724343812" duration="340000" />
+      <workItem from="1557725426671" duration="2503000" />
+      <workItem from="1557744555218" duration="905000" />
+      <workItem from="1558004492770" duration="4850000" />
     </task>
     <task id="LOCAL-00001" summary="Designed a little bit of header.">
       <created>1544899454495</created>
@@ -860,11 +838,25 @@
       <option name="project" value="LOCAL" />
       <updated>1556892763879</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added introduction on groups.">
+      <created>1557061403098</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1557061403098</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Midway through detection, based on new policy.">
+      <created>1557488245280</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1557488245281</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255341000" />
+    <option name="totallyTimeSpent" value="295823000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,7 +871,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49275362" visible="true" weight="0.2246596" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49275362" visible="true" weight="0.26172465" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -942,14 +934,15 @@
     <MESSAGE value="Almost finished with result calculation." />
     <MESSAGE value="finished with result calculation." />
     <MESSAGE value="Changed the test!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the test!" />
+    <MESSAGE value="Added introduction on groups." />
+    <MESSAGE value="Midway through detection, based on new policy." />
+    <option name="LAST_COMMIT_MESSAGE" value="Midway through detection, based on new policy." />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/library/types/typeTpl/menu.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/library/types/typeTpl/menuCtrl.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/home/homeConfig.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -981,13 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="23" selection-start-column="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="114" selection-start-line="7" selection-start-column="114" selection-end-line="7" selection-end-column="114" />
         </state>
       </provider>
     </entry>
@@ -1054,60 +1040,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/emoticons/font/flaticon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/numbers/font/_flaticon.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbolDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/emoticons/font/flaticon.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/numbers/font/_flaticon.scss" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbolDirective.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/enneagram_fonts/font/flaticon.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/numbers/font/flaticon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3891">
-          <caret line="435" column="52" selection-start-line="435" selection-start-column="52" selection-end-line="435" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#section#2;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/emoticons/font/_flaticon.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/emoticons/font/Flaticon.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/emoticons/font/flaticon.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/numbers/font/flaticon.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/numbers/font/flaticon.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/emoticons/font/_flaticon.scss" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/emoticons/font/Flaticon.svg" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/emoticons/font/flaticon.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/numbers/font/flaticon.css" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/blog/blogSrvc.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1158,20 +1099,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../fonts.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="94" column="22" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/style.css" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/fonts/Vazir/font.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
@@ -1186,31 +1114,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbol.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1846">
-          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/js/enneagramSymbol/enneagramSymbol.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/library/types/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/home/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1228,41 +1136,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js" />
+    <entry file="file://$PROJECT_DIR$/bower_components/angular-bootstrap/ui-bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="388" column="11" selection-start-line="388" selection-start-column="11" selection-end-line="388" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detectionCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3026">
-          <caret line="178" column="42" selection-start-line="178" selection-start-column="42" selection-end-line="178" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/explanationModal/explanationModalCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="46" column="77" selection-start-line="46" selection-start-column="77" selection-end-line="46" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="87" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="3604">
+          <caret line="212" column="12" selection-start-line="212" selection-start-column="12" selection-end-line="212" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+        <state relative-caret-position="2890">
+          <caret line="170" column="21" selection-start-line="170" selection-start-column="21" selection-end-line="170" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/detection/detection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="153" column="111" selection-start-line="153" selection-start-column="111" selection-end-line="153" selection-end-column="111" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/assets/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="179" column="26" selection-start-line="179" selection-start-column="26" selection-end-line="179" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/modules/home/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="95" column="48" selection-start-line="95" selection-start-column="48" selection-end-line="95" selection-end-column="48" />
         </state>
       </provider>
     </entry>

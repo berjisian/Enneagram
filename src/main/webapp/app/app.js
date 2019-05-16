@@ -14,14 +14,3 @@ var app = angular.module(
     .concat(enneagram.internalDependency)
     .concat(enneagram.modulesDependency)
 );
-
-// app.factory("lowLevelHttpInterceptor", function() {});
-//
-// app
-//   .config(enneagram.config)
-//   .run(run)
-//   .filter("safeHTML", function($sce) {
-//     return $sce.trustAsHtml;
-//   });
-//
-// app.directive("schemaMapRequiredFieldValidator", function() {});
