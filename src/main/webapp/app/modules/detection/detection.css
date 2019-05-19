@@ -1,3 +1,18 @@
+.detection-page .progress {
+    margin: 50px;
+    height: 30px;
+}
+.detection-page .progress .progress-bar {
+    width: 25%;
+    background-color: darkslategrey;
+}
+.detection-page .progress .final-bar {
+    background-color: #007bff;
+}
+.detection-page .progress .active-bar {
+    background-color: #007bff;
+    border-left: 1px solid darkslategrey;
+}
 .detection-page .pre-explanation {
     margin-bottom: 30px;
 }
@@ -104,6 +119,7 @@
     z-index: 120;
     margin: 10px;
     cursor: pointer;
+    direction: ltr;
 }
 .detection-page .comparison-part .ui-select-container input {
     width: 100% !important;
@@ -112,8 +128,8 @@
 .detection-page .comparison-part .ui-select-container .ui-select-choices {
     top: 0 !important;
     z-index: 120;
-    width: 50%;
-    background: wheat;
+    background: whitesmoke;
+    direction: ltr;
 }
 .detection-page .comparison-part .ui-select-container .selectize-input {
     background: white;
@@ -144,6 +160,9 @@
     margin-bottom: 20px;
     border-bottom: 1px solid;
 }
+.detection-page .answer-part .answer-part-explanation {
+    padding: 10px;
+}
 .detection-page .answer-part .result-table {
     margin-top: 50px;
 }
@@ -166,6 +185,12 @@
 }
 .detection-page .answer-part .result-table .result-marker {
     font-size: 20px;
+    color: green;
+}
+.detection-page .answer-part .result-table .inactive-result {
+    background-color: dimgray;
+    pointer-events: none;
+    cursor: default;
 }
 .detection-page .answer-part .move-to-groups {
     margin-top: 20px;

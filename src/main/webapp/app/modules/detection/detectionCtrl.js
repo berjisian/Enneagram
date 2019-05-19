@@ -2,6 +2,7 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
 
     $scope.Data = {
         mode: "none",
+        currentProgress: 0,
         groupsTitle: [
             "پیش از بررسی آزمون، دوست دارید با هرکدام از گروه‌ها کمی آشنا بشوید؟",
             "کمال‌گرا",
@@ -16,7 +17,7 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
         ],
         groupsIntroduction:
             [
-                "افراد هرگروه باورها و رفتارهای مخصوص خود را دارند. شاید شما با دیدن گوشه‌ای از این رفتارها به راحتی جایگاه خود را بین این نه گروه پیدا کنید. برای آشنایی بیشتر با هرگروه تصویر آن را انتخاب کنید. اگر بعد از خواندن توصیفات یک گروه احساس کردید ممکن است عضوی از آن باشید، بر دکمه‌ی سبزرنگ آن گروه کلیک کنید. پس از اتمام آزمون می‌توانید تصوری را که از خودتان داشتید، با نتایج حاصل از آزمون مقایسه کنید و میزان مطابقت آن‌ها را بسنجید.",
+                "افراد هرگروه باورها و رفتارهای مخصوص خود را دارند. شاید شما با دیدن گوشه‌ای از این رفتارها به راحتی جایگاه خود را بین این نه گروه پیدا کنید. برای آشنایی بیشتر با هرگروه تصویر آن را انتخاب کنید. اگر بعد از خواندن توصیفات یک گروه احساس کردید ممکن است عضوی از آن باشید، بر دکمه‌ی سبزرنگ آن گروه هم کلیک کنید. پس از اتمام آزمون می‌توانید تصوری را که از خودتان داشتید، با نتایج حاصل از آزمون مقایسه کنید و میزان مطابقت آن‌ها را بسنجید.",
                 "داشتن معیارهای صحیح در زندگی برایم ارزش بالایی دارد و از خودم انتظار دارم طبق آن معیارها زندگی کنم. برایم آسان است که ایرادات موجود را پیدا کنم و برایشان چاره بیاندیشم. ممکن است در نظر بعضی‌ها بیش از حد عیب‌جو یا کمال‌گرا باشم، ولی سخت می‌توانم کارهای ناتمام و نادرست را نادیده بگیرم و یا آن‌ها را قبول کنم. اگر مسئول انجام کاری بشوم، مطمئناً به خوبی از عهده‌اش برمی‌آیم و از این بابت به خودم افتخار می‌کنم. از سمبل‌کاری‌های دیگران و رفتارهای غیرمسئولانه‌شان می‌رنجم، اما معمولاً آزردگی خود را به رویشان نمی‌آورم. کار برایم از تفریح مهم‌تر است و اگر لازم باشد از علایقم می‌گذرم تا کاری را به سرانجام برسانم.",
                 "نسبت به احساسات دیگران حساسم. حتی اگر کسی را نشناسم، به نیازهایش پی می‌برم. بعضی وقت‌ها از این که از نیازهای بقیه خبر دارم، ناراحت می‌شوم؛ خصوصاً وقتی به رنج یا ناراحتی‌شان پی می‌برم، چون کار چندانی از دستم برایشان برنمی‌آید. می‌توانم به راحتی خودم را وقف دیگران کنم. بعضی وقت‌ها آرزو می‌کنم که کاش می‌توانستم نیازهای بقیه را نادیده بگیرم، چون اهمیت دادن به دیگران باعث می‌شود انرژی بیشتری صرف آن‌ها کنم و توان چندانی برای رسیدگی به خودم نداشته باشم. فقط می‌خواهم کمک‌حال بقیه باشم و اگر کسی فکر کند که دارم به جایش تصمیم می‌گیرم و زندگی‌اش را کنترل می‌کنم، احساساتم جریحه‌دار می‌شود. دوست دارم خوب و مهربان به نظر برسم، ولی اگر بقیه به من بی‌توجهی کنند یا به انگیزه‌ام پی نبرند، ناراحت و حتی پرتوقع می‌شوم. خیلی مهم است که با بقیه رابطه‌ی خوبی داشته باشم و برای رسیدن به این هدف سخت تلاش می‌کنم.",
                 "دوست دارم در کاری که انجام می‌دهم، بهترین باشم. این طرز فکر به من انگیزه می‌دهد. در خیلی از کارها پیشرفت می‌کنم و اسم و رسمی به هم می‌زنم. کارهای زیادی انجام داده‌ام و تقریباً در تمام آن‌ها موفق بوده‌ام. به شدت با فعالیت‌هایم احساس نزدیکی می‌کنم، چون معتقدم ارزش هرکس  به کارهایش و شهرتی که از بابت آن‌ها کسب می‌کند، بستگی دارد. همیشه به قدری کار زیاد دارم که وقت نمی‌کنم به تمامشان برسم. برای همین معمولاً وقت خلوت کردن با خودم را ندارم و چندان به احساساتم فکر نمی‌کنم تا بلکه بتوانم کارهایم را به سرانجام برسانم. از آن‌جا که همیشه سرم شلوغ است، برایم سخت است که بنشینم و هیچ کاری نکنم. طاقت تحمل کسانی که وقت را تلف می‌کنند، ندارم. گاهی کارهایی را که بقیه به کندی انجام می‌دهند، خودم به دوش می‌گیرم. دوست دارم همیشه احساس کنم از بقیه یک سروگردن بالاتر هستم. با وجود این که از رقابت لذت می‌برم، هم‌گروهی خوبی هستم.",
@@ -35,8 +36,10 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
         groups: [1, 2, 3, 4, 5, 6, 7, 8, 9],
         probableGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         resultGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        mbtiGroups: ["INTJ", "INTP", "INFJ", "INFP", "ISTJ", "ISTP", "ISFJ", "ISFP",
-                    "ENTJ", "ENTP", "ENFJ", "ENFP", "ESTJ", "ESTP", "ESFJ", "ESFP"],
+        mbtiGroups: ["INTJ (Architect)", "INTP (Logician)", "INFJ (Advocate)", "INFP (Mediator)",
+                    "ISTJ (Logistician)", "ISTP (Virtuoso)", "ISFJ (Defender)", "ISFP (Adventurer)",
+                    "ENTJ (Commander)", "ENTP (Debater)", "ENFJ (Protagonist)", "ENFP (Campaigner)",
+                    "ESTJ (Executive)", "ESTP (Entrepreneur)", "ESFJ (Consul)", "ESFP (Entertainer)"],
         big: {
             openness: "middle",
             conscientiousness: "middle",
@@ -46,7 +49,7 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
         },
         approvedMbtiGroup: "",
         transferredMbtiResult: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        discGroups: ["D", "I", "S", "C"],
+        discGroups: ["D (Drive)", "I (Influence)", "S (Support)", "C (Clarity)"],
         approvedDiscGroup: "",
         transferredDiscResult: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         transferredBigResult: [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -130,7 +133,9 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             "راحت می‌توانم در دل مردم جا باز کنم و این مهارت خیلی جاها به دادم رسیده\n" +
             "با وجود این که مهارت‌های اجتماعی چندانی ندارم، توانسته‌ام از عهده‌ی کارهایم بربیایم",
         answerKey: [4, 6, 8, 9, 3, 1, 5, 7, 2, 4, 6, 9, 8, 1, 2, 5, 3, 7, 4, 9, 5, 8, 6, 1, 2, 3, 4, 7, 5, 1, 6, 8, 9, 2,
-            3, 4, 6, 7, 2, 1, 8, 3, 5, 9, 6, 2, 7, 8, 4, 1, 9, 7, 6, 3, 5, 4, 8, 2, 7, 1, 9, 3, 5, 6, 4, 8, 9, 1, 7, 2, 3, 5]
+            3, 4, 6, 7, 2, 1, 8, 3, 5, 9, 6, 2, 7, 8, 4, 1, 9, 7, 6, 3, 5, 4, 8, 2, 7, 1, 9, 3, 5, 6, 4, 8, 9, 1, 7, 2, 3, 5],
+        numToWord: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"],
+        activeResults: [1, 1, 1, 1, 1, 1, 1, 1, 1]
     };
 
     $scope.Func = {
@@ -175,6 +180,7 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
         },
         showQuestions: function () {
             $scope.Data.mode = "showQuestions";
+            $scope.Data.currentProgress++;
             $scope.Func.scrollToTop();
         },
         onSelectProbableGroup: function (group) {
@@ -204,6 +210,7 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             if (answer === "answered") {
                 $scope.Data.showAnswer = false;
                 $scope.Data.mode = "comparison";
+                $scope.Data.currentProgress++;
                 $scope.Func.scrollToTop();
             } else {
                 $scope.Data.showAnswer = true;
@@ -214,7 +221,9 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             $scope.Func.transferDiscResult();
             $scope.Func.transferMbtiResult();
             $scope.Func.transferBigResult();
+            $scope.Func.findActiveResults();
             $scope.Data.mode = "showAnswer";
+            $scope.Data.currentProgress++;
             $scope.Func.scrollToTop();
         },
         transferBigResult: function () {
@@ -252,7 +261,7 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
                 $scope.Data.transferredBigResult[8] = 1;
         },
         transferMbtiResult: function () {
-            switch ($scope.Data.approvedMbtiGroup) {
+            switch ($scope.Data.approvedMbtiGroup.split(" ")[0]) {
                 case "INTP":
                     $scope.Data.transferredMbtiResult[3] = 1;
                     $scope.Data.transferredMbtiResult[4] = 1;
@@ -310,7 +319,7 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
             }
         },
         transferDiscResult: function () {
-            switch ($scope.Data.approvedDiscGroup) {
+            switch ($scope.Data.approvedDiscGroup.split(" ")[0]) {
                 case "D":
                     $scope.Data.transferredDiscResult[2] = 1;
                     $scope.Data.transferredDiscResult[6] = 1;
@@ -333,12 +342,26 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
                     break;
             }
         },
+        findActiveResults: function () {
+            for (let i = 0; i < 9; i++) {
+                if ($scope.Data.resultGroups[i] === 0 &&
+                    $scope.Data.probableGroups[i] === 0 &&
+                    $scope.Data.transferredMbtiResult[i] === 0 &&
+                    $scope.Data.transferredDiscResult[i] === 0 &&
+                    $scope.Data.transferredBigResult[i] === 0) {
+                    $scope.Data.activeResults[i] = 0;
+                }
+            }
+        },
         scrollToTop: function () {
             window.scrollTo(0, 0);
             window.onbeforeunload = function () {
                 window.scrollTo(0, 0);
             }
         },
+        onGroupClick: function (selectedGroup) {
+            window.location.href = "#/library/types/" + $scope.Data.numToWord[selectedGroup.value - 1];
+        }
     };
 
     const Run = function () {
