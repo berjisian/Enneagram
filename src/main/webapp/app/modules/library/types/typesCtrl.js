@@ -2,7 +2,18 @@ angular.module('typesModule').controller('typesCtrl', function ($scope) {
 
     $scope.Data = {
         groups: [],
-        numToWord: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+        numToWord: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"],
+        groupsTitle: [
+            "کمال‌گرا",
+            "یاری‌رسان",
+            "موفقیت‌طلب",
+            "فردگرا",
+            "جستجوگر",
+            "وفادار",
+            "خوش‌گذران",
+            "رهبر",
+            "میانجی"
+        ]
     };
 
     $scope.Func = {

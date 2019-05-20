@@ -1,25 +1,26 @@
-<div class="all-types-page row">
-    <div class="col-md-4 col-sm-12">
-        <div class="groups-div">
-            <span ng-repeat="group in Data.groups" ng-if="group.value<4" class="group-btn"
-                  ng-click="Func.onGroupClick(group)">{{group.value}}</span>
-            <br>
-            <span ng-repeat="group in Data.groups" ng-if="group.value>3 && group.value<7"
-                  class="group-btn"
-                  ng-click="Func.onGroupClick(group)">{{group.value}}</span>
-            <br>
-            <span ng-repeat="group in Data.groups" ng-if="group.value>6" class="group-btn"
-                  ng-click="Func.onGroupClick(group)">{{group.value}}</span>
-            <br>
+<div class="all-types-page">
+    <div class="groups-div">
+        <div class="row images-block">
+            <div class="group-image" ng-repeat="group in Data.groups track by $index"
+                 ng-click="Func.onGroupClick(group)">
+                <img src="/app/assets/images/{{group.value}}.png" alt="تعیین شخصیت">
+                <p class="group-name">
+                    {{group.value}}
+                    <br>
+                    {{Data.groupsTitle[$index]}}
+                </p>
+            </div>
+        </div>
+        <div class="explanation-block">
+            <h1>گروه‌ها</h1>
+            <div>
+                برای آشنایی با هرگروه آن را انتخاب کنید.
+            </div>
         </div>
     </div>
-    <div class="col-md-8 col-sm-12 right-side-text">
-        <h1>گروه‌ها</h1>
-        <div>
-            توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات،
-            توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات، توضیحات،
-            توضیحات، توضیحات، توضیحات، توضیحات،
-            توضیحات،
+    <div class="row">
+        <div class="col-md-10 col-md-offset-right-1 col-sm-12 right-side-text">
+
         </div>
     </div>
 </div>
