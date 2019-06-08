@@ -1,55 +1,122 @@
-<h1>8اینجا صفحه گسست و پیوست است.</h1>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
-<p>اینجا صفحه گسست و پیوست است.</p>
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><b><span lang="AR-SA">تکامل‌سازی و تجزیه‌پردازی</span></b><b><span dir="LTR"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">هر تیپ شخصیتی دو گرایش طبیعی دارد. یکی در راه پیشروی و
+دیگری پسروی. این دو گرایش به طور طبیعی خود را نشان می‌دهند، اگرچه یکی به سوی
+کامل‌سازی شخصیت است و دیگری به سوی تجزیه‌پردازی، ولی می‌توان گفت که یکی بهتر از
+دیگری است. گرایش طبیعی به سوی کامل‌سازی راهنمای ارزشمندی است برای رشد شخصیتی
+فرد، زیرا که الگوی کاملا عملی و پایداری است که فرد را به سوی تیپ سالم شخصیتی
+خود راهنمایی می‌کند. گرایش طبیعی به سوی تجزیه‌پردازی، مکانیسم باارزشی است که
+مانع از تنزل تیپ شخصیتی به مرحله ناسالم می‌شود. این گرایش طبیعی که هنگام فشارهای
+روحی و عصبی خود را نشان می‌دهد، در واقع مانع از پیدایش شخصیت بیمارگونه‌ی فرد می‌شود.
+مثلاً تیپ دو که مهربان و مهرورز است، هنگامی که از مرز قابل تحمل خود در مهرورزی
+می‌گذرد و نیازهای او برآورده نمی‌شود، همانند تیپ شخصیتی هشت عمل می‌کند و خشم و
+عصبانیت خود را بروز می دهد و این باعث می‌شود که فشارهای روحی و روانی ناشی از
+سرخوردگی و دل‌شکستگی او کاهش یابد.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">هرگاه فرد، در آسایش و آرامش باشد، همانند تیپ سالم دیگری
+عمل می‌کند تا تعادل شخصیتی خود را تضمین کند و این فرایند به طور طبیعی انجام می‌شود
+که راهنمای ارزنده‌ای برای پیشرفت آگاهانه در مراحل رشد تیپ شخصیتی به شمار می‌رود.
+اگر تیپ شخصیتی خود را به خوبی تشخیص بدهیم، انیاگرام راه رسیدن به سالم‌ترین
+مرحله‌ی رشد را نشان می‌دهد و گرایش در راه پیشرفت که در انیاگرام آمده راهنمای بسیار
+مفید و ارزشمندی است برای دستیابی به مسیر تکامل و کمال انسانی خود.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">انیاگرام مشخص می کند که باید شبیه کدام یک از تیپ‌های
+شخصیتی دیگر رفتار کنیم تا تعادل رفتاری داشته باشیم. در واقع بین افکار، احساسات
+و رفتار خود چگونه باید هماهنگی ایجاد کنیم تا به آرامش درونی دست یابیم.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">این بدین معنی نیست که باید خود را مجبور کنیم که همانند
+دیگری عمل کنیم. چراکه بدین صورت به مشکلات شخصیتی خود می‌افزائیم. هدف اصلی این
+است که از اسارت شخصیتی خود رها شده و به ذات اصلی و انسانی خود، اجازه عمل بدهیم
+نه اینکه با رفتن زیر سلطه‌ی یک شخصیت دیگر به پیچیدگی شخصیتی خود بیفزاییم.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">آگاهی به گرایش‌های طبیعی هر تیپ شخصیتی در واقع راهنمایی
+است برای رهایی فرد از شخصیت شکل‌گرفته‌ی خود. هنگامی که به تدریج ترس‌ها و اعمال
+مربوط به مکانیسم دفاعی خود را رها می‌کنیم. ذات اصلی ما هم به تدریج نمایان می‌شود
+و در نتیجه ما در مسیر تکامل انسانی خود قرار خواهیم گرفت.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><b><span lang="AR-SA">گرایش طبیعی در مواقع آسایش (کامل سازی)</span></b><span lang="AR-SA"> <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ یک: تیپ جدی و کمال گرای یک، همانند تیپ سالم هفت عمل
+می‌کند، که جدی نیست و بیشتر خوش و خوشحال است.<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ دو: تیپ فداکار و خودفریب دو، همانند تیپ سالم چهار
+عمل می‌کند که بیشتر خوددوست است و عواطف واقعی خود را</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">می‌شناسد. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ سه: تیپ موفقیت‌جو و موفق سه، همانند تیپ سالم شش عمل
+می‌کند که بیشتر مسالمت‌آمیز و وفادار است. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ چهار: تیپ آشفته و خيال‌باف چهار، همانند تیپ سالم یک
+عمل می‌کند که بیشتر معقول و مبادی اصول اخلاقی است. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ پنج: تیپ دانشمند و منزوی پنج، همانند تیپ سالم هشت
+عمل می‌کند که بیشتر مطمئن، پیشرو، قاطع و اهل عمل است. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ شش: تیپ وفاجو و نامطمئن شش، همانند تیپ سالم نه عمل
+می‌کند که بیشتر آسوده، آرام و خوشبین است. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ هفت: تیپ تندرو، خوش و گیج هفت، همانند تیپ سالم پنج
+عمل می‌کند که بیشتر قاطع، متمرکز و متفکر است. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ هشت: تیپ افراطی، زورگو و رهبر هشت، همانند تیپ سالم
+دو عمل می‌کند که بیشتر مهربان و مهرورز است. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ نه: تیپ خودکم‌بین و صلح‌طلب نه، همانند تیپ سالم سه عمل
+می‌کند که بیشتر متکی به نفس، کارآمد و موفق است.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><b><span lang="AR-SA">گرایش طبیعی در مواقع فشارهای زندگی (تجزیه‌پردازی)</span></b><b><span dir="LTR"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ یک: تیپ محکم و استوار یک، ناگهان همانند تیپ بی‌منطق
+و ناپایدار چهار عمل می‌کند. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ دو: تیپ نیازمند دو، ناگهان همانند تیپ خشن و عصبانی
+هشت عمل می‌کند. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ سه: تیپ پرتلاش سه، ناگهان همانند تیپ بی‌حوصله و
+خونسرد نه عمل می‌کند. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ چهار: تیپ بی‌خیال چهار، ناگهان همانند تیپ مداخله‌گر
+و سمج دو عمل می‌کند. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ پنج: تیپ منزوی پنج، ناگهان همانند تیپ پرجنب‌وجوش و
+پرانرژی هفت عمل می‌کند. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ شش: تیپ مسئول شش، ناگهان همانند تیپ متکبر و خودخواه
+سه عمل می‌کند. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ هفت: تیپ شلوغ و بی‌نظم هفت، ناگهان همانند تیپ کمال‌گرا
+و اصلاح‌طلب یک عمل می‌کند. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ هشت: تیپ متکی به نفس هشت، ناگهان همانند تیپ ترسو و
+مرموز پنج عمل می‌کند. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ نه: تیپ خشنود و راضی نه، ناگهان همانند تیپ مضطرب و نگران
+شش عمل می‌کند.</span><span dir="LTR"><o:p></o:p></span></p>

@@ -1,7 +1,17 @@
 angular.module('blogModule').controller('blogCtrl', function ($scope, blogSrvc) {
 
     $scope.Data = {
-        posts: []
+        posts: [
+            {
+                "title": "سلام",
+                "date": "2 تیر",
+                "content": "<p>این اولین پست بلاگ است</p>"
+            },{
+                "title": "سلام مجدد",
+                "date": "2 تیر",
+                "content":  "<p>دومین</p>"
+            }
+        ]
     };
 
     $scope.Func = {
@@ -10,17 +20,11 @@ angular.module('blogModule').controller('blogCtrl', function ($scope, blogSrvc) 
             window.onbeforeunload = function () {
                 window.scrollTo(0, 0);
             }
-        },
-        getBlogPosts: function () {
-            blogSrvc.getData().done(function(data) {
-                $scope.Data.posts = data;
-            });
         }
     };
 
     let Run = function () {
         $scope.Func.scrollToTop();
-        $scope.Func.getBlogPosts();
     };
 
     Run();

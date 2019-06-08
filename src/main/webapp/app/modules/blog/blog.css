@@ -1,9 +1,7 @@
 .blog-page .blog-post-container {
-    border: 1px solid;
-    border-radius: 10px;
     padding: 7px;
-    margin-top: 10px;
-    background-color: lightgray;
+    margin-top: 20px;
+    border-right: 1px solid;
 }
 .blog-page .blog-post-container .blog-post-body-divider {
     width: 100%;

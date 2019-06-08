@@ -1,55 +1,122 @@
-<h1>8اینجا صفحه سه گانه ها است.</h1>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
-<p>اینجا صفحه سه گانه ها است.</p>
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><b><span lang="AR-SA">تقسیم‌بندی تیپ‌های شخصیتی براساس مراکز شعور انسانی</span></b><b><span dir="LTR"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">در این شیوه تقسیم‌بندی، انیاگرام اساس کار را روی مراکز
+سه‌گانه‌ی شعور انسانی قرار می‌دهد. این سه مرکزهمان طور که قبلاً یادآور شدیم،
+مرکز احساس، مرکز تفکر و مرکز تحرک می‌باشند. باید به این امر بسیار مهم توجه کرد
+که این سه مرکز از هم گسسته نیستند، بلکه به شکل بسیار عمیق و بامعنا به هم پیوسته‌اند.
+در مباحث بعدی به چگونگی این روابط خواهیم پرداخت.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">انیاگرام، تیپ‌های شخصیتی نه‌گانه را براساس مراکز شعور
+انسانی به سه گروه تقسیم می‌کند. هر گروه به طور مشخص توسط یکی از این سه مرکز تشخیص
+داده می‌شود. بدین معنی که شخصیت فرد مشخصاً تحت کنترل آن مرکز است؛ مثلاً در تیپ
+شخصیتی هشت، شخصیت شکل گرفته که تحت تأثیر مركز تحرک عمل می‌کند، روی قدرت ذاتی
+فرد سرپوش می‌گذارد و تیپ هشت برای جبران، تظاهر به قدرت می‌کند و باعث می‌شود که
+فرد، خود را قوی و سرسخت نشان دهد. این قدرت کاذب به تدریج تبدیل به عادت می‌شود و
+همانند سد بزرگی در برابر قدرت طبیعی و ذاتی فرد قرار می‌گیرد.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">باید توجه داشت اگر تیپ شخصیتی فردی مثلاً در مثلث احساس
+قرار داشته باشد، بدین معنی نیست که بیشتر از تیپ‌های دیگر از روی احساس عمل می‌کند
+و یا اگر در مثلث تفکر باشد، از دیگران باهوش‌تر است. بلکه بدین معنی است که بعد
+روانی فرد به طور معنی‌داری زیر نفوذ آن مرکز است.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><b><span lang="AR-SA">تیپ‌های مرکز احساس (</span></b><b><span lang="FA" style="mso-bidi-language:FA">۴، ۳، ۲) <o:p></o:p></span></b></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ‌های شخصیتی زیر نفوذ این مرکز، در تلاش حفظ هویت فردی
+هستند. زیر بنای سد شخصیتی این گروه شرم است.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">مشکل اساسی این گروه، متظاهر بودن و باورهای ساخته و
+پرداخته آن‌ها از خود است. شخصیت شکل‌گرفته در این گروه در جستجوی هویت است.<o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpFirst" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l0 level1 lfo1;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">تيپ دو (مهرورز و مهرجو) با انجام کارهای مفید و
+خدمتگزاری سعی می‌کند که توجه به دست آورد.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l0 level1 lfo1;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">تیپ سه (موفق و موفقیت‌گرا) برای جلب توجه کارهایی
+انجام می‌دهد که فکر می‌کند مهم و با ارزش است.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpLast" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l0 level1 lfo1;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">تیپ چهار (فردگرا و خیال‌پرداز) با کناره گرفتن و
+به خلوت رفتن امیدوار است که کسی متوجه غیبت و نبود او نشود.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">در واقع فعالیت اساسی و پایه‌ای مرکز احساس در این گروه یا
+بسیار کم (تیپ دو)، بی‌حرکت و خاموش (تیپ سه) و یا بسیار زیاد (تیپ چهار) است و
+شخصیت شکل‌گرفته به نوعی برخلاف این خصلت‌های اساسی رفتار می‌کند، و این در واقع یک
+نوع ساختار سازگاری است که شخصیت فرد بر آن پایه‌گذاری شده است. تیپ دو با مهربانی
+و بروز احساسات بیش از حد، تیپ سه با بی‌توجهی به احساسات درونی و تیپ چهار با نادیده
+گرفتن احساسات زیاد درونی و سرپوش گذاشتن روی آن‌ها سازش می‌کنند.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><b><span lang="AR-SA">تیپ‌های مرکز تفکر (</span></b><b><span lang="FA" style="mso-bidi-language:FA">۵</span><span lang="AR-SA">، </span></b><b><span lang="FA" style="mso-bidi-language:FA">۶</span><span lang="AR-SA">، </span></b><b><span lang="FA" style="mso-bidi-language:FA">۷)</span></b><b><span dir="LTR"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">افراد زیر نفوذ این مرکز، در جستجوی حامی و راهنمای درونی
+هستند. زیر بنای سد شخصیتی این گروه ترس است. <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">مشکل اساسی این گروه تشویش و نگرانی آن‌ها در مورد عدم
+امنیت و پشتیبانی است. شخصیت شکل‌گرفته در این گروه در جستجوی امنیت است.<o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpFirst" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l2 level1 lfo2;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">تیپ پنج (متفکر، کناره گیر) برای حفظ امنیت خود،
+از دیگران کناره می‌گیرد.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l2 level1 lfo2;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">تيپ شش (وفاخو و وقاجو) سعی می‌کند که با وفاداری
+به دیگران، امنیت خود را حفظ کند.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpLast" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l2 level1 lfo2;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">تیپ هفت (خوش‌خو و خوش‌گذران) سعی و اصرار دارد
+که به خواسته‌های لحظه‌ای خود پاسخ گوید تا احساس امنیت در خود به وجود آورد.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ شخصیتی پنج با فعالیت بیش از حد ذهن خویش کمبود
+راهنمای درونی خود را جبران می‌کند و تیپ شش با بی‌تفاوتی و تیپ هفت با پرداختن به
+شلوغ‌بازی و مشغول کردن بیش از حد خود. فعالیت‌های شدید ذهن را آرام می‌کند.<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><b><span lang="AR-SA">تیپ های مرکز تحرک (</span></b><b><span lang="FA" style="mso-bidi-language:FA">۸</span><span lang="AR-SA">، </span></b><b><span lang="FA" style="mso-bidi-language:FA">۹</span><span lang="AR-SA">، </span></b><b><span lang="FA" style="mso-bidi-language:FA">۱)</span></b><b><span dir="LTR"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">افراد زیر نفوذ این مرکز خواهان نگهداری حس خود بودن
+هستند. زیر بنای سد شخصیتی این گروه خشم است.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">مشکل اساسی این گروه، تنش‌های فیزیکی از قبیل خشونت، درازدستی،
+جلوگیری و فرونشانی است. شخصیت شکل‌گرفته در این گروه در جستجوی استقلال می‌باشد.<o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpFirst" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l1 level1 lfo3;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">تیپ هشت (رهبر و مدیر) اصرار و پافشاری بر
+استقلال فردی دارد.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l1 level1 lfo3;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">تیپ نه (صلح‌خو ‌و صلح‌طلب) با کناره‌گیری و جدایی
+می‌خواهد استقلال خود را به دست آورد. </span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpLast" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l1 level1 lfo3;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">تیپ یک (کمال‌گرا و اصلاح‌طلب) با سعی و کوشش و
+بدون سروصدا می‌خواهد که استقلال خود را به دست آورد. متعلق به گروه موافق است.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">تیپ شخصیتی هشت در واقع احساس ضعف و ناتوانی درونی خود را
+با نشان دادن توانایی، راسخ و پایدار بودن جبران می‌کند. تیپ شخصیتی نه با بی‌تفاوتی
+و یک نوع بی‌توجهی می‌خواهد که بر احساس قدرت غریزی خود سرپوش گذاشته و یا آن را
+انکار کند. تیپ یک شدت غریز درونی و قدرت خود را با رعایت و اجرای بیش از حد أصول
+اخلاقی، کاهش می‌دهد.</span><span dir="LTR"><o:p></o:p></span></p>

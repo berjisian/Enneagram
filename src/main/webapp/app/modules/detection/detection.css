@@ -151,6 +151,12 @@
     color: #0056b3;
     text-decoration: none;
 }
+.detection-page .comparison-part .comparison-part-mbti h5,
+.detection-page .comparison-part .comparison-part-big h5,
+.detection-page .comparison-part .comparison-part-disc h5 {
+    background-color: mediumslateblue;
+    padding: 10px;
+}
 .detection-page .comparison-part .show-result-button {
     text-align: center;
     margin-top: 10px;

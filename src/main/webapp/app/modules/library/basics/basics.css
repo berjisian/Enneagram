@@ -16,12 +16,13 @@
     width: 100%;
     text-align: center;
     padding: 5px;
-    background-color: lightblue;
-    border: 2px outset;
+    border-bottom: 2px solid;
     cursor: pointer;
+    margin: 5px;
 }
 .basics-page #basics-navigation-bar .li-selected {
-    border: 2px solid midnightblue;
+    border-bottom: 2px solid midnightblue;
+    color: midnightblue;
 }
 .sticky {
     position: fixed;

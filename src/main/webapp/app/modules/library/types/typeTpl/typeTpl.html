@@ -10,21 +10,17 @@
                         ng-class="{'li-selected': Data.page === 'parentalOrientation'}">ریشه‌های کودکی
                     </li>
                     <li ng-click="Func.onPageSelect('transformation')"
-                        ng-class="{'li-selected': Data.page === 'transformation'}">مراحل تغییرات
+                        ng-class="{'li-selected': Data.page === 'transformation'}">‌لایه‌های رشد
                     </li>
                     <li ng-click="Func.onPageSelect('dynamics')"
-                        ng-class="{'li-selected': Data.page === 'dynamics'}">گسست و پیوست
+                        ng-class="{'li-selected': Data.page === 'dynamics'}">تکامل‌سازی و تجزیه‌پردازی
                     </li>
                     <li ng-click="Func.onPageSelect('wings')"
                         ng-class="{'li-selected': Data.page === 'wings'}">بال‌ها
-                    </li>
-                    <li ng-click="Func.onPageSelect('similarities')"
-                        ng-class="{'li-selected': Data.page === 'similarities'}">شباهت‌‌ها
                     </li>
                 </ul>
             </div>
         </div>
         <div class="col-sm-8 row" ui-view></div>
     </div>
-    <!--TODO: Add next/previous page buttons.-->
 </div>

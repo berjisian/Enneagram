@@ -1,55 +1,50 @@
-<h1>اینجا صفحه ریشه های کودکی است.</h1>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
-<p>اینجا صفحه ریشه های کودکی است.</p>
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><b><span lang="AR-SA">الگوی برگزیده دوران کودکی در تیپ دو</span></b><b><span dir="LTR"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">افراد تیپ دو، از کودکی به دلیل تمایل آن‌ها به کسب محبت
+و در نتیجه راضی نگه داشتن افراد محیط زندگی خود، آموخته‌اند که در درجه اول نیازهای
+دیگران را باید مهم‌تر از خواسته‌های خود بدانند. دوم اینکه با نشان دادن مهر و محبت،
+بخشش و خدمتگزاری به دیگران خود را مورد عنایت آنها قرار دهند. دوم آنکه باید محبت
+و علاقه دیگران به خود را، با زحمت زیاد به دست آورند، زیرا که خود به خود دریافت
+نخواهند کرد.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">در این صورت است که نیازهای خود را نشان نمی‌دهند و تصور
+می‌کنند باید جوابگوی درخواست دیگران باشند، تا مبادا عشق و علاقه آنان را از دست
+بدهند. این افراد باور دارند، پذیرش و نمایان ساختن تمایلات خود، به نوعی خودخواهی
+تلقی می‌شود و انسان‌های خوب، خودخواه نیستند و نتیجه می‌گیرند که خوب بودن یعنی بی‌نیاز
+بودن.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="AR-SA">افراد تیپ دو، در محیط خانواده آموخته‌اند که یاور، مشکل‌گشا،
+پرستار و مفید باشند. نقش تیپ دو در جوانان، نگهداری و پرستاری از کوچک‌ترها و کمک
+کردن به بزرگ‌ترها، در خانواده می‌باشد. در نتیجه از خودگذشتگی، فداکاری، مهرورزی
+و بی‌نیازی بخش مهمی از هویت شخصیتی آنان را تشکیل می‌دهد.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><b><span lang="AR-SA">شخصیت افراد تیپ دو در دوران کودکی</span></b><span lang="AR-SA"> <o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpFirst" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l0 level1 lfo1;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">سعی می‌کنند رضایت دیگران را به دست آورند. </span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l0 level1 lfo1;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">از ترس مورد محبت قرار نگرفتن، تمایلات خود را
+مخفی می کنند.</span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l0 level1 lfo1;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">از طریق خدمتگذاری و مهربانی، سعی می‌کنند عشق و
+محبت دیگران را به دست آورند. </span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l0 level1 lfo1;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">خواست‌های فردی خود را نشان نمی‌دهند، زیرا فکر میکنند
+که دوست‌داشتنی نخواهند بود. </span><span dir="LTR"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpLast" dir="RTL" style="margin-top:0cm;margin-right:
+36.0pt;margin-bottom:8.0pt;margin-left:0cm;mso-add-space:auto;text-align:right;
+text-indent:-18.0pt;mso-list:l0 level1 lfo1;direction:rtl;unicode-bidi:embed"><!--[if !supportLists]--><span style="mso-fareast-font-family:Arial"><span style="mso-list:Ignore">5.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span dir="RTL"></span><span lang="AR-SA">ترس و نگرانی دارند که به خودی خود، دوست‌داشتنی
+و باارزش نیستند.</span><span dir="LTR"><o:p></o:p></span></p>
