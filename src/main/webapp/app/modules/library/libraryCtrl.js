@@ -5,9 +5,7 @@ angular.module('libraryModule').controller('libraryCtrl', function ($scope) {
     $scope.Func = {
         scrollToTop: function () {
             window.scrollTo(0, 0);
-            window.onbeforeunload = function () {
-                window.scrollTo(0, 0);
-            }
+
         }
     };
 

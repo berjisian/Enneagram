@@ -5,7 +5,7 @@ enneagram.externalDependencies = [
 ];
 enneagram.internalDependency = [];
 enneagram.modulesDependency = [
-    "homeModule", "detectionModule", "libraryModule", "blogModule", "basicsModule", "typesModule", "typeTplModule", "othersModule"
+    "homeModule", "detectionModule", "comparisonModule", "libraryModule", "personalityModule", "basicsModule", "typesModule", "typeTplModule", "othersModule"
 ];
 
 var app = angular.module(

@@ -22,8 +22,8 @@
     margin: 5px;
 }
 .type-tpl-page #type-navigation-bar .li-selected {
-    border-bottom: 2px solid midnightblue;
-    color: midnightblue;
+    border-bottom: 2px solid crimson;
+    color: crimson;
 }
 .sticky {
     position: fixed;

@@ -6,10 +6,7 @@
         <div class="progress-bar" ng-class="{'active-bar': Data.currentProgress > 0}" role="progressbar">
             آزمون
         </div>
-        <div class="progress-bar" ng-class="{'active-bar': Data.currentProgress > 1}" role="progressbar">
-            قیاس با آزمون‌های دیگر
-        </div>
-        <div class="progress-bar" ng-class="{'final-bar': Data.currentProgress > 2}" role="progressbar">
+        <div class="progress-bar" ng-class="{'final-bar': Data.currentProgress > 1}" role="progressbar">
             نتیجه
         </div>
     </div>
@@ -17,19 +14,24 @@
         <div class="col-md-10 col-sm-12 col-md-offset-right-1">
             <div class="row images-block">
                 <div class="group-images" ng-repeat="group in Data.introductionGroups"
-                     ng-click="Func.onIntroductionSelect(group)" ng-class="{'active-image': group.active}">
+                     ng-click="Func.onIntroductionSelect(group)">
                     <img src="/app/assets/images/{{group.value}}.png" alt="تعیین شخصیت">
+                    <p class="group-name" ng-class="{'active-image': group.active}">
+                        {{group.value}}
+                        <br>
+                        {{Data.groupsTitle[$index]}}
+                    </p>
+                    <div class="select-probable-button btn btn-primary" ng-if="group.visited"
+                         ng-class="{'btn-success': Data.tempProbableGroups[group.value - 1].selected === 'true',
+                         'btn-danger': Data.tempProbableGroups[group.value - 1].selected === 'false'}"
+                         ng-click="Func.onSelectProbableGroup(group.value)">
+                        {{Data.tempProbableGroups[group.value - 1].selectedMessage}}
+                    </div>
                 </div>
             </div>
-            <div class="pre-explanation-main"
-                 ng-class="{'main-introduction-title': (Data.selectedGroupValue == 0)}">
-                {{Data.selectedTitle}}
-                <button class="pull-left btn probable-group"
-                        ng-class="{'selected-probable-group': Data.tempProbableGroups[Data.selectedGroupValue - 1].active}"
-                        ng-click="Func.onSelectProbableGroup(Data.selectedGroupValue)"
-                        ng-if="Data.selectedGroupValue !== 0">{{Data.tempProbableGroups[Data.selectedGroupValue -
-                    1].active ? Data.selectedMessage[1] : Data.selectedMessage[0]}}
-                </button>
+            <div class="pre-explanation-main main-introduction-title"
+                 ng-if="Data.selectedGroupValue == 0">
+                پیش از بررسی آزمون، دوست دارید با هرکدام از گروه‌ها کمی آشنا بشوید؟
             </div>
             <div class="pre-explanation-extra">
                 {{Data.selectedIntroduction}}
@@ -71,123 +73,8 @@
                         </div>
                     </li>
                 </ul>
-                <button type="button" class="btn btn-success" ng-click="Func.toComparison()">
-                    اتمام
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="comparison-part row" ng-if="Data.mode == 'comparison'">
-        <div class="col-md-10 col-sm-12 col-md-offset-right-1 comparison-part-body row">
-            <div class="col-md-12 col-sm-12 comparison-part-explanation">
-                شاید اطلاع داشته باشید که سیستم‌های شخصیت‌شناسی به‌نامی نظیر MBTI، DISC و یا Big 5 موجودند. بنابر
-                بررسی‌های انجام‌شده روی نتایج آزمون‌های افراد مختلف در این سیستم‌ها، بین نتایج این سه سیستم و انیاگرام
-                هم‌بستگی وجود دارد. بنابراین اگر کنجکاوید که بدانید بین شخصیت شما در هریک از این سه سیستم و شخصیت شما در
-                انیاگرام چقدر تشابه وجود دارد، می‌توانید اطلاعات نتایج خود در این آزمون‌ها را هم وارد کنید تا به
-                گروه‌های انیاگرام نظیر شوند.
-                <br><br>
-                اگر هم گروه خود را در هرکدام از این سیستم‌ها نمی‌دانید، مشکلی نیست. نتایج
-                آزمون بدون این موارد هم مشخص هستند، ولی اگر تمایل داشتید که با تیپ شخصیتی خود در هریک از این سیستم‌ها
-                بیشتر آشنا بشوید، می‌توانید به سایت‌هایی که برای آن‌ها معرفی شده، مراجعه کنید.
-            </div>
-            <div class="col-md-4 col-sm-12 comparison-part-mbti">
-                <h5><a href="#/library/others" target="_blank">در قیاس با MBTI</a></h5>
-                <span>اگر گروه غالب خود در MBTI را می‌دانید، می‌توانید آن را هم مشخص کنید تا با نتیجه‌ی انیاگرام مقایسه بشود.</span>
-                <br><br>
-                <ui-select ng-model="Data.approvedMbtiGroup" theme="selectize">
-                    <ui-select-match placeholder="MBTI">
-                        {{$select.selected}}
-                    </ui-select-match>
-                    <ui-select-choices repeat="group in Data.mbtiGroups">
-                        {{group}}
-                    </ui-select-choices>
-                </ui-select>
-                <br>
-                <span>اگر نه، به سایت زیر سر بزنید.</span>
-                <br>
-                <a href="https://www.16personalities.com/free-personality-test" target="_blank">آزمون MBTI</a>
-            </div>
-            <div class="col-md-4 col-sm-12 comparison-part-big">
-                <h5><a href="#/library/others" target="_blank">در قیاس با Big 5</a></h5>
-                <span>اگر نتایج آزمون Big 5 خود را می‌دانید، می‌توانید آن‌ها را هم مشخص کنید تا با نتیجه‌ی انیاگرام مقایسه بشود.</span>
-                <br><br>
-                <div>
-                    <span>گشودگی به تجربه(Openness): </span>
-                    <div class="btn-group">
-                        <label class="btn btn-primary" ng-model="Data.big.openness" uib-btn-radio="'high'">زیاد</label>
-                        <label class="btn btn-primary" ng-model="Data.big.openness"
-                               uib-btn-radio="'middle'">متوسط</label>
-                        <label class="btn btn-primary" ng-model="Data.big.openness" uib-btn-radio="'low'">کم</label>
-                    </div>
-                </div>
-                <div>
-                    <span>مسئولیت‌پذیری(Conscientiousness): </span>
-                    <div class="btn-group">
-                        <label class="btn btn-primary" ng-model="Data.big.conscientiousness"
-                               uib-btn-radio="'high'">زیاد</label>
-                        <label class="btn btn-primary" ng-model="Data.big.conscientiousness" uib-btn-radio="'middle'">متوسط</label>
-                        <label class="btn btn-primary" ng-model="Data.big.conscientiousness"
-                               uib-btn-radio="'low'">کم</label>
-                    </div>
-                </div>
-                <div>
-                    <span>برون‌گرایی(Extraversion): </span>
-                    <div class="btn-group">
-                        <label class="btn btn-primary" ng-model="Data.big.extraversion"
-                               uib-btn-radio="'high'">زیاد</label>
-                        <label class="btn btn-primary" ng-model="Data.big.extraversion"
-                               uib-btn-radio="'middle'">متوسط</label>
-                        <label class="btn btn-primary" ng-model="Data.big.extraversion" uib-btn-radio="'low'">کم</label>
-                    </div>
-                </div>
-                <div>
-                    <span>توافق‌گرایی(Agreeableness): </span>
-                    <div class="btn-group">
-                        <label class="btn btn-primary" ng-model="Data.big.agreeableness"
-                               uib-btn-radio="'high'">زیاد</label>
-                        <label class="btn btn-primary" ng-model="Data.big.agreeableness"
-                               uib-btn-radio="'middle'">متوسط</label>
-                        <label class="btn btn-primary" ng-model="Data.big.agreeableness"
-                               uib-btn-radio="'low'">کم</label>
-                    </div>
-                </div>
-                <div>
-                    <span>روان‌رنجور‌خویی(Neuroticism): </span>
-                    <div class="btn-group">
-                        <label class="btn btn-primary" ng-model="Data.big.neuroticism"
-                               uib-btn-radio="'high'">زیاد</label>
-                        <label class="btn btn-primary" ng-model="Data.big.neuroticism"
-                               uib-btn-radio="'middle'">متوسط</label>
-                        <label class="btn btn-primary" ng-model="Data.big.neuroticism" uib-btn-radio="'low'">کم</label>
-                    </div>
-                </div>
-                <div>
-                    <br>
-                    <span>اگر نه، به سایت زیر سر بزنید.</span>
-                    <br>
-                    <a href="https://www.truity.com/test/big-five-personality-test" target="_blank">آزمون Big 5</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12 comparison-part-disc">
-                <h5><a href="#/library/others" target="_blank">در قیاس با DISC</a></h5>
-                <span>اگر گروه غالب خود در DISC را می‌دانید، می‌توانید آن را هم مشخص کنید تا با نتیجه‌ی انیاگرام مقایسه بشود.</span>
-                <br><br>
-                <ui-select ng-model="Data.approvedDiscGroup" theme="selectize">
-                    <ui-select-match placeholder="DISC">
-                        {{$select.selected}}
-                    </ui-select-match>
-                    <ui-select-choices repeat="group in Data.discGroups">
-                        {{group}}
-                    </ui-select-choices>
-                </ui-select>
-                <br>
-                <span>اگر نه، به سایت زیر سر بزنید.</span>
-                <br>
-                <a href="https://www.truity.com/test/disc-behavior-inventory" target="_blank">آزمون DISC</a>
-            </div>
-            <div class="col-sm-12 show-result-button">
                 <button type="button" class="btn btn-success" ng-click="Func.calculateResults()">
-                    نمایش نتایج
+                    اتمام
                 </button>
             </div>
         </div>
@@ -205,18 +92,6 @@
                     شباهت تصورتان از خود را با نتایجی که از پاسختان به آزمون حاصل شده، بسنجید. از سوی دیگر تشخیصی که با
                     خواندن مختصر توضیحاتی از هرگروه داده‌اید، به احتمال قوی صحت بالایی دارد و می‌تواند کار شما را در
                     تشخیص گروه اصلی خود تسهیل کند.</p>
-                <p>سطر سوم نمایانگر حاصل نگاشت گروه MBTI شما به انیاگرام است. این نگاشت مبتنی بر بررسی آماری صورت‌گرفته
-                    بر بیش از هزار نفر است (<a href="http://www.9types.com/wwwboard/messages/6231.html" target="_blank">اینجا</a>
-                    را ببینید).</p>
-                <p>سطر چهارم نمایانگر حاصل نگاشت گروه DISC شما به انیاگرام است (<a
-                        href="http://www.9types.com/movieboard/messages/6626.html" target="_blank">اینجا</a> را ببینید).
-                </p>
-                <p>سطر پنجم هم نشان‌دهنده‌ی نتیجه‌ی تبدیل خصایص Big 5 شما به انیاگرام است (<a
-                        href="http://www.9types.com/wwwboard/messages/21599.html" target="_blank">اینجا</a> را ببینید).
-                </p>
-                <p>البته ناگفته نماند که نتایج حاصل از آزمون و آشنایی مختصر با گروه‌ها دقت بالاتری دارند و بنابراین در
-                    وهله‌ی اول بهتر است برای تشخیص گروه اصلی خود به نتایج دو سطر اول تکیه کنید. بعد از این که گروه اصلی
-                    خود را پیدا کردید، روی تصویر آن کلیک کنید تا توضیحات کامل آن را مطالعه کنید.</p>
             </div>
         </div>
         <div class="col-md-12 col-sm-12 answer-part-body row">
@@ -226,6 +101,8 @@
                     <th class="first-cell-header"></th>
                     <th ng-repeat="group in Data.groups" ng-class="{'inactive-result': !Data.activeResults[$index]}">
                         {{group}}
+                        <br>
+                        {{Data.groupsTitle[$index]}}
                     </th>
                 </tr>
                 <tr>
@@ -247,27 +124,6 @@
                 <tr>
                     <th>انتخابی کاربر</th>
                     <th ng-repeat="group in Data.probableGroups track by $index"
-                        ng-class="{'inactive-result': !Data.activeResults[$index]}">
-                        <span class="result-marker" ng-show="group">&#10004;</span>
-                    </th>
-                </tr>
-                <tr>
-                    <th><a href="#/library/others" target="_blank">آزمون MBTI</a></th>
-                    <th ng-repeat="group in Data.transferredMbtiResult track by $index"
-                        ng-class="{'inactive-result': !Data.activeResults[$index]}">
-                        <span class="result-marker" ng-show="group">&#10004;</span>
-                    </th>
-                </tr>
-                <tr>
-                    <th><a href="#/library/others" target="_blank">آزمون DISC</a></th>
-                    <th ng-repeat="group in Data.transferredDiscResult track by $index"
-                        ng-class="{'inactive-result': !Data.activeResults[$index]}">
-                        <span class="result-marker" ng-show="group">&#10004;</span>
-                    </th>
-                </tr>
-                <tr>
-                    <th><a href="#/library/others" target="_blank">آزمون 5 Big</a></th>
-                    <th ng-repeat="group in Data.transferredBigResult track by $index"
                         ng-class="{'inactive-result': !Data.activeResults[$index]}">
                         <span class="result-marker" ng-show="group">&#10004;</span>
                     </th>

@@ -1,0 +1,32 @@
+<div class="personality-page">
+    <div class="row">
+        <div class="col-sm-4">
+            <div id="personality-navigation-bar">
+                <ul>
+                    <li ng-click="Func.onPageSelect('introduction')"
+                        ng-class="{'li-selected': Data.page === 'introduction'}">شخصیت‌شناسی
+                    </li>
+                    <li ng-click="Func.onPageSelect('enneagram')"
+                        ng-class="{'li-selected': Data.page === 'enneagram'}">انیاگرام
+                    </li>
+                    <li ng-click="Func.onPageSelect('history')"
+                        ng-class="{'li-selected': Data.page === 'history'}">تاریخچه
+                    </li>
+                    <li ng-click="Func.onPageSelect('transformation')"
+                        ng-class="{'li-selected': Data.page === 'transformation'}">‌لایه‌های رشد
+                    </li>
+                    <li ng-click="Func.onPageSelect('triads')"
+                        ng-class="{'li-selected': Data.page === 'triads'}">سه‌گانه‌ها
+                    </li>
+                    <li ng-click="Func.onPageSelect('dynamics')"
+                        ng-class="{'li-selected': Data.page === 'dynamics'}">تکامل‌سازی و تجزیه‌پردازی
+                    </li>
+                    <li ng-click="Func.onPageSelect('wings')"
+                        ng-class="{'li-selected': Data.page === 'wings'}">بال‌ها
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-8" id="personality-content-div"></div>
+    </div>
+</div>

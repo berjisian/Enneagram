@@ -38,12 +38,16 @@ body {
 }
 .image-header .title {
     font-size: 27px;
-    padding: 29px 0;
-    margin-right: 10px;
-    color: slategray;
+    display: block;
+    padding: 20px 0;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #363636;
+    color: #d9d9d9;
+    border-radius: 1.00rem 1.00rem 1.00rem 1.00rem;
 }
 .image-header .take-exam {
-    padding: 31px 0;
+    padding: 30px 0;
 }
 @media (max-width: 700px) {
     .image-header .image {
@@ -57,6 +61,41 @@ body {
     .image-header .take-exam {
         padding: 23px 0;
     }
+}
+.header-bar-start {
+    padding: 10px;
+    margin: 37px 0;
+    text-align: left;
+    background-color: grey;
+    border-radius: .25rem .25rem .25rem .25rem;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.header-progress-bar {
+    padding: 10px;
+    border-radius: .25rem .25rem .25rem .25rem;
+    border: 1px solid rgba(0,0,0,.125);
+    margin: 37px 0;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.header-bar-one {
+    background-color: #459095;
+}
+.header-bar-two {
+    background-color: #4da1a7;
+}
+.header-bar-three {
+    background-color: #5badb3;
+}
+.header-bar-four {
+    background-color: #6cb6bb;
+}
+.header-bar-five {
+    background-color: #7dbfc3;
+}
+.header-bar-six {
+    background-color: #8fc7cb;
 }
 .main-header {
     margin: 0;
@@ -78,8 +117,39 @@ body {
 .main-header .link:focus {
     background-color: steelblue;
 }
+.current-link {
+    background-color: steelblue;
+    pointer-events: none;
+}
 .home .body {
     min-height: calc(100vh - 300px);
+    margin-bottom: 120px;
+}
+#home-navigation-bar * {
+    float: right;
+}
+#home-navigation-bar ul {
+    list-style: none;
+    margin-top: 10px;
+    padding-right: 0;
+    width: 300px;
+}
+@media (max-width: 700px) {
+    #home-navigation-bar ul {
+        width: 150px;
+    }
+}
+#home-navigation-bar li {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 2px solid;
+    cursor: pointer;
+    margin: 5px;
+}
+#home-navigation-bar .li-selected {
+    border-bottom: 2px solid crimson;
+    color: crimson;
 }
 .card {
     padding: 20px 0;
@@ -124,13 +194,13 @@ body {
     background-color: #6cbbb3;
 }
 .recognition-card .card .card-description {
-    margin: 45px 30px 0;
+    margin: 45px 30px;
 }
 .blog-card .card {
     background-color: #a0dee5;
 }
 .card {
-    border-radius: .25rem .25rem 0 0;
+    border-radius: .25rem .25rem .25rem .25rem;
 }
 .card-description {
     text-align: right;
@@ -139,9 +209,9 @@ body {
     text-align: center;
     color: white;
     background-color: #1e1e1e;
-    padding: 15px;
+    padding: 6px;
     border: 1px solid rgba(0,0,0,.125);
-    border-radius: 0 0 .25rem .25rem;
+    border-radius: .25rem .25rem .25rem .25rem;
     cursor: pointer;
 }
 .recognition-card .card-link {
@@ -164,7 +234,13 @@ body {
     background-color: gray;
 }
 .home .footer {
-    margin-bottom: 30px;
+    background-color: #363636;
+    color: #d9d9d9;
+    max-height: 120px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 .home .footer .call-me,
 .home .footer .blog-updates,
