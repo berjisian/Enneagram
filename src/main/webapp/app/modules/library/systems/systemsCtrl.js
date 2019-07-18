@@ -1,10 +1,10 @@
-angular.module('othersModule').controller('othersCtrl', function ($scope, othersSrvc) {
+angular.module('systemsModule').controller('systemsCtrl', function ($scope, systemsSrvc) {
 
     $scope.Data = {};
 
     $scope.Func = {
         onScroll: function () {
-            let navbar = document.getElementById("others-navigation-bar");
+            let navbar = document.getElementById("systems-navigation-bar");
             if (navbar) {
                 let sticky = navbar.offsetTop + 192;
                 if (window.pageYOffset >= sticky) {
@@ -16,7 +16,7 @@ angular.module('othersModule').controller('othersCtrl', function ($scope, others
         },
         onPageSelect: function (page) {
             $scope.Data.page = page;
-            othersSrvc.getData(page);
+            systemsSrvc.getData(page);
             window.scrollTo(0, 0);
         }
     };

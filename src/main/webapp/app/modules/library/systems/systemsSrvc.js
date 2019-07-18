@@ -1,13 +1,13 @@
-angular.module('othersModule', []);
-angular.module('othersModule').factory('othersSrvc', [
+angular.module('systemsModule', []);
+angular.module('systemsModule').factory('systemsSrvc', [
     function() {
         return {
             getData : function (page) {
                 $.ajax({
-                    url : ("app/assets/Data/others/" + page + ".txt"),
+                    url : ("app/assets/Data/systems/" + page + ".txt"),
                     dataType: "text",
                     success : function (data) {
-                        $("#others-content-div").html(data);
+                        $("#systems-content-div").html(data);
                     }
                 });
             }

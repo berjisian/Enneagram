@@ -1,4 +1,4 @@
-angular.module('personalityModule').controller('personalityCtrl', function ($scope, personalitySrvc) {
+angular.module('introductionModule').controller('introductionCtrl', function ($scope, introductionSrvc) {
 
     $scope.Data = {
         entry: [],
@@ -9,7 +9,7 @@ angular.module('personalityModule').controller('personalityCtrl', function ($sco
     $scope.Func = {
         loadData: function (page) {
             $scope.Data.page = page;
-            personalitySrvc.getData(page).done(function (result) {
+            introductionSrvc.getData(page).done(function (result) {
                 $scope.Data.entry = result.split("pageEnder");
                 $scope.Data.maxPageNum = $scope.Data.entry.length - 1;
                 $scope.Func.changePage("next");
@@ -18,12 +18,12 @@ angular.module('personalityModule').controller('personalityCtrl', function ($sco
         changePage: function (direction) {
             var changeValue = (direction === "next") ? 1 : -1;
             $scope.Data.currentPage += changeValue;
-            $("#personality-content-div").html($scope.Data.entry[$scope.Data.currentPage]);
+            $("#introduction-content-div").html($scope.Data.entry[$scope.Data.currentPage]);
         }
     };
 
     let Run = function () {
-        $scope.Func.loadData("personality");
+        $scope.Func.loadData("introduction");
     };
 
     Run();

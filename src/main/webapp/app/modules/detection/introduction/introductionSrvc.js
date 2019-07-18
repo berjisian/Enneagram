@@ -1,5 +1,5 @@
-angular.module('personalityModule', []);
-angular.module('personalityModule').factory('personalitySrvc', [
+angular.module('introductionModule', []);
+angular.module('introductionModule').factory('introductionSrvc', [
     function() {
         return {
             getData : function (page) {

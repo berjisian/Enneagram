@@ -1,16 +1,12 @@
 angular.module('homeModule').controller('homeCtrl', function ($scope) {
 
-    $scope.Data = {};
-
-    $scope.Func = {
-        scrollToTop: function () {
-            window.scrollTo(0, 0);
-        }
+    $scope.Data = {
+        mode: "initial"
     };
 
-    let Run = function () {
-        $scope.Func.scrollToTop();
-    };
+    $scope.Func = {};
+
+    let Run = function () {};
 
     Run();
 });

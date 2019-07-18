@@ -1,6 +1,6 @@
 <div class="row home">
     <div class="col-md-12 col-sm-12 header">
-        <div class="row image-header">
+        <div class="row">
             <div class="col-md-2 col-sm-3 link" ui-sref="home">
                 <span class="title link">شخصیت‌شناس</span>
             </div>
@@ -20,11 +20,12 @@
             <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.library.types"
                  ng-if="'home.library.typeTpl' | includedByState">گروه‌ها
             </div>
+            <!-- TODO: Add other progress bar cells. -->
         </div>
     </div>
-    <div class="col-md-10 col-sm-12 col-md-offset-right-1">
+    <div class="col-md-12 col-sm-12">
         <div class="body row">
-            <div class="col-sm-4">
+            <div class="col-sm-2">
                 <div id="home-navigation-bar">
                     <ul>
                         <li ui-sref="home.library.personality"
@@ -37,30 +38,51 @@
                             گروه‌ها
                         </li>
                         <li ui-sref="home.detection" ng-class="{'li-selected': ('home.detection' | isState)}">آزمون</li>
-                        <li ui-sref="home.comparison" ng-class="{'li-selected': ('home.comparison' | isState)}">مقایسه</li>
+                        <li ui-sref="home.comparison" ng-class="{'li-selected': ('home.comparison' | isState)}">مقایسه
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-8 col-sm-8" ui-view>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 recognition-card">
-                        <div class="card">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8 col-sm-8 card-data">
-                                        <h2 class="card-header">مسیر آرامش</h2>
-                                        <div class="card-description">
-                                            انیاگرام با شناسایی دقیق ارزش بنیادین افراد و چارچوب رفتاری آن‌ها کمک می‌کند
-                                            تا هرکس به نقاط ضعف خود پی ببرد و مسیر شادکامی خود را پیدا کند. اگر دوست
-                                            دارید خودتان را بهتر بشناسید، بی‌معطلی در آزمون کوتاه ما شرکت کنید.
-                                        </div>
-                                        <div ui-sref="home.detection" class="card-link">آزمون</div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 home-card-img">
-                                        <img src="/app/assets/images/what-is-it.png" alt="تعیین شخصیت">
-                                    </div>
-                                </div>
-                            </div>
+            <div class="col-sm-10">
+                <div class="card" ui-view>
+                    <div name="initial-card" ng-if="Data.mode === 'initial'">
+                        <h2 class="card-header">شخصیت‌شناس</h2>
+                        <div class="card-description">
+                            این سامانه با هدف بررسی شخصیت افراد از دیدگاه چهار روش شناخته‌شده‌ی موجود، مقایسه‌ی
+                            نتایج حاصل و ارائه‌ی توصیه به منظور رشد فردی طراحی شده. در صورت تمایل برای شرکت در
+                            این رویه گزینه‌ی شناسایی را انتخاب کنید.
+                        </div>
+                        <div ng-click="Data.mode = 'personality'" class="card-link card-link-action card-link-full">
+                            شناسایی
+                        </div>
+                    </div>
+                    <div name="if-know-about-personality-card" ng-if="Data.mode === 'personality'">
+                        <h2 class="card-header">آیا می‌دانید شخصیت چیست؟</h2>
+                        <div class="card-description">
+                            آیا با مفهوم شخصیت آشنایی دارید؟ چنان‌چه تصویر روشنی از مفهوم شخصیت در ذهن ندارید و
+                            می‌خواهید
+                            بیشتر با این مفهوم آشنا شوید، گزینه‌ی <b>خیر</b> و در غیر این صورت گزینه‌ی <b>بله</b> را
+                            انتخاب کنید.
+                        </div>
+                        <div ng-click="Data.mode = 'systems'"
+                             class="card-link card-link-yes card-link-half-first">بله
+                        </div>
+                        <div ui-sref="home.library.personality" ng-click="Data.mode = 'initial'"
+                             class="card-link card-link-no card-link-half-second">خیر
+                        </div>
+                    </div>
+                    <div name="if-know-about-personality-systems-card" ng-if="Data.mode === 'systems'">
+                        <h2 class="card-header">با روش‌های مختلف شخصیت‌شناسی آشنایی دارید؟</h2>
+                        <div class="card-description">
+                            آیا با روش‌های Big 5، Myers-Briggs، DISC و Enneagram آشنایی دارید؟ چنان‌چه شناختی از
+                            هیچ‌کدام از این آزمون‌ها ندارید و می‌خواهید با آن‌ها بیشتر آشنا شوید، گزینه‌ی <b>خیر</b> و
+                            در غیر این صورت گزینه‌ی <b>بله</b> را انتخاب کنید.
+                        </div>
+                        <div ui-sref="home.detection" ng-click="Data.mode = 'initial'"
+                             class="card-link card-link-yes card-link-half-first">بله
+                        </div>
+                        <div ui-sref="home.library.systems" ng-click="Data.mode = 'initial'"
+                             class="card-link card-link-no card-link-half-second">خیر
                         </div>
                     </div>
                 </div>
@@ -68,7 +90,7 @@
         </div>
         <div class="footer">
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-md-offset-right-3 call-me">
+                <div class="col-sm-12 col-md-6 col-md-offset-right-3">
                     <p class="footer-description">اگر راجع به انیاگرام یا این سامانه سؤالی دارید، می‌توانید از طریق
                         ایمیل
                         زیر با طراح سامانه در ارتباط باشید.

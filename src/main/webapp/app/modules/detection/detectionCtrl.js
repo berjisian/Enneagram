@@ -2,7 +2,6 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
 
     $scope.Data = {
         mode: "none",
-        currentProgress: 0,
         groupsTitle: [
             "کمال‌گرا",
             "یاری‌رسان",
@@ -182,7 +181,6 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
         },
         showQuestions: function () {
             $scope.Data.mode = "showQuestions";
-            $scope.Data.currentProgress++;
             $scope.Func.scrollToTop();
         },
         onSelectProbableGroup: function (group) {
@@ -221,7 +219,6 @@ angular.module('detectionModule').controller('detectionCtrl', function ($scope, 
                 $scope.Data.showAnswer = false;
                 $scope.Func.findActiveResults();
                 $scope.Data.mode = "showAnswer";
-                $scope.Data.currentProgress++;
                 $scope.Func.scrollToTop();
             } else {
                 $scope.Data.showAnswer = true;

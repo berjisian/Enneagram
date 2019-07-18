@@ -1,18 +1,18 @@
-.others-page #others-navigation-bar * {
+.systems-page #systems-navigation-bar * {
     float: right;
 }
-.others-page #others-navigation-bar ul {
+.systems-page #systems-navigation-bar ul {
     list-style: none;
     margin-top: 10px;
     padding-right: 0;
     width: 300px;
 }
 @media (max-width: 700px) {
-    .others-page #others-navigation-bar ul {
+    .systems-page #systems-navigation-bar ul {
         width: 150px;
     }
 }
-.others-page #others-navigation-bar li {
+.systems-page #systems-navigation-bar li {
     width: 100%;
     text-align: center;
     padding: 5px;
@@ -20,7 +20,7 @@
     cursor: pointer;
     margin: 5px;
 }
-.others-page #others-navigation-bar .li-selected {
+.systems-page #systems-navigation-bar .li-selected {
     border-bottom: 2px solid crimson;
     color: crimson;
 }
