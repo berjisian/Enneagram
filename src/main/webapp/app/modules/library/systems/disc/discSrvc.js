@@ -1,10 +1,10 @@
-angular.module('introductionModule', []);
-angular.module('introductionModule').factory('introductionSrvc', [
+angular.module('discModule', []);
+angular.module('discModule').factory('discSrvc', [
     function() {
         return {
             getData : function (page) {
                 return $.ajax({
-                    url : ("app/assets/Data/groups/" + page + ".txt"),
+                    url : ("app/assets/Data/systems/" + page + ".txt"),
                     dataType: "text",
                 });
             }

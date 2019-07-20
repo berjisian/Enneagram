@@ -1,4 +1,26 @@
-<div class="detection-page">
+<div class="detection-page" ui-view>
+    <div name="if-know-your-personality-card">
+        <h2 class="card-header">گروه شخصیتی خود در انیاگرام را می‌دانید؟</h2>
+        <div class="card-description">
+            <p>
+                از بین روش‌های شخصیت‌شناسی مورد بررسی در سامانه‌ی شخصیت‌شناس تنها انیاگرام است که برای رشد شخصیتی مخاطب
+                خود
+                توصیه‌هایی ارائه می‌کند. به همین دلیل در این سامانه انیاگرام به عنوان روش پایه انتخاب شده و نتایج حاصل
+                از
+                تشخیص باقی روش‌ها به نتایج انیاگرام نظیر می‌شوند و بین تمامی نتایج تجمیع صورت می‌گیرد.
+            </p>
+            <p>
+                بنابراین اگر گروه شخصیتی خود در انیاگرام را می‌دانید با انتخاب گزینه‌ی <b>بله</b> به جای شرکت مجدد در
+                آزمون
+                نتایج را مستقیماْ وارد کرده و درغیر این صورت با انتخاب گزینه‌ی <b>خیر</b> به باقی مراحل شناسایی توجه
+                فرمایید.
+            </p>
+        </div>
+        <div class="card-link card-link-yes card-link-half-first">بله</div>
+        <div ui-sref="home.detection.introduction" class="card-link card-link-no card-link-half-second">خیر</div>
+    </div>
+</div>
+<div class="detection-page" ng-if="Data.mode === 'asb'">
     <div class="row pre-explanation" ng-if="Data.mode === 'none'">
         <div class="col-md-10 col-sm-12 col-md-offset-right-1">
             <div class="row images-block">

@@ -1,0 +1,25 @@
+.images-block .active-image {
+    border: 2px solid indianred;
+}
+
+.images-block .group-images {
+    width: 10%;
+    margin-right: 2px;
+    cursor: pointer;
+}
+.images-block:first-child {
+    margin-right: 50px;
+}
+.images-block .group-images img {
+    border: 2px solid;
+    max-width: 81px;
+    cursor: pointer;
+}
+.images-block .group-name {
+    width: 80%;
+    text-align: center;
+    font-size: smaller;
+    padding: 10px 0;
+    background-color: darkgray;
+    margin-bottom: 0;
+}

@@ -1,13 +1,45 @@
-<div name="introduction-card">
-    <h2 class="card-header">شخصیت چیست؟</h2>
-    <div class="card-description" id="introduction-content-div"></div>
-    <div ng-if="Data.currentPage < Data.maxPageNum" ng-click="Func.changePage('next')"
-         class="card-link card-link-yes card-link-third-first">بعد
+<div name="introduction-description-card" ng-if="Data.mode === 'introductionDescription'">
+    <h2 class="card-header">می‌خواهید با نگاهی کوتاه به گروه‌های انیاگرام گروه شخصیتی خود را حدس بزنید؟</h2>
+    <div class="card-description">
+        اگر تمایل دارید، نگاه مختصری به گروه‌های مختلف انیاگرام بیاندازید و پیش از شرکت در آزمون سعی کنید حدس بزنید که
+        در کدام گروه قرار دارید. این حدس شما در تشخیص نهایی مورد استفاده قرار می‌گیرد. چنان‌چه تمایل به بررسی گروه‌ها
+        دارید، گزینه‌ی <b>بله</b> و در غیر این صورت گزینه‌ی
+        <b>خیر</b>
+        را انتخاب کنید.
     </div>
-    <div ui-sref="home" ng-click="Data.mode = 'initial'" class="card-link card-link-action card-link-third-second">
-        صفحه‌ی اول
+    <div ng-click="Data.mode = 'selectGroupIntroduction'" class="card-link card-link-yes card-link-half-first">بله</div>
+    <div class="card-link card-link-no card-link-half-second">خیر، در آزمون شرکت می‌کنم.</div>
+</div>
+<div name="select-group-introduction-card" ng-if="Data.mode === 'selectGroupIntroduction'">
+    <h2 class="card-header">گروه موردنظر خود را انتخاب کنید.</h2>
+    <div class="card-description">
+        <div class="row images-block">
+            <div class="group-images" ng-repeat="group in Data.introductionGroups"
+                 ng-click="Func.onGroupSelect(group.value)">
+                <img src="/app/assets/images/{{group.value}}.png" alt="تعیین شخصیت">
+                <p class="group-name">
+                    {{group.value}}
+                    <br>
+                    {{group.title}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div ng-click="Data.mode = 'introductionDescription'" class="card-link card-link-action card-link-full">
+        آزمون
+    </div>
+</div>
+<div name="show-group-introduction-card" ng-if="Data.mode === 'showGroupIntroduction'">
+    <h2 class="card-header">معرفی گروه‌های انیاگرام</h2>
+    <div class="card-description" ng-bind-html="Data.entry[Data.currentPage]">
+    </div>
+    <div ng-if="Data.currentPage < Data.maxPageNum" ng-click="Func.changePage('next')"
+         class="card-link card-link-yes card-link-third-first">گروه بعد
+    </div>
+    <div ng-click="Data.mode = 'selectGroupIntroduction'" class="card-link card-link-action card-link-third-second">
+        مشاهده‌ی گروه‌ها
     </div>
     <div ng-if="Data.currentPage > 0" ng-click="Func.changePage('previous')"
-         class="card-link card-link-no card-link-third-third">قبل
+         class="card-link card-link-no card-link-third-third">گروه قبل
     </div>
 </div>

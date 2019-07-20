@@ -12,13 +12,16 @@
                  ng-if="('home.library' | includedByState) && !('home.library' | isState)">کتابخانه
             </div>
             <div class="col-md-1 header-progress-bar header-bar-two" ui-sref="home.detection"
-                 ng-if="('home.detection' | includedByState) && !('home.detection' | isState)">آزمون
+                 ng-if="('home.detection' | includedByState) && !('home.detection' | isState)">شناسایی
             </div>
             <div class="col-md-1 header-progress-bar header-bar-two" ui-sref="home.comparison"
                  ng-if="('home.comparison' | includedByState) && !('home.comparison' | isState)">مقایسه
             </div>
             <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.library.types"
                  ng-if="'home.library.typeTpl' | includedByState">گروه‌ها
+            </div>
+            <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.library.systems"
+                 ng-if="('home.library.systems' | includedByState) && !('home.library.systems' | isState)">روش‌ها
             </div>
             <!-- TODO: Add other progress bar cells. -->
         </div>
