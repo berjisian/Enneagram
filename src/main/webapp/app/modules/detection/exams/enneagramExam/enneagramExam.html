@@ -1,0 +1,38 @@
+<div class="enneagramExamPage" ui-view>
+    <div name="enneagram-exam-card">
+        <h2 class="card-header">آزمون انیاگرام</h2>
+        <div class="card-description">
+            <div class="question-part">
+                <div>{{Data.currentPage + 1}}/{{Data.maxPageNum + 1}}</div>
+                <ul>
+                    <li ng-repeat="question in Data.currentQuestions" class="row" id="question-{{question.num}}"
+                        ng-class="{'not-answered': Data.unanswered && !question.answer}">
+                        <div class="col-sm-6 question-phrase"
+                             ng-class="{'selected-answer': question.answer == question.first.value}"
+                             ng-click="Func.onAnswerSelect(question, question.first.value)">
+                            {{question.first.phrase}}
+                        </div>
+                        <div class="col-sm-6 question-phrase"
+                             ng-class="{'selected-answer': question.answer == question.second.value}"
+                             ng-click="Func.onAnswerSelect(question, question.second.value)">
+                            {{question.second.phrase}}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div ng-if="Data.currentPage === Data.maxPageNum" ng-click="Func.calculateResults()"
+             class="card-link card-link-yes btn btn-success card-link-third-first">اتمام
+        </div>
+        <div ng-if="Data.currentPage < Data.maxPageNum" ng-click="Func.changePage('next')"
+             class="card-link card-link-yes btn btn-success card-link-third-first">بعد
+        </div>
+        <div ui-sref="home.detection.exams" ng-click="Data.mode = 'initial'"
+             class="card-link card-link-action btn btn-info card-link-third-second">
+            آزمون‌ها
+        </div>
+        <div ng-if="Data.currentPage > 0" ng-click="Func.changePage('previous')"
+             class="card-link card-link-no btn btn-danger card-link-third-third">قبل
+        </div>
+    </div>
+</div>

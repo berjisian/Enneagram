@@ -1,0 +1,25 @@
+.question-part {
+    text-align: center;
+}
+.question-part ul {
+    list-style: none;
+    padding-right: 0;
+}
+.question-part li {
+    margin: 30px 10px;
+}
+.question-phrase {
+    border-bottom: 1px solid;
+    padding: 15px 5px;
+    cursor: pointer;
+}
+.question-phrase:hover {
+    border: 2px solid rgb(9,76,114);
+}
+.selected-answer {
+    border: 2px solid rgb(9,76,114);
+}
+.question-part .not-answered {
+    border: 1px solid red;
+    padding: 10px;
+}

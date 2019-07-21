@@ -23,6 +23,9 @@
             <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.library.systems"
                  ng-if="('home.library.systems' | includedByState) && !('home.library.systems' | isState)">روش‌ها
             </div>
+            <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.detection.exams"
+                 ng-if="('home.detection.exams' | includedByState) && !('home.detection.exams' | isState)">آزمون‌ها
+            </div>
             <!-- TODO: Add other progress bar cells. -->
         </div>
     </div>
@@ -40,7 +43,7 @@
                         <li ui-sref="home.library.types" ng-class="{'li-selected': ('home.library.types' | isState)}">
                             گروه‌ها
                         </li>
-                        <li ui-sref="home.detection" ng-class="{'li-selected': ('home.detection' | isState)}">آزمون</li>
+                        <li ui-sref="home.detection" ng-class="{'li-selected': ('home.detection' | isState)}">شناسایی</li>
                         <li ui-sref="home.comparison" ng-class="{'li-selected': ('home.comparison' | isState)}">مقایسه
                         </li>
                     </ul>
@@ -55,7 +58,7 @@
                             نتایج حاصل و ارائه‌ی توصیه به منظور رشد فردی طراحی شده. در صورت تمایل برای شرکت در
                             این رویه گزینه‌ی شناسایی را انتخاب کنید.
                         </div>
-                        <div ng-click="Data.mode = 'personality'" class="card-link card-link-action card-link-full">
+                        <div ng-click="Data.mode = 'personality'" class="card-link card-link-action btn btn-info card-link-full">
                             شناسایی
                         </div>
                     </div>
@@ -68,10 +71,10 @@
                             انتخاب کنید.
                         </div>
                         <div ng-click="Data.mode = 'systems'"
-                             class="card-link card-link-yes card-link-half-first">بله
+                             class="card-link card-link-yes btn btn-success card-link-half-first">بله
                         </div>
                         <div ui-sref="home.library.personality" ng-click="Data.mode = 'initial'"
-                             class="card-link card-link-no card-link-half-second">خیر
+                             class="card-link card-link-no btn btn-danger card-link-half-second">خیر
                         </div>
                     </div>
                     <div name="if-know-about-personality-systems-card" ng-if="Data.mode === 'systems'">
@@ -82,10 +85,10 @@
                             در غیر این صورت گزینه‌ی <b>بله</b> را انتخاب کنید.
                         </div>
                         <div ui-sref="home.detection" ng-click="Data.mode = 'initial'"
-                             class="card-link card-link-yes card-link-half-first">بله
+                             class="card-link card-link-yes btn btn-success card-link-half-first">بله
                         </div>
                         <div ui-sref="home.library.systems" ng-click="Data.mode = 'initial'"
-                             class="card-link card-link-no card-link-half-second">خیر
+                             class="card-link card-link-no btn btn-danger card-link-half-second">خیر
                         </div>
                     </div>
                 </div>

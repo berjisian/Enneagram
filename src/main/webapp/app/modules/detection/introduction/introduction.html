@@ -7,8 +7,10 @@
         <b>خیر</b>
         را انتخاب کنید.
     </div>
-    <div ng-click="Data.mode = 'selectGroupIntroduction'" class="card-link card-link-yes card-link-half-first">بله</div>
-    <div class="card-link card-link-no card-link-half-second">خیر، در آزمون شرکت می‌کنم.</div>
+    <div ng-click="Data.mode = 'selectGroupIntroduction'"
+         class="card-link card-link-yes btn btn-success card-link-half-first">بله
+    </div>
+    <div ui-sref="home.detection.exams" class="card-link card-link-no btn btn-danger card-link-half-second">خیر، در آزمون شرکت می‌کنم.</div>
 </div>
 <div name="select-group-introduction-card" ng-if="Data.mode === 'selectGroupIntroduction'">
     <h2 class="card-header">گروه موردنظر خود را انتخاب کنید.</h2>
@@ -25,21 +27,25 @@
             </div>
         </div>
     </div>
-    <div ng-click="Data.mode = 'introductionDescription'" class="card-link card-link-action card-link-full">
+    <div ng-click="Func.goToSelectExamsPage()"
+         class="card-link card-link-action btn btn-info card-link-full">
         آزمون
     </div>
 </div>
 <div name="show-group-introduction-card" ng-if="Data.mode === 'showGroupIntroduction'">
     <h2 class="card-header">معرفی گروه‌های انیاگرام</h2>
-    <div class="card-description" ng-bind-html="Data.entry[Data.currentPage]">
-    </div>
+    <div class="card-description" ng-bind-html="Data.entry[Data.currentPage]"></div>
+    <button style="margin-left: 15px" class="btn btn-success" ng-click="Func.onSelectPossibleGroups(Data.currentPage)">
+        ممکن است عضو گروه {{Data.currentPage + 1}} باشم
+    </button>
     <div ng-if="Data.currentPage < Data.maxPageNum" ng-click="Func.changePage('next')"
-         class="card-link card-link-yes card-link-third-first">گروه بعد
+         class="card-link card-link-yes btn btn-success card-link-third-first">گروه بعد
     </div>
-    <div ng-click="Data.mode = 'selectGroupIntroduction'" class="card-link card-link-action card-link-third-second">
+    <div ng-click="Data.mode = 'selectGroupIntroduction'"
+         class="card-link card-link-action btn btn-info card-link-third-second">
         مشاهده‌ی گروه‌ها
     </div>
     <div ng-if="Data.currentPage > 0" ng-click="Func.changePage('previous')"
-         class="card-link card-link-no card-link-third-third">گروه قبل
+         class="card-link card-link-no btn btn-danger card-link-third-third">گروه قبل
     </div>
 </div>

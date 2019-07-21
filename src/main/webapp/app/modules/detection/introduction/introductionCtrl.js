@@ -1,4 +1,4 @@
-angular.module('introductionModule').controller('introductionCtrl', function ($scope, introductionSrvc) {
+angular.module('introductionModule').controller('introductionCtrl', function ($scope, $state, introductionSrvc, homeSrvc) {
 
     $scope.Data = {
         mode: "introductionDescription",
@@ -15,7 +15,12 @@ angular.module('introductionModule').controller('introductionCtrl', function ($s
             {title: "خوش‌گذران", value: 7},
             {title: "رهبر", value: 8},
             {title: "میانجی", value: 9},
-        ]
+        ],
+        possibleGroups: [
+                        0, 0, 0,
+                        0, 0, 0,
+                        0, 0, 0
+                        ]
     };
 
     $scope.Func = {
@@ -38,6 +43,19 @@ angular.module('introductionModule').controller('introductionCtrl', function ($s
         onGroupSelect: function (group) {
             $scope.Data.mode = "showGroupIntroduction";
             $scope.Func.changePage(0, group);
+        },
+        onSelectPossibleGroups: function (possibleGroup) {
+            $scope.Data.possibleGroups[possibleGroup] = 1;
+            homeSrvc.showMassage('success', '', 'ایمپورت با موفقیت اضافه شد');
+        //    TODO: Not working.
+        },
+        goToSelectExamsPage: function () {
+            $scope.Data.mode = 'introductionDescription';
+            let possibleGroupsString = "";
+            for (let i = 0; i < 9; i++) {
+                possibleGroupsString += ($scope.Data.possibleGroups[i] + "X");
+            }
+            $state.go('home.detection.exams', {possibleGroups: possibleGroupsString});
         }
     };
 

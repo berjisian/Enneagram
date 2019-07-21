@@ -8,6 +8,19 @@ body {
 .not-show-ui-until-ready-angular{
     visibility: hidden;
 }
+.waiting-dialog {
+    background-color: rgba(204, 230, 255, 0.73);
+    border: 1px solid #cce6ff;
+    border-radius: 10px;
+    box-shadow: 0 0 7px #49535b;
+    left: 50%;
+    margin-left: -125px;
+    padding: 10px;
+    position: fixed;
+    top: 65px;
+    width: 250px;
+    z-index: 2000;
+}
 .pull-right {
     float: right;
 }
@@ -129,7 +142,7 @@ body {
 .card {
     position: relative;
     padding: 0 0 10px;
-    background-color: darkseagreen;
+    background-color: darkgrey;
     min-height: 385px;
     border-radius: .25rem .25rem .25rem .25rem;
 }
@@ -141,7 +154,7 @@ body {
 }
 .card .card-description {
     margin: 20px 20px;
-    text-align: right;
+    text-align: center;
 }
 .card .card-link {
     text-align: center;
@@ -149,13 +162,13 @@ body {
     cursor: pointer;
     position: absolute;
 }
-.card .card-link-action {
+.card .card-link-action btn btn-info {
     background-color: #17a2b8;
 }
-.card .card-link-yes {
+.card .card-link-yes btn btn-success {
     background-color: #218838;
 }
-.card .card-link-no {
+.card .card-link-no btn btn-danger {
     background-color: #b23535;
 }
 .card .card-link-full {
@@ -189,10 +202,17 @@ body {
     width: 33.34%;
 }
 .card .systems-img {
-    max-width: 150px;
+    max-width: 120px;
     height: auto;
     border-radius: 40%;
     cursor: pointer;
+}
+.card .systems-btn {
+    width: 80%;
+}
+.card .systems-btn a {
+    text-decoration: none;
+    color: white;
 }
 .home .footer-divider {
     width: 100%;

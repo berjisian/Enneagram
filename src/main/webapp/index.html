@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="app/assets/images/header G.png" type="image/ico">
-    <title>انیاگرام</title>
+    <title>شخصیت‌شناس</title>
 
     <!-- css -->
     <link rel="stylesheet" href="app/lib/html5-boilerplate/dist/css/normalize.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="app/assets/css/base.css">
     <link rel="stylesheet" href="app/assets/css/rightOffset.css">
     <link rel="stylesheet" href="app/assets/css/groupImages.css">
+    <link rel="stylesheet" href="app/assets/css/questions.css">
     <link rel="stylesheet" href="app/assets/fonts/Vazir/font.css">
     <link rel="stylesheet" href="app/lib/angular-ui-select/dist/select.min.css">
+    <link rel="stylesheet" href="app/lib/AngularJS-Toaster/toaster.css">
 
     <script src="app/lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="app/lib/angular/angular.js"></script>
@@ -25,6 +27,7 @@
     <script src="app/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="app/lib/angular-ui-select/dist/select.min.js"></script>
     <script src="app/lib/lodash/lodash.js"></script>
+    <script src="app/lib/AngularJS-Toaster/toaster.js"></script>
 
     <!-- Enneagram -->
 
@@ -38,6 +41,26 @@
     <script src="app/modules/detection/detectionCtrl.js"></script>
     <script src="app/modules/detection/detectionConfig.js"></script>
     <link rel="stylesheet" href="app/modules/detection/detection.css">
+
+    <!-- introduction -->
+    <script src="app/modules/detection/introduction/introductionSrvc.js"></script>
+    <script src="app/modules/detection/introduction/introductionCtrl.js"></script>
+    <script src="app/modules/detection/introduction/introductionConfig.js"></script>
+
+    <!-- exams -->
+    <script src="app/modules/detection/exams/examsSrvc.js"></script>
+    <script src="app/modules/detection/exams/examsCtrl.js"></script>
+    <script src="app/modules/detection/exams/examsConfig.js"></script>
+
+    <!-- enneagramExam -->
+    <script src="app/modules/detection/exams/enneagramExam/enneagramExamSrvc.js"></script>
+    <script src="app/modules/detection/exams/enneagramExam/enneagramExamCtrl.js"></script>
+    <script src="app/modules/detection/exams/enneagramExam/enneagramExamConfig.js"></script>
+
+    <!-- enneagramResult -->
+    <script src="app/modules/detection/exams/enneagramExam/enneagramResult/enneagramResultSrvc.js"></script>
+    <script src="app/modules/detection/exams/enneagramExam/enneagramResult/enneagramResultCtrl.js"></script>
+    <script src="app/modules/detection/exams/enneagramExam/enneagramResult/enneagramResultConfig.js"></script>
 
     <!-- comparison -->
     <script src="app/modules/comparison/comparisonSrvc.js"></script>
@@ -92,11 +115,6 @@
     <script src="app/modules/library/types/typesCtrl.js"></script>
     <script src="app/modules/library/types/typesConfig.js"></script>
     <link rel="stylesheet" href="app/modules/library/types/style.css">
-
-    <!-- introduction -->
-    <script src="app/modules/detection/introduction/introductionSrvc.js"></script>
-    <script src="app/modules/detection/introduction/introductionCtrl.js"></script>
-    <script src="app/modules/detection/introduction/introductionConfig.js"></script>
 
     <!-- typeTpl -->
     <script src="app/modules/library/types/typeTpl/typeTplSrvc.js"></script>

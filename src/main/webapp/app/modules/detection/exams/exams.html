@@ -1,0 +1,49 @@
+<div class="exams-page" ui-view>
+    <div name="select-which-exam-card">
+        <h2 class="card-header">در کدام آزمون می خواهید شرکت کنید؟</h2>
+        <div class="card-description">
+            از بین آزمون‌های چهار روش انیاگرام، مایرز-بریگز، دیسک و نئو تنها آزمون انیاگرام در این سامانه پیاده‌سازی
+            شده.
+            برای شرکت در آزمون باقی روش‌ها، با انتخاب آزمون موردنظر خود به صفحه‌ی خارجی آزمون هدایت می‌شوید و پس از شرکت
+            در
+            آزمون می‌توانید با انتخاب گزینه‌ی <b>ورود نتایج</b> نتایج را وارد کنید. چنان‌چه نتیجه‌ی آزمون انیاگرام خود
+            را هم
+            می‌دانید، می‌توانید بدون شرکت مجدد در آزمون و با انتخاب همین گزینه نتایج آن را نیز وارد کنید.
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-right-2">
+                <a href="https://www.truity.com/test/big-five-personality-test" target="_blank">
+                    <img class="systems-img" style="margin-top: 4px;" src="/app/assets/images/Big.png">
+                </a>
+                <div class="systems-btn btn btn-info">
+                    <a href="https://www.truity.com/test/big-five-personality-test" target="_blank">Big 5</a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <a href="https://www.16personalities.com/free-personality-test" target="_blank">
+                    <img class="systems-img" src="/app/assets/images/MBTI.jpg">
+                </a>
+                <div class="systems-btn btn btn-info">
+                    <a href="https://www.16personalities.com/free-personality-test" target="_blank">MBTI</a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <a href="https://www.truity.com/test/disc-behavior-inventory" target="_blank">
+                    <img class="systems-img" src="/app/assets/images/DISC.png">
+                </a>
+                <div class="systems-btn btn btn-info">
+                    <a href="https://www.truity.com/test/disc-behavior-inventory" target="_blank">DISC</a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <img ng-click="Func.goToEnneagramExam()" class="systems-img"
+                     src="/app/assets/images/Enneagram.png">
+                <div ng-click="Func.goToEnneagramExam()" class="systems-btn btn btn-info">
+                    Enneagram
+                </div>
+            </div>
+            <!--TODO: Add ui-sref-->
+            <div class="card-link card-link-action btn btn-info card-link-full">ورود نتایج</div>
+        </div>
+    </div>
+</div>
