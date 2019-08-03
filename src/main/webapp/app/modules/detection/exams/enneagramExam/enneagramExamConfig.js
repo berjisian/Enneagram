@@ -2,7 +2,7 @@ angular.module('enneagramExamModule').config(['$stateProvider', function($stateP
     var enneagramExamStates = [
         {
             name: "home.detection.exams.enneagramExam",
-            url: "/enneagramExam/?possibleGroups",
+            url: "/enneagramExam/",
             templateUrl: "app/modules/detection/exams/enneagramExam/enneagramExam.html",
             controller: 'enneagramExamCtrl'
         }];

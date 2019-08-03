@@ -53,7 +53,9 @@ angular.module('introductionModule').controller('introductionCtrl', function ($s
             $scope.Data.mode = 'introductionDescription';
             let possibleGroupsString = "";
             for (let i = 0; i < 9; i++) {
-                possibleGroupsString += ($scope.Data.possibleGroups[i] + "X");
+                possibleGroupsString += ($scope.Data.possibleGroups[i]);
+                if (i < 8)
+                    possibleGroupsString += "X";
             }
             $state.go('home.detection.exams', {possibleGroups: possibleGroupsString});
         }

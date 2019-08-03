@@ -1,8 +1,69 @@
-<div name="enneagram-result-card">
+<div name="enneagram-result-explanation-card" ng-if="Data.mode === 'enneagramResultExplanationCard'">
     <h2 class="card-header">نتیجه‌ی آزمون انیاگرام</h2>
-    <div class="card-description"></div>
-    <div ui-sref="home.detection.exams" ng-click="Data.mode = 'initial'"
-         class="card-link card-link-action btn btn-info card-link-third-second">
+    <div class="card-description">
+        <p>
+            آزمون به اتمام رسیده و نتیجه مشخص شده است. نتیجه‌ی این آزمون امتیازی بین ۰ تا ۸ برای هرگروه است. هرچه امتیاز
+            کسب‌شده در گروهی بالاتر باشد، شباهت شما به اعضای آن گروه بیشتر است. درصورتی‌که پیش از آزمون با خواندن توضیح
+            مختصری از گروه‌ها، گروه خود را نیز حدس زده باشید،‌ حدس شما در کنار نتیجه نمایش داده خواهد شد. پس از مشاهده‌ی
+            نتیجه می‌توانید یکی از اقدامات زیر را انجام دهید:
+        </p>
+        <p>
+        <ul>
+            <li><b>می‌توانید با انتخاب گروهی که بیشترین امتیاز را دارد، بیشتر با آن آشنا بشوید و توصیه‌های مناسب خود را
+                در آن
+                گروه دریافت کنید.</b></li>
+            <li><b>می توانید با انتخاب گزینه‌ی آزمون‌های دیگر در سایر آزمون‌ها نیز شرکت کنید و نتایج آن‌ها را با
+                انیاگرام
+                مقایسه کرده و بر اساس تجمیع آن‌ها به گروه هدف خود راهنمایی شوید.</b></li>
+        </ul>
+        </p>
+    </div>
+    <div ng-click="Data.mode = 'enneagramResultCard'"
+         class="card-link card-link-action btn btn-info card-link-full">
+        مشاهده‌ی نتیجه
+    </div>
+</div>
+<div name="enneagram-result-card" ng-if="Data.mode === 'enneagramResultCard'">
+    <h2 class="card-header">نتیجه‌ی آزمون انیاگرام</h2>
+    <div class="card-description">
+        <table class="table table-striped result-table">
+            <thead class="table-header">
+            <tr>
+                <th class="first-cell-header"></th>
+                <th class="result-group" ng-repeat="group in Data.introductionGroups"
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
+                    <a href="#/library/types/{{Data.numToWord[group.value - 1]}}" target="_blank">
+                    {{group.title}}
+                </th>
+            </tr>
+            <tr>
+                <th class="first-cell-header"></th>
+                <th class="result-group result-images" ng-repeat="group in Data.introductionGroups"
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
+                    <a href="#/library/types/{{Data.numToWord[group.value - 1]}}" target="_blank">
+                    <img src="/app/assets/images/{{group.value}}.png" alt="تعیین شخصیت"></a></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>آزمون</th>
+                <th ng-repeat="group in Data.resultGroups track by $index"
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
+                    <span ng-show="group">{{group}}</span>
+                </th>
+            </tr>
+            <tr ng-if="Data.possibleGroups && Data.possibleGroups.length">
+                <th>انتخابی کاربر</th>
+                <th ng-repeat="group in Data.possibleGroups track by $index"
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
+                    <span class="result-marker" ng-show="group">&#10004;</span>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div ng-click="Func.onMoveBackToExams()"
+         class="card-link card-link-action btn btn-info card-link-full">
         آزمون‌ها
     </div>
 </div>

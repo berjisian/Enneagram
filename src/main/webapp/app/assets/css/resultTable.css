@@ -1,0 +1,53 @@
+.result-table .table-header {
+    background-color: darkgrey;
+}
+.result-table th {
+    border: none !important;
+    padding: 5px;
+}
+.result-table .result-group {
+    cursor: pointer;
+}
+.result-table .result-group a {
+    text-decoration: none;
+    color: initial;
+}
+.result-table .first-cell-header {
+    background-color: darkgrey;
+    border-bottom-width: 0;
+}
+.result-table .result-images {
+    width: 10%;
+    margin-right: 2px;
+}
+.result-table .result-images img {
+    max-width: 61px;
+}
+.result-table .result-marker {
+    font-size: 20px;
+    color: green;
+}
+.result-table .inactive-result {
+    background-color: dimgray;
+    pointer-events: none;
+    cursor: default;
+}
+.enneagram-result .result-table .rzslider.rz-vertical {
+    min-height: 70px;
+}
+.disc-result .result-table .rzslider.rz-vertical {
+    min-height: 150px;
+}
+.mbti-result .result-table .result-images img {
+    max-width: 90px;
+}
+.mbti-result .result-table .result-images:hover {
+    background-color: rgba(0,0,0,.05);
+}
+.mbti-result .result-table .selected-mbti-group {
+    background-color: palevioletred;
+    border-radius: 10%;
+}
+.big-result .result-table .rzslider.rz-vertical {
+    min-height: 140px;
+}

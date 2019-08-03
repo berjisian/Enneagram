@@ -1,13 +1,14 @@
 var enneagram = enneagram || {};
 
 enneagram.externalDependencies = [
-    "ui.bootstrap", "ui.router", "ui.select", "ngSanitize", "toaster"
+    "ui.bootstrap", "ui.router", "ui.select", "ngSanitize", "toaster", "rzSlider"
 ];
 enneagram.internalDependency = [];
 enneagram.modulesDependency = [
     "homeModule", "detectionModule", "introductionModule", "comparisonModule", "libraryModule",
     "personalityModule", "basicsModule", "typesModule", "typeTplModule", "systemsModule", "enneagramModule",
-    "discModule", "mbtiModule", "bigModule", "examsModule", "enneagramExamModule", "enneagramResultModule"
+    "discModule", "mbtiModule", "bigModule", "examsModule", "enneagramExamModule", "enneagramResultModule",
+    "enterExamResultsModule"
 ];
 
 var app = angular.module(

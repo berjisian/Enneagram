@@ -2,7 +2,7 @@ angular.module('enneagramResultModule').config(['$stateProvider', function($stat
     var enneagramResultStates = [
         {
             name: "home.detection.exams.enneagramExam.enneagramResult",
-            url: "/enneagramResult/?possibleGroups?resultGroups",
+            url: "/enneagramResult/",
             templateUrl: "app/modules/detection/exams/enneagramExam/enneagramResult/enneagramResult.html",
             controller: 'enneagramResultCtrl'
         }];

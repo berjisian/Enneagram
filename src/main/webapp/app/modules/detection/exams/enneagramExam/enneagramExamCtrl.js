@@ -63,7 +63,7 @@ angular.module('enneagramExamModule').controller('enneagramExamCtrl', function (
             });
             if (!answer || !$scope.Data.questions.length)
                 answer = "answered";
-            return answer;
+            return "answered";
         },
         calculateResults: function () {
             let answer = $scope.Func.isAllAnswered();
@@ -71,7 +71,9 @@ angular.module('enneagramExamModule').controller('enneagramExamCtrl', function (
                 $scope.Data.unanswered = false;
                 let resultsString = "";
                 for (let i = 0; i < 9; i++) {
-                    resultsString += ($scope.Data.resultGroups[i] + "X");
+                    resultsString += ($scope.Data.resultGroups[i]);
+                    if (i < 8)
+                        resultsString += "X";
                 }
                 $state.go('home.detection.exams.enneagramExam.enneagramResult', {
                     possibleGroups: $state.params.possibleGroups,
