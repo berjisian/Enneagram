@@ -3,7 +3,10 @@
         <h2 class="card-header">آزمون انیاگرام</h2>
         <div class="card-description">
             <div class="question-part">
-                <div>{{Data.currentPage + 1}}/{{Data.maxPageNum + 1}}</div>
+                <div class="page-slider">
+                    <rzslider rz-slider-model="Data.currentPage"
+                              rz-slider-options="Slider.pageSliderOptions"></rzslider>
+                </div>
                 <ul>
                     <li ng-repeat="question in Data.currentQuestions" class="row" id="question-{{question.num}}"
                         ng-class="{'not-answered': Data.unanswered && !question.answer}">

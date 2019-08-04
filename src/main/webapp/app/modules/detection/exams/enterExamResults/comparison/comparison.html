@@ -1,0 +1,83 @@
+<div name="comparison-explanation-card" ng-if="Data.mode === 'comparisonExplanationCard'">
+    <h2 class="card-header">مقایسه و تجمیع</h2>
+    <div class="card-description">
+        <p>
+            چنان‌چه در بیش از یک آزمون شرکت کرده باشید و یا پیش از شرکت در آزمون گروه شخصیتی خود را حدس زده باشید،
+            می‌توانید در صفحه‌ی بعد تجمیع نتایج آزمون‌ها و پیش‌بینی خود را مشاهده کنید.
+        </p>
+        <p>
+            تبدیل سایر آزمون‌ها به قالب انیاگرام بر اساس شباهت‌سنجی به کمک داده‌های آماری گردآوری‌شده از کاربران مختلف
+            در این چند آزمون انجام شده. برای مشاهده‌ی نتیجه‌ی تجمیعی خود گزینه‌ی <b>مشاهده‌ی نتیجه‌‌ی تجمیعی</b> را
+            انتخاب کنید.
+        </p>
+        <br>
+        <p><b class="important-point">
+            پس از پی بردن به گروه شخصیتی خود، با انتخاب تصویر آن گروه توضیحات و راهنمایی آن را دریافت کنید.
+        </b></p>
+    </div>
+    <div ng-click="Data.mode = 'comparisonCard'"
+         class="card-link card-link-action btn btn-info card-link-full">
+        مشاهده‌ی نتیجه‌ی تجمیعی
+    </div>
+</div>
+<div name="comparison-card" class="comparison" ng-if="Data.mode === 'comparisonCard'">
+    <div class="card-description">
+        <table class="table table-striped result-table">
+            <thead class="table-header">
+            <tr>
+                <th class="first-cell-header"></th>
+                <th class="result-group" ng-repeat="group in Data.introductionGroups"
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
+                    <a href="#/library/types/{{Data.numToWord[group.value - 1]}}" target="_blank">
+                        {{group.title}}
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                <th class="first-cell-header"></th>
+                <th class="result-group result-images" ng-repeat="group in Data.introductionGroups"
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
+                    <a href="#/library/types/{{Data.numToWord[group.value - 1]}}" target="_blank">
+                        <img src="/app/assets/images/{{group.value}}.png" alt="تعیین شخصیت"></a></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-if="Data.possibleGroups && Data.possibleGroups.length">
+                <th>انتخابی کاربر</th>
+                <th ng-repeat="group in Data.possibleGroups track by $index"
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
+                    <span class="result-marker" ng-show="group">&#10004;</span>
+                </th>
+            </tr>
+            <tr ng-if="Data.enneagramResultGroups && Data.enneagramResultGroups.length">
+                <th>Enneagram</th>
+                <th ng-repeat="group in Data.enneagramResultGroups track by $index"
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
+                    <span ng-show="group">{{group}}</span>
+                </th>
+            </tr>
+            <tr ng-if="Data.discResultGroups && Data.discResultGroups.length">
+                <th>DISC</th>
+                <th ng-repeat="group in Data.transferredDiscResult track by $index"
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
+                    <span class="result-marker" ng-show="group">&#10004;</span>
+                </th>
+            </tr>
+            <tr ng-if="Data.bigResultGroups && Data.bigResultGroups.length">
+                <th>Big 5</th>
+                <th ng-repeat="group in Data.transferredBigResult track by $index"
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
+                    <span class="result-marker" ng-show="group">&#10004;</span>
+                </th>
+            </tr>
+            <tr ng-if="Data.mbtiResultGroup">
+                <th>MBTI</th>
+                <th ng-repeat="group in Data.transferredMbtiResult track by $index"
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
+                    <span class="result-marker" ng-show="group">&#10004;</span>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

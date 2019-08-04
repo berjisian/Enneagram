@@ -47,7 +47,7 @@
             <tbody>
             <tr>
                 <th>آزمون</th>
-                <th ng-repeat="group in Data.resultGroups track by $index"
+                <th ng-repeat="group in Data.enneagramResultGroups track by $index"
                     ng-class="{'inactive-result': !Data.activeResults[$index]}">
                     <span ng-show="group">{{group}}</span>
                 </th>

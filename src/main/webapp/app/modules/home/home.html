@@ -14,9 +14,6 @@
             <div class="col-md-1 header-progress-bar header-bar-two" ui-sref="home.detection"
                  ng-if="('home.detection' | includedByState) && !('home.detection' | isState)">شناسایی
             </div>
-            <div class="col-md-1 header-progress-bar header-bar-two" ui-sref="home.comparison"
-                 ng-if="('home.comparison' | includedByState) && !('home.comparison' | isState)">مقایسه
-            </div>
             <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.library.types"
                  ng-if="'home.library.typeTpl' | includedByState">گروه‌ها
             </div>
@@ -26,7 +23,10 @@
             <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.detection.exams"
                  ng-if="('home.detection.exams' | includedByState) && !('home.detection.exams' | isState)">آزمون‌ها
             </div>
-            <!-- TODO: Add other progress bar cells. -->
+            <div class="col-md-1 header-progress-bar header-bar-four" ui-sref="home.detection.exams.enterExamResults"
+                 ng-if="('home.detection.exams.enterExamResults' | includedByState) && !('home.detection.exams.enterExamResults' | isState)">
+                ورود نتایج
+            </div>
         </div>
     </div>
     <div class="col-md-12 col-sm-12">
@@ -35,6 +35,9 @@
                 <div id="home-navigation-bar">
                     <ul>
                         <!--TODO: Update side menu.-->
+                        <!--TODO: Design groups' pages.-->
+                        <!--TODO: Design library's page.-->
+                        <!--TODO: Fix warning pop-up problem.-->
                         <li ui-sref="home.library.personality"
                             ng-class="{'li-selected': ('home.library.personality' | isState)}">شخصیت چیست؟
                         </li>
@@ -45,7 +48,9 @@
                             گروه‌ها
                         </li>
                         <li ui-sref="home.detection" ng-class="{'li-selected': ('home.detection' | isState)}">شناسایی</li>
-                        <li ui-sref="home.comparison" ng-class="{'li-selected': ('home.comparison' | isState)}">مقایسه
+                        <li ui-sref="home.detection.exams.enterExamResults.comparison"
+                            ng-class="{'li-selected': ('home.detection.exams.enterExamResults.comparison' | isState)}">
+                            مقایسه
                         </li>
                     </ul>
                 </div>

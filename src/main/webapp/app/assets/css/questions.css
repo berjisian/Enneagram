@@ -1,12 +1,15 @@
 .question-part {
     text-align: center;
 }
+.question-part .page-slider {
+    margin-top: -10px;
+}
 .question-part ul {
     list-style: none;
     padding-right: 0;
 }
 .question-part li {
-    margin: 30px 10px;
+    margin: 10px 10px 0;
 }
 .question-phrase {
     border-bottom: 1px solid;

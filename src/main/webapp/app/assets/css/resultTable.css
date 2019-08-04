@@ -49,5 +49,8 @@
     border-radius: 10%;
 }
 .big-result .result-table .rzslider.rz-vertical {
-    min-height: 140px;
+    min-height: 120px;
+}
+.comparison .result-table .result-images img {
+    max-width: 46px;
 }

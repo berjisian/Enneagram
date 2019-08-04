@@ -1,9 +1,9 @@
 angular.module('comparisonModule').config(['$stateProvider', function($stateProvider) {
     const detectionStates = [
         {
-            name: "home.comparison",
+            name: "home.detection.exams.enterExamResults.comparison",
             url: "/comparison",
-            templateUrl : "app/modules/comparison/comparison.html",
+            templateUrl : "app/modules/detection/exams/enterExamResults/comparison/comparison.html",
             controller : 'comparisonCtrl'
         }];
     detectionStates.forEach(function(state) {

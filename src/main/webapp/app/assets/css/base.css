@@ -214,6 +214,10 @@ body {
     text-decoration: none;
     color: white;
 }
+.card .important-point {
+    font-size: x-large;
+    color: #c82333;
+}
 .home .footer-divider {
     width: 100%;
     background-color: gray;

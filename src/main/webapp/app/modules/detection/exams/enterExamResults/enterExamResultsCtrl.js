@@ -24,13 +24,13 @@ angular.module('enterExamResultsModule').controller('enterExamResultsCtrl', func
                     "ENTJ", "ENTP", "ENFJ", "ENFP",
                     "ESTJ", "ESTP", "ESFJ", "ESFP"],
         bigGroups: [
-            {title: "Agreeableness", farsi: "توافق‌گرایی"},
+            {title: "Openness", farsi: "گشودگی"},
             {title: "Conscientiousness", farsi: "مسئولیت‌پذیری"},
             {title: "Extraversion", farsi: "برون‌گرایی"},
-            {title: "Neuroticism", farsi: "روان‌رنجورخویی"},
-            {title: "Openness", farsi: "گشودگی"}
+            {title: "Agreeableness", farsi: "توافق‌گرایی"},
+            {title: "Neuroticism", farsi: "روان‌رنجورخویی"}
         ],
-        resultGroups: [0, 0, 0, 0, 0, 0, 0, 0 ,0],
+        enneagramResultGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         discResultGroups: [0, 0, 0, 0],
         mbtiResultGroup: "",
         bigResultGroups: [0, 0, 0, 0, 0]
@@ -38,11 +38,54 @@ angular.module('enterExamResultsModule').controller('enterExamResultsCtrl', func
 
     $scope.Func = {
         prepareResults: function () {
-            if ($state.params.resultGroups) {
-                $scope.Data.resultGroups = $state.params.resultGroups.split("X");
+            if ($state.params.enneagramResultGroups) {
+                $scope.Data.enneagramResultGroups = $state.params.enneagramResultGroups.split("X");
                 for (let i = 0; i < 9; i++)
-                    $scope.Data.resultGroups[i] = Number($scope.Data.resultGroups[i]);
+                    $scope.Data.enneagramResultGroups[i] = Number($scope.Data.enneagramResultGroups[i]);
             }
+            if ($state.params.discResultGroups) {
+                $scope.Data.discResultGroups = $state.params.discResultGroups.split("X");
+                for (let i = 0; i < 4; i++)
+                    $scope.Data.discResultGroups[i] = Number($scope.Data.discResultGroups[i]);
+            }
+            if ($state.params.bigResultGroups) {
+                $scope.Data.bigResultGroups = $state.params.bigResultGroups.split("X");
+                for (let i = 0; i < 5; i++)
+                    $scope.Data.bigResultGroups[i] = Number($scope.Data.bigResultGroups[i]);
+            }
+            if ($state.params.mbtiResultGroup) {
+                $scope.Data.mbtiResultGroup = $state.params.mbtiResultGroup;
+            }
+        },
+        calculateResults: function () {
+            let enneagramResultsString = "";
+            let discResultsString = "";
+            let bigResultsString = "";
+            if (!$scope.Data.enneagramResultGroups.every(item => item === 0))
+                for (let i = 0; i < 9; i++) {
+                    enneagramResultsString += ($scope.Data.enneagramResultGroups[i]);
+                    if (i < 8)
+                        enneagramResultsString += "X";
+                }
+            if (!$scope.Data.discResultGroups.every(item => item === 0))
+                for (let i = 0; i < 4; i++) {
+                    discResultsString += ($scope.Data.discResultGroups[i]);
+                    if (i < 3)
+                        discResultsString += "X";
+                }
+            if (!$scope.Data.bigResultGroups.every(item => item === 0))
+                for (let i = 0; i < 5; i++) {
+                    bigResultsString += ($scope.Data.bigResultGroups[i]);
+                    if (i < 4)
+                        bigResultsString += "X";
+                }
+            $state.go('home.detection.exams.enterExamResults.comparison', {
+                possibleGroups: $state.params.possibleGroups,
+                enneagramResultGroups: enneagramResultsString,
+                discResultGroups: discResultsString,
+                bigResultGroups: bigResultsString,
+                mbtiResultGroup: $scope.Data.mbtiResultGroup
+            });
         }
     };
 

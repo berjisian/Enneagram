@@ -15,7 +15,7 @@ angular.module('enneagramResultModule').controller('enneagramResultCtrl', functi
         ],
         numToWord: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"],
         possibleGroups: [],
-        resultGroups: [],
+        enneagramResultGroups: [],
         activeResults: [1, 1, 1, 1, 1, 1, 1, 1, 1]
     };
 
@@ -26,19 +26,19 @@ angular.module('enneagramResultModule').controller('enneagramResultCtrl', functi
                 for (let i = 0; i < 9; i++)
                     $scope.Data.possibleGroups[i] = Number($scope.Data.possibleGroups[i]);
             }
-            if ($state.params.resultGroups) {
-                $scope.Data.resultGroups = $state.params.resultGroups.split("X");
+            if ($state.params.enneagramResultGroups) {
+                $scope.Data.enneagramResultGroups = $state.params.enneagramResultGroups.split("X");
                 for (let i = 0; i < 9; i++)
-                    $scope.Data.resultGroups[i] = Number($scope.Data.resultGroups[i]);
+                    $scope.Data.enneagramResultGroups[i] = Number($scope.Data.enneagramResultGroups[i]);
             }
             $scope.Func.findActiveResults();
         },
         findActiveResults: function () {
             for (let i = 0; i < 9; i++) {
                 if ($scope.Data.possibleGroups && $scope.Data.possibleGroups.length) {
-                    if ($scope.Data.resultGroups[i] === 0 && $scope.Data.possibleGroups[i] === 0)
+                    if ($scope.Data.enneagramResultGroups[i] === 0 && $scope.Data.possibleGroups[i] === 0)
                         $scope.Data.activeResults[i] = 0;
-                } else if ($scope.Data.resultGroups[i] === 0)
+                } else if ($scope.Data.enneagramResultGroups[i] === 0)
                     $scope.Data.activeResults[i] = 0;
             }
         },
@@ -46,7 +46,7 @@ angular.module('enneagramResultModule').controller('enneagramResultCtrl', functi
             $scope.Data.mode = 'enneagramResultExplanationCard';
             $state.go('home.detection.exams', {
                 possibleGroups: $state.params.possibleGroups,
-                resultGroups: $state.params.resultGroups
+                enneagramResultGroups: $state.params.enneagramResultGroups
             });
         }
     };

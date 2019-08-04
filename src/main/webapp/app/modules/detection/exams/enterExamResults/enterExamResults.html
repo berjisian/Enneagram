@@ -1,152 +1,163 @@
-<div name="enter-exam-results-card" ng-if="Data.mode === 'enterExamResults'">
-    <h2 class="card-header">نتایج آزمون‌ها را وارد کنید</h2>
-    <div class="card-description">
-        هرکدام از آزمون‌ها را که در آن شرکت کرده‌اید، انتخاب کرده و نتیجه‌ی خود را وارد کنید. دقت کنید که احتیاجی نیست
-        نتیجه‌ی تک‌تک آزمون‌ها را وارد کنید. بعد از این که نتایج آزمون‌هایی را که در آن‌ها شرکت کرده‌اید،‌ وارد نمودید،
-        با انتخاب گزینه‌ی <b>مقایسه و تجمیع</b> حاصل جمع‌بندی نتایج آزمون‌های خود را بررسی کرده و برمبنای آن‌ها
-        توصیه‌های انیاگرام را مشاهده کنید.
-    </div>
-    <div class="row">
-        <div class="col-md-2 col-md-offset-right-2" ng-click="Data.mode = 'bigResult'">
-            <img class="systems-img" style="margin-top: 4px;" src="/app/assets/images/Big.png">
-            <div class="systems-btn btn btn-info" ng-click="Data.mode = 'bigResult'">
-                Big 5
+<div class="enter-exams-result-page" ui-view>
+    <div name="enter-exam-results-card" ng-if="Data.mode === 'enterExamResults'">
+        <h2 class="card-header">نتایج آزمون‌ها را وارد کنید</h2>
+        <div class="card-description">
+            هرکدام از آزمون‌ها را که در آن شرکت کرده‌اید، انتخاب کرده و نتیجه‌ی خود را وارد کنید. دقت کنید که احتیاجی
+            نیست
+            نتیجه‌ی تک‌تک آزمون‌ها را وارد کنید. بعد از این که نتایج آزمون‌هایی را که در آن‌ها شرکت کرده‌اید،‌ وارد
+            نمودید،
+            با انتخاب گزینه‌ی <b>مقایسه و تجمیع</b> حاصل جمع‌بندی نتایج آزمون‌های خود را بررسی کرده و برمبنای آن‌ها
+            توصیه‌های انیاگرام را مشاهده کنید.
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-right-2" ng-click="Data.mode = 'bigResult'">
+                <img class="systems-img" style="margin-top: 4px;" src="/app/assets/images/Big.png">
+                <div class="systems-btn btn btn-info" ng-click="Data.mode = 'bigResult'">
+                    Big 5
+                </div>
+            </div>
+            <div class="col-md-2" ng-click="Data.mode = 'mbtiResult'">
+                <img class="systems-img" src="/app/assets/images/MBTI.jpg">
+                <div class="systems-btn btn btn-info" ng-click="Data.mode = 'mbtiResult'">
+                    MBTI
+                </div>
+            </div>
+            <div class="col-md-2" ng-click="Data.mode = 'discResult'">
+                <img class="systems-img" src="/app/assets/images/DISC.png">
+                <div class="systems-btn btn btn-info" ng-click="Data.mode = 'discResult'">
+                    DISC
+                </div>
+            </div>
+            <div class="col-md-2">
+                <img ng-click="Data.mode = 'enneagramResult'" class="systems-img"
+                     src="/app/assets/images/Enneagram.png">
+                <div ng-click="Data.mode = 'enneagramResult'" class="systems-btn btn btn-info">
+                    Enneagram
+                </div>
+            </div>
+            <div ng-click="Func.calculateResults()" class="card-link card-link-action btn btn-info card-link-full">
+                مقایسه و
+                تجمیع
             </div>
         </div>
-        <div class="col-md-2" ng-click="Data.mode = 'mbtiResult'">
-            <img class="systems-img" src="/app/assets/images/MBTI.jpg">
-            <div class="systems-btn btn btn-info" ng-click="Data.mode = 'mbtiResult'">
-                MBTI
-            </div>
+    </div>
+    <div name="enter-enneagram-results-card" class="enneagram-result" ng-if="Data.mode === 'enneagramResult'">
+        <h2 class="card-header">نتایج Enneagram</h2>
+        <div class="card-description">
+            <table class="table table-striped result-table">
+                <thead class="table-header">
+                <tr>
+                    <th class="first-cell-header"></th>
+                    <th class="result-group" ng-repeat="group in Data.enneagramGroups">
+                        {{group.title}}
+                    </th>
+                </tr>
+                <tr>
+                    <th class="first-cell-header"></th>
+                    <th class="result-group result-images" ng-repeat="group in Data.enneagramGroups">
+                        <img src="/app/assets/images/{{group.value}}.png" alt="{{group.title}}"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>آزمون</th>
+                    <th ng-repeat="group in Data.enneagramResultGroups track by $index">
+                        <rzslider rz-slider-model="Data.enneagramResultGroups[$index]"
+                                  rz-slider-options="Slider.enneagramOptions"></rzslider>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="col-md-2" ng-click="Data.mode = 'discResult'">
-            <img class="systems-img" src="/app/assets/images/DISC.png">
-            <div class="systems-btn btn btn-info" ng-click="Data.mode = 'discResult'">
-                DISC
-            </div>
+        <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">
+            ورود
+            نتایج باقی آزمون‌ها
         </div>
-        <div class="col-md-2">
-            <img ng-click="Data.mode = 'enneagramResult'" class="systems-img"
-                 src="/app/assets/images/Enneagram.png">
-            <div ng-click="Data.mode = 'enneagramResult'" class="systems-btn btn btn-info">
-                Enneagram
-            </div>
+    </div>
+    <div name="enter-disc-results-card" class="disc-result" ng-if="Data.mode === 'discResult'">
+        <h2 class="card-header">نتایج DISC</h2>
+        <div class="card-description row">
+            <table class="col-sm-4 col-sm-offset-right-4 table table-striped result-table">
+                <thead class="table-header">
+                <tr>
+                    <th class="first-cell-header"></th>
+                    <th class="result-group result-images" ng-repeat="group in Data.discGroups">
+                        <img src="/app/assets/images/{{group.title}}.png" alt="{{group.farsi}}"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>آزمون</th>
+                    <th ng-repeat="group in Data.discResultGroups track by $index">
+                        <rzslider rz-slider-model="Data.discResultGroups[$index]"
+                                  rz-slider-options="Slider.discOptions"></rzslider>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
         </div>
-        <!--TODO: Add ui-sref-->
-        <div class="card-link card-link-action btn btn-info card-link-full">مقایسه و تجمیع</div>
+        <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">
+            ورود
+            نتایج باقی آزمون‌ها
+        </div>
     </div>
-</div>
-<div name="enter-enneagram-results-card" class="enneagram-result" ng-if="Data.mode === 'enneagramResult'">
-    <h2 class="card-header">نتایج Enneagram</h2>
-    <div class="card-description">
-        <table class="table table-striped result-table">
-            <thead class="table-header">
-            <tr>
-                <th class="first-cell-header"></th>
-                <th class="result-group" ng-repeat="group in Data.enneagramGroups">
-                    {{group.title}}
-                </th>
-            </tr>
-            <tr>
-                <th class="first-cell-header"></th>
-                <th class="result-group result-images" ng-repeat="group in Data.enneagramGroups">
-                    <img src="/app/assets/images/{{group.value}}.png" alt="{{group.title}}"></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>آزمون</th>
-                <th ng-repeat="group in Data.resultGroups track by $index">
-                    <rzslider rz-slider-model="Data.resultGroups[$index]"
-                              rz-slider-options="Slider.enneagramOptions"></rzslider>
-                </th>
-            </tr>
-            </tbody>
-        </table>
+    <div name="enter-mbti-results-card" class="mbti-result" ng-if="Data.mode === 'mbtiResult'">
+        <h2 class="card-header">نتایج MBTI</h2>
+        <div class="card-description row">
+            <table class="col-sm-10 col-sm-offset-right-1 table table-striped result-table">
+                <thead class="table-header">
+                <tr>
+                    <th class="result-group result-images" ng-repeat="group in Data.mbtiGroups track by $index"
+                        ng-if="$index < 8" ng-click="Data.mbtiResultGroup = group"
+                        ng-class="{'selected-mbti-group': Data.mbtiResultGroup === group}">
+                        <img src="/app/assets/images/{{group}}.png">
+                        {{group}}
+                    </th>
+                </tr>
+                <tr>
+                    <th class="result-group result-images" ng-repeat="group in Data.mbtiGroups track by $index"
+                        ng-if="$index > 7" ng-click="Data.mbtiResultGroup = group"
+                        ng-class="{'selected-mbti-group': Data.mbtiResultGroup === group}">
+                        <img src="/app/assets/images/{{group}}.png">
+                        {{group}}
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">
+            ورود
+            نتایج باقی آزمون‌ها
+        </div>
     </div>
-    <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">ورود
-        نتایج باقی آزمون‌ها
-    </div>
-</div>
-<div name="enter-disc-results-card" class="disc-result" ng-if="Data.mode === 'discResult'">
-    <h2 class="card-header">نتایج DISC</h2>
-    <div class="card-description row">
-        <table class="col-sm-4 col-sm-offset-right-4 table table-striped result-table">
-            <thead class="table-header">
-            <tr>
-                <th class="first-cell-header"></th>
-                <th class="result-group result-images" ng-repeat="group in Data.discGroups">
-                    <img src="/app/assets/images/{{group.title}}.png" alt="{{group.farsi}}"></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>آزمون</th>
-                <th ng-repeat="group in Data.discResultGroups track by $index">
-                    <rzslider rz-slider-model="Data.discResultGroups[$index]"
-                              rz-slider-options="Slider.discOptions"></rzslider>
-                </th>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">ورود
-        نتایج باقی آزمون‌ها
-    </div>
-</div>
-<div name="enter-mbti-results-card" class="mbti-result" ng-if="Data.mode === 'mbtiResult'">
-    <h2 class="card-header">نتایج MBTI</h2>
-    <div class="card-description row">
-        <table class="col-sm-10 col-sm-offset-right-1 table table-striped result-table">
-            <thead class="table-header">
-            <tr>
-                <th class="result-group result-images" ng-repeat="group in Data.mbtiGroups track by $index"
-                    ng-if="$index < 8" ng-click="Data.mbtiResultGroup = group"
-                    ng-class="{'selected-mbti-group': Data.mbtiResultGroup === group}">
-                    <img src="/app/assets/images/{{group}}.png">
-                    {{group}}
-                </th>
-            </tr>
-            <tr>
-                <th class="result-group result-images" ng-repeat="group in Data.mbtiGroups track by $index"
-                    ng-if="$index > 7" ng-click="Data.mbtiResultGroup = group"
-                    ng-class="{'selected-mbti-group': Data.mbtiResultGroup === group}">
-                    <img src="/app/assets/images/{{group}}.png">
-                    {{group}}
-                </th>
-            </tr>
-            </thead>
-        </table>
-    </div>
-    <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">ورود
-        نتایج باقی آزمون‌ها
-    </div>
-</div>
-<div name="enter-big-results-card" class="big-result" ng-if="Data.mode === 'bigResult'">
-    <h2 class="card-header">نتایج Big 5</h2>
-    <div class="card-description row">
-        <table class="col-sm-6 col-sm-offset-right-3 table table-striped result-table">
-            <thead class="table-header">
-            <tr>
-                <th class="first-cell-header"></th>
-                <th class="result-group result-images" ng-repeat="group in Data.bigGroups">
-                    <img src="/app/assets/images/{{group.title}}.png" alt="{{group.farsi}}">
-                    {{group.farsi}}
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>آزمون</th>
-                <th ng-repeat="group in Data.bigResultGroups track by $index">
-                    <rzslider rz-slider-model="Data.bigResultGroups[$index]"
-                              rz-slider-options="Slider.bigOptions"></rzslider>
-                </th>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">ورود
-        نتایج باقی آزمون‌ها
+    <div name="enter-big-results-card" class="big-result" ng-if="Data.mode === 'bigResult'">
+        <h2 class="card-header">نتایج Big 5</h2>
+        <div class="card-description row">
+            <table class="col-sm-6 col-sm-offset-right-3 table table-striped result-table">
+                <thead class="table-header">
+                <tr>
+                    <th class="first-cell-header"></th>
+                    <th class="result-group result-images" ng-repeat="group in Data.bigGroups">
+                        <img src="/app/assets/images/{{group.title}}.png" alt="{{group.farsi}}">
+                        {{group.title}}
+                        {{group.farsi}}
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>آزمون</th>
+                    <th ng-repeat="group in Data.bigResultGroups track by $index">
+                        <rzslider rz-slider-model="Data.bigResultGroups[$index]"
+                                  rz-slider-options="Slider.bigOptions"></rzslider>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">
+            ورود
+            نتایج باقی آزمون‌ها
+        </div>
     </div>
 </div>

@@ -9,7 +9,7 @@ angular.module('examsModule').controller('examsCtrl', function ($scope, $state, 
         goToEnterResultsPage: function () {
             $state.go('home.detection.exams.enterExamResults', {
                 possibleGroups: $state.params.possibleGroups,
-                resultGroups: $state.params.resultGroups
+                enneagramResultGroups: $state.params.enneagramResultGroups
             });
         }
     };
