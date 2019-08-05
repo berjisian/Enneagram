@@ -34,22 +34,25 @@
             <div class="col-sm-2">
                 <div id="home-navigation-bar">
                     <ul>
-                        <!--TODO: Update side menu.-->
-                        <!--TODO: Design groups' pages.-->
-                        <!--TODO: Design library's page.-->
+                        <!--TODO: Add groups' data.-->
                         <!--TODO: Fix warning pop-up problem.-->
                         <li ui-sref="home.library.personality"
-                            ng-class="{'li-selected': ('home.library.personality' | isState)}">شخصیت چیست؟
+                            ng-class="{'li-selected': ('home.library.personality' | includedByState)}">شخصیت چیست؟
                         </li>
-                        <li ui-sref="home.library.basics" ng-class="{'li-selected': ('home.library.basics' | isState)}">
-                            معرفی
+                        <li ui-sref="home.library.systems"
+                            ng-class="{'li-selected': ('home.library.systems' | includedByState)}">
+                            روش‌های شخصیت‌شناسی
                         </li>
-                        <li ui-sref="home.library.types" ng-class="{'li-selected': ('home.library.types' | isState)}">
+                        <li ui-sref="home.library.types"
+                            ng-class="{'li-selected': ('home.library.types' | includedByState) || ('home.library.typeTpl' | includedByState)}">
                             گروه‌ها
                         </li>
-                        <li ui-sref="home.detection" ng-class="{'li-selected': ('home.detection' | isState)}">شناسایی</li>
-                        <li ui-sref="home.detection.exams.enterExamResults.comparison"
-                            ng-class="{'li-selected': ('home.detection.exams.enterExamResults.comparison' | isState)}">
+                        <li ui-sref="home.detection"
+                            ng-class="{'li-selected': ('home.detection' | includedByState) && !('home.detection.exams.enterExamResults' | includedByState)}">
+                            شناسایی
+                        </li>
+                        <li ui-sref="home.detection.exams.enterExamResults"
+                            ng-class="{'li-selected': ('home.detection.exams.enterExamResults' | includedByState)}">
                             مقایسه
                         </li>
                     </ul>

@@ -6,7 +6,7 @@ enneagram.externalDependencies = [
 enneagram.internalDependency = [];
 enneagram.modulesDependency = [
     "homeModule", "detectionModule", "introductionModule", "libraryModule",
-    "personalityModule", "basicsModule", "typesModule", "typeTplModule", "systemsModule", "enneagramModule",
+    "personalityModule", "typesModule", "typeTplModule", "systemsModule", "enneagramModule",
     "discModule", "mbtiModule", "bigModule", "examsModule", "enneagramExamModule", "enneagramResultModule",
     "enterExamResultsModule", "comparisonModule"
 ];

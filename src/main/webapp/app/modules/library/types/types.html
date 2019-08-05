@@ -1,21 +1,19 @@
-<div class="all-types-page">
-    <div class="groups-div">
+<div name="select-group-card">
+    <h2 class="card-header">گروه موردنظر خود را انتخاب کنید.</h2>
+    <div class="card-description">
         <div class="row images-block">
-            <div class="group-image" ng-repeat="group in Data.groups track by $index"
-                 ng-click="Func.onGroupClick(group)">
-                <img src="/app/assets/images/{{group.value}}.png" alt="تعیین شخصیت">
+            <div class="group-images" ng-repeat="group in Data.groups"
+                 ng-click="Func.onGroupSelect(group.value)">
+                <img src="/app/assets/images/{{group.value}}.png" alt="{{group.title}}">
                 <p class="group-name">
                     {{group.value}}
                     <br>
-                    {{Data.groupsTitle[$index]}}
+                    {{group.title}}
                 </p>
             </div>
         </div>
     </div>
-    <div class="explanation-block">
-        <h1>گروه‌ها</h1>
-        <div>
-            برای آشنایی با هرگروه آن را انتخاب کنید.
-        </div>
+    <div ui-sref="home.detection" class="card-link card-link-action btn btn-info card-link-full">
+        شناسایی
     </div>
 </div>
