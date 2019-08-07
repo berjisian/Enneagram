@@ -1,4 +1,4 @@
-angular.module('introductionModule').controller('introductionCtrl', function ($scope, $state, introductionSrvc, homeSrvc) {
+angular.module('introductionModule').controller('introductionCtrl', function ($scope, $state, introductionSrvc) {
 
     $scope.Data = {
         mode: "introductionDescription",
@@ -45,9 +45,13 @@ angular.module('introductionModule').controller('introductionCtrl', function ($s
             $scope.Func.changePage(0, group);
         },
         onSelectPossibleGroups: function (possibleGroup) {
-            $scope.Data.possibleGroups[possibleGroup] = 1;
-            homeSrvc.showMassage('success', '', 'ایمپورت با موفقیت اضافه شد');
-        //    TODO: Not working.
+            if (!$scope.Data.possibleGroups[possibleGroup]) {
+                $scope.Data.possibleGroups[possibleGroup] = 1;
+                toastr.success('شما فکر می‌کنید عضو گروه ' + (possibleGroup + 1) + ' هستید.');
+            } else {
+                $scope.Data.possibleGroups[possibleGroup] = 0;
+                toastr.error('شما فکر نمی‌کنید عضو گروه ' + (possibleGroup + 1) + ' باشید.');
+            }
         },
         goToSelectExamsPage: function () {
             $scope.Data.mode = 'introductionDescription';
@@ -59,6 +63,15 @@ angular.module('introductionModule').controller('introductionCtrl', function ($s
             }
             $state.go('home.detection.exams', {possibleGroups: possibleGroupsString});
         }
+    };
+
+    toastr.options = {
+        "closeMethod": "fadeOut",
+        "positionClass": "toast-bottom-right",
+        "closeDuration": 300,
+        "closeEasing": 'swing',
+        "extendedTimeOut": 1000,
+        "rtl": true
     };
 
     let Run = function () {

@@ -12,7 +12,10 @@ angular.module('typeTplModule').controller('typeTplCtrl', function ($scope, $sta
             {title: "خوش‌گذران", value: 7, state: "seven"},
             {title: "رهبر", value: 8, state: "eight"},
             {title: "میانجی", value: 9, state: "nine"},
-        ]
+        ],
+        entry: [],
+        currentPage: -1,
+        maxPageNum: 0
     };
 
     $scope.Func = {
@@ -24,10 +27,14 @@ angular.module('typeTplModule').controller('typeTplCtrl', function ($scope, $sta
                 $scope.Func.changePage("next");
             });
         },
-        changePage: function (direction) {
-            var changeValue = (direction === "next") ? 1 : -1;
-            $scope.Data.currentPage += changeValue;
-            $("#personality-content-div").html($scope.Data.entry[$scope.Data.currentPage]);
+        changePage: function (direction, selectedPage) {
+            if (selectedPage)
+                $scope.Data.currentPage = selectedPage - 1;
+            else {
+                let changeValue = (direction === "next") ? 1 : -1;
+                $scope.Data.currentPage += changeValue;
+            }
+            $("#type-content-div").html($scope.Data.entry[$scope.Data.currentPage]);
         }
     };
 
