@@ -1,4 +1,4 @@
-<div name="comparison-explanation-card" ng-if="Data.mode === 'comparisonExplanationCard'">
+<div class="comparison-explanation-card" ng-if="Data.mode === 'comparisonExplanationCard'">
     <h2 class="card-header">مقایسه و تجمیع</h2>
     <div class="card-description">
         <p>
@@ -20,7 +20,7 @@
         مشاهده‌ی نتیجه‌ی تجمیعی
     </div>
 </div>
-<div name="comparison-card" class="comparison" ng-if="Data.mode === 'comparisonCard'">
+<div class="comparison-card comparison" ng-if="Data.mode === 'comparisonCard'">
     <div class="card-description">
         <table class="table table-striped result-table">
             <thead class="table-header">
@@ -36,8 +36,7 @@
             <tr>
                 <th class="first-cell-header"></th>
                 <th class="result-group result-images" ng-repeat="group in Data.introductionGroups"
-                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
-                    <a href="#/library/types/{{Data.numToWord[group.value - 1]}}" target="_blank">
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}" ng-click="Func.onGroupClick(group)">
                         <img src="/app/assets/images/{{group.value}}.png" alt="تعیین شخصیت"></a></th>
             </tr>
             </thead>

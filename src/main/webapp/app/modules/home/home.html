@@ -34,7 +34,6 @@
             <div class="col-sm-2">
                 <div id="home-navigation-bar">
                     <ul>
-                        <!--TODO: Add info page on Enneagram basics and direct to it once.-->
                         <li ui-sref="home.library.personality"
                             ng-class="{'li-selected': ('home.library.personality' | includedByState)}">شخصیت چیست؟
                         </li>
@@ -59,7 +58,7 @@
             </div>
             <div class="col-sm-10">
                 <div class="card" ui-view>
-                    <div name="initial-card" ng-if="Data.mode === 'initial'">
+                    <div class="initial-card" ng-if="Data.mode === 'initial'">
                         <h2 class="card-header">شخصیت‌شناس</h2>
                         <div class="card-description">
                             این سامانه با هدف بررسی شخصیت افراد از دیدگاه چهار روش شناخته‌شده‌ی موجود، مقایسه‌ی
@@ -70,7 +69,7 @@
                             شناسایی
                         </div>
                     </div>
-                    <div name="if-know-about-personality-card" ng-if="Data.mode === 'personality'">
+                    <div class="if-know-about-personality-card" ng-if="Data.mode === 'personality'">
                         <h2 class="card-header">آیا می‌دانید شخصیت چیست؟</h2>
                         <div class="card-description">
                             آیا با مفهوم شخصیت آشنایی دارید؟ چنان‌چه تصویر روشنی از مفهوم شخصیت در ذهن ندارید و
@@ -85,7 +84,7 @@
                              class="card-link card-link-no btn btn-danger card-link-half-second">خیر
                         </div>
                     </div>
-                    <div name="if-know-about-personality-systems-card" ng-if="Data.mode === 'systems'">
+                    <div class="if-know-about-personality-systems-card" ng-if="Data.mode === 'systems'">
                         <h2 class="card-header">با روش‌های مختلف شخصیت‌شناسی آشنایی دارید؟</h2>
                         <div class="card-description">
                             آیا با روش‌های Big 5، Myers-Briggs، DISC و Enneagram آشنایی دارید؟ چنان‌چه شناختی از

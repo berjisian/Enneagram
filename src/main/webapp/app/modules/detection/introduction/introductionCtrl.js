@@ -76,7 +76,7 @@ angular.module('introductionModule').controller('introductionCtrl', function ($s
 
     let Run = function () {
         $scope.Data.$contentDiv = $("#group-introduction-content-div");
-        $scope.Func.loadData("introduction");
+        $scope.Func.loadData("groupIntroductions");
     };
 
     Run();

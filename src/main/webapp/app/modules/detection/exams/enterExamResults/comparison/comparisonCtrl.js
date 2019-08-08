@@ -30,7 +30,8 @@ angular.module('comparisonModule').controller('comparisonCtrl', function ($scope
         discResultGroups: [],
         quantizedDiscResults: [],
         bigResultGroups: [],
-        mbtiResultGroup: ""
+        mbtiResultGroup: "",
+        viewEnneagramBasics: true
     };
 
     $scope.Func = {
@@ -220,7 +221,14 @@ angular.module('comparisonModule').controller('comparisonCtrl', function ($scope
             }
         },
         onGroupClick: function (selectedGroup) {
-            window.location.href = "#/library/types/" + $scope.Data.numToWord[selectedGroup.value - 1];
+            if ($scope.Data.viewEnneagramBasics) {
+                $scope.Data.viewEnneagramBasics = false;
+                let url = $state.href('home.library.basics', {selectedGroup: $scope.Data.numToWord[selectedGroup.value - 1]});
+                window.open(url,'_blank');
+            } else {
+                let url = $state.href('home.library.typeTpl.' + $scope.Data.numToWord[selectedGroup.value - 1]);
+                window.open(url,'_blank');
+            }
         }
     };
 

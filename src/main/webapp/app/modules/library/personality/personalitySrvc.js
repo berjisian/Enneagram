@@ -4,7 +4,7 @@ angular.module('personalityModule').factory('personalitySrvc', [
         return {
             getData : function (page) {
                 return $.ajax({
-                    url : ("app/assets/Data/basics/" + page + ".txt"),
+                    url : ("app/assets/Data/" + page + ".txt"),
                     dataType: "text",
                 });
             }

@@ -1,5 +1,5 @@
-angular.module('introductionModule', []);
-angular.module('introductionModule').factory('introductionSrvc', [
+angular.module('basicsModule', []);
+angular.module('basicsModule').factory('basicsSrvc', [
     function() {
         return {
             getData : function (page) {

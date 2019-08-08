@@ -1,4 +1,4 @@
-<div name="introduction-description-card" ng-if="Data.mode === 'introductionDescription'">
+<div class="introduction-description-card" ng-if="Data.mode === 'introductionDescription'">
     <h2 class="card-header">می‌خواهید با نگاهی کوتاه به گروه‌های انیاگرام گروه شخصیتی خود را حدس بزنید؟</h2>
     <div class="card-description">
         اگر تمایل دارید، نگاه مختصری به گروه‌های مختلف انیاگرام بیاندازید و پیش از شرکت در آزمون سعی کنید حدس بزنید که
@@ -12,7 +12,7 @@
     </div>
     <div ui-sref="home.detection.exams" class="card-link card-link-no btn btn-danger card-link-half-second">خیر، در آزمون شرکت می‌کنم.</div>
 </div>
-<div name="select-group-introduction-card" ng-if="Data.mode === 'selectGroupIntroduction'">
+<div class="select-group-introduction-card" ng-if="Data.mode === 'selectGroupIntroduction'">
     <h2 class="card-header">گروه موردنظر خود را انتخاب کنید.</h2>
     <div class="card-description">
         <div class="row images-block">
@@ -32,8 +32,8 @@
         آزمون
     </div>
 </div>
-<div name="show-group-introduction-card" ng-if="Data.mode === 'showGroupIntroduction'">
-    <h2 class="card-header">معرفی گروه‌های انیاگرام</h2>
+<div class="show-group-introduction-card" ng-if="Data.mode === 'showGroupIntroduction'">
+    <h2 class="card-header">گروه {{Data.currentPage + 1}} - {{Data.introductionGroups[Data.currentPage].title}}</h2>
     <div class="card-description" ng-bind-html="Data.entry[Data.currentPage]"></div>
     <button style="margin-left: 15px" class="btn btn-info" ng-click="Func.onSelectPossibleGroups(Data.currentPage)">
         عضو گروه {{Data.currentPage + 1}} هستید؟
