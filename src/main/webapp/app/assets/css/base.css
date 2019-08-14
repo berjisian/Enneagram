@@ -135,9 +135,35 @@ body {
     cursor: pointer;
     margin: 5px;
 }
+#home-navigation-bar li:hover {
+    color: #f25a77;
+    border-bottom: 2px solid #f25a77;
+}
 #home-navigation-bar .li-selected {
-    border-bottom: 2px solid crimson;
-    color: crimson;
+    border-bottom: 2px solid crimson!important;
+    color: crimson!important;
+}
+#home-navigation-bar .unactive-li {
+    pointer-events: none;
+    border-bottom: 2px solid grey!important;
+    color: grey!important;
+}
+#home-navigation-bar .dropdown-title {
+    padding-right: 73px;
+}
+.dropdown-menu {
+    text-align: center;
+    background: gainsboro;
+    cursor: pointer;
+}
+.dropdown-menu li {
+    margin: 10px;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+.dropdown-menu li:hover {
+    color: #f25a77;
+    border-bottom: 1px solid #f25a77;
 }
 .card {
     position: relative;

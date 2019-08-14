@@ -2,7 +2,7 @@ angular.module('examsModule').config(['$stateProvider', function($stateProvider)
     var examsStates = [
         {
             name: "home.detection.exams",
-            url: "/exams/?possibleGroups?enneagramResultGroups?discResultGroups?mbtiResultGroup?bigResultGroups",
+            url: "/exams",
             templateUrl: "app/modules/detection/exams/exams.html",
             controller: 'examsCtrl'
         }];

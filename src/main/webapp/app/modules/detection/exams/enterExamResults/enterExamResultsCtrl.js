@@ -33,7 +33,11 @@ angular.module('enterExamResultsModule').controller('enterExamResultsCtrl', func
         enneagramResultGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         discResultGroups: [0, 0, 0, 0],
         mbtiResultGroup: "",
-        bigResultGroups: [0, 0, 0, 0, 0]
+        bigResultGroups: [0, 0, 0, 0, 0],
+        activeEnneagramResult: false,
+        activeDiscResult: false,
+        activeMbtiResult: false,
+        activeBigResult: false
     };
 
     $scope.Func = {
@@ -86,6 +90,17 @@ angular.module('enterExamResultsModule').controller('enterExamResultsCtrl', func
                 bigResultGroups: bigResultsString,
                 mbtiResultGroup: $scope.Data.mbtiResultGroup
             });
+        },
+        checkActiveResults: function () {
+            if (!$scope.Data.enneagramResultGroups.every(item => item === 0))
+                $scope.Data.activeEnneagramResult = true;
+            if (!$scope.Data.discResultGroups.every(item => item === 0))
+                $scope.Data.activeDiscResult = true;
+            if ($scope.Data.mbtiResultGroup)
+                $scope.Data.activeMbtiResult = true;
+            if (!$scope.Data.bigResultGroups.every(item => item === 0))
+                $scope.Data.activeBigResult = true;
+            $scope.Data.mode = 'enterExamResults';
         }
     };
 
@@ -112,6 +127,7 @@ angular.module('enterExamResultsModule').controller('enterExamResultsCtrl', func
 
     let Run = function () {
         $scope.Func.prepareResults();
+        $scope.Func.checkActiveResults();
     };
 
     Run();

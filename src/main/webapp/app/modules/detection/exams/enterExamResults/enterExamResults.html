@@ -10,28 +10,33 @@
             توصیه‌های انیاگرام را مشاهده کنید.
         </div>
         <div class="row">
-            <div class="col-md-2 col-md-offset-right-2" ng-click="Data.mode = 'bigResult'">
-                <img class="systems-img" style="margin-top: 4px;" src="/app/assets/images/Big.png">
-                <div class="systems-btn btn btn-info" ng-click="Data.mode = 'bigResult'">
+            <div class="col-md-2 col-md-offset-right-2">
+                <img class="systems-img" ng-click="Data.mode = 'bigResult'" style="margin-top: 4px;"
+                     src="/app/assets/images/Big.png">
+                <div class="systems-btn btn" ng-click="Data.mode = 'bigResult'"
+                     ng-class="{'btn-success': Data.activeBigResult, 'btn-info': !Data.activeBigResult}">
                     Big 5
                 </div>
             </div>
-            <div class="col-md-2" ng-click="Data.mode = 'mbtiResult'">
-                <img class="systems-img" src="/app/assets/images/MBTI.jpg">
-                <div class="systems-btn btn btn-info" ng-click="Data.mode = 'mbtiResult'">
+            <div class="col-md-2">
+                <img class="systems-img" ng-click="Data.mode = 'mbtiResult'" src="/app/assets/images/MBTI.jpg">
+                <div class="systems-btn btn" ng-click="Data.mode = 'mbtiResult'"
+                     ng-class="{'btn-success': Data.activeMbtiResult, 'btn-info': !Data.activeMbtiResult}">
                     MBTI
                 </div>
             </div>
-            <div class="col-md-2" ng-click="Data.mode = 'discResult'">
-                <img class="systems-img" src="/app/assets/images/DISC.png">
-                <div class="systems-btn btn btn-info" ng-click="Data.mode = 'discResult'">
+            <div class="col-md-2">
+                <img class="systems-img" ng-click="Data.mode = 'discResult'" src="/app/assets/images/DISC.png">
+                <div class="systems-btn btn" ng-click="Data.mode = 'discResult'"
+                     ng-class="{'btn-success': Data.activeDiscResult, 'btn-info': !Data.activeDiscResult}">
                     DISC
                 </div>
             </div>
             <div class="col-md-2">
                 <img ng-click="Data.mode = 'enneagramResult'" class="systems-img"
                      src="/app/assets/images/Enneagram.png">
-                <div ng-click="Data.mode = 'enneagramResult'" class="systems-btn btn btn-info">
+                <div ng-click="Data.mode = 'enneagramResult'" class="systems-btn btn"
+                     ng-class="{'btn-success': Data.activeEnneagramResult, 'btn-info': !Data.activeEnneagramResult}">
                     Enneagram
                 </div>
             </div>
@@ -69,7 +74,7 @@
                 </tbody>
             </table>
         </div>
-        <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">
+        <div ng-click="Func.checkActiveResults()" class="card-link card-link-action btn btn-info card-link-full">
             ورود
             نتایج باقی آزمون‌ها
         </div>
@@ -96,7 +101,7 @@
                 </tbody>
             </table>
         </div>
-        <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">
+        <div ng-click="Func.checkActiveResults()" class="card-link card-link-action btn btn-info card-link-full">
             ورود
             نتایج باقی آزمون‌ها
         </div>
@@ -125,7 +130,7 @@
                 </thead>
             </table>
         </div>
-        <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">
+        <div ng-click="Func.checkActiveResults()" class="card-link card-link-action btn btn-info card-link-full">
             ورود
             نتایج باقی آزمون‌ها
         </div>
@@ -155,7 +160,7 @@
                 </tbody>
             </table>
         </div>
-        <div ng-click="Data.mode = 'enterExamResults'" class="card-link card-link-action btn btn-info card-link-full">
+        <div ng-click="Func.checkActiveResults()" class="card-link card-link-action btn btn-info card-link-full">
             ورود
             نتایج باقی آزمون‌ها
         </div>

@@ -4,29 +4,64 @@
             <div class="col-md-2 col-sm-3 link" ui-sref="home">
                 <span class="title link">شخصیت‌شناس</span>
             </div>
-            <div class="col-md-2 header-bar-start" ng-if="!('home' | isState)">بازگشت به:</div>
+            <div class="col-md-2 header-bar-start">بازگشت به:</div>
             <div class="col-md-1 header-progress-bar header-bar-one" ui-sref="home"
-                 ng-if="('home' | includedByState) && !('home' | isState)">صفحه‌ی اول
+                 ng-if="('home' | includedByState)" ng-click="Data.mode = 'initial'">صفحه‌ی اول
             </div>
             <div class="col-md-1 header-progress-bar header-bar-two" ui-sref="home.library"
-                 ng-if="('home.library' | includedByState) && !('home.library' | isState)">کتابخانه
+                 ng-if="('home.library' | includedByState)">دانشنامه
             </div>
             <div class="col-md-1 header-progress-bar header-bar-two" ui-sref="home.detection"
-                 ng-if="('home.detection' | includedByState) && !('home.detection' | isState)">شناسایی
+                 ng-if="('home.detection' | includedByState)">شناسایی
             </div>
-            <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.library.types"
-                 ng-if="'home.library.typeTpl' | includedByState">گروه‌ها
+            <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.library.basics"
+                 ng-if="'home.library.basics' | includedByState">مبانی
+            </div>
+            <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.library.personality"
+                 ng-if="'home.library.personality' | includedByState">شخصیت
             </div>
             <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.library.systems"
-                 ng-if="('home.library.systems' | includedByState) && !('home.library.systems' | isState)">روش‌ها
+                 ng-if="('home.library.systems' | includedByState)">روش‌ها
+            </div>
+            <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.library.types"
+                 ng-if="('home.library.typeTpl' | includedByState) || ('home.library.types' | includedByState)">گروه‌ها
             </div>
             <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.detection.exams"
-                 ng-if="('home.detection.exams' | includedByState) && !('home.detection.exams' | isState)">آزمون‌ها
+                 ng-if="('home.detection.exams' | includedByState)">آزمون‌ها
+            </div>
+            <div class="col-md-1 header-progress-bar header-bar-three" ui-sref="home.detection.introduction"
+                 ng-if="'home.detection.introduction' | includedByState">برآورد
+            </div>
+            <div class="col-md-1 header-progress-bar header-bar-four" ui-sref="home.library.systems.big"
+                 ng-if="('home.library.systems.big' | includedByState)">
+                Big 5
+            </div>
+            <div class="col-md-1 header-progress-bar header-bar-four" ui-sref="home.library.systems.disc"
+                 ng-if="('home.library.systems.disc' | includedByState)">
+                DISC
+            </div>
+            <div class="col-md-1 header-progress-bar header-bar-four" ui-sref="home.library.systems.enneagram"
+                 ng-if="('home.library.systems.enneagram' | includedByState)">
+                Enneagram
+            </div>
+            <div class="col-md-1 header-progress-bar header-bar-four" ui-sref="home.library.systems.mbti"
+                 ng-if="('home.library.systems.mbti' | includedByState)">
+                MBTI
+            </div>
+            <div ng-repeat="group in Data.groups" class="col-md-1 header-progress-bar header-bar-four"
+                 ui-sref="home.library.typeTpl.{{group.state}}"
+                 ng-if="('home.library.typeTpl.' + group.state) | includedByState">{{group.title}}
             </div>
             <div class="col-md-1 header-progress-bar header-bar-four" ui-sref="home.detection.exams.enterExamResults"
-                 ng-if="('home.detection.exams.enterExamResults' | includedByState) && !('home.detection.exams.enterExamResults' | isState)">
+                 ng-if="('home.detection.exams.enterExamResults' | includedByState)">
                 ورود نتایج
             </div>
+            <div class="col-md-1 header-progress-bar header-bar-five"
+                 ui-sref="home.detection.exams.enterExamResults.comparison"
+                 ng-if="('home.detection.exams.enterExamResults.comparison' | includedByState)">
+                تجمیع
+            </div>
+            <!--TODO: Add states && nodes && sideMenuLinks for each exam.-->
         </div>
     </div>
     <div class="col-md-12 col-sm-12">
@@ -34,24 +69,44 @@
             <div class="col-sm-2">
                 <div id="home-navigation-bar">
                     <ul>
-                        <li ui-sref="home.library.personality"
-                            ng-class="{'li-selected': ('home.library.personality' | includedByState)}">شخصیت چیست؟
+                        <!--TODO: Update interpretation Page.-->
+                        <li ui-sref="home.library"
+                            ng-class="{'li-selected': ('home.library' | includedByState) && !('home.library.types' | includedByState)}">
+                            دانشنامه
                         </li>
-                        <li ui-sref="home.library.systems"
-                            ng-class="{'li-selected': ('home.library.systems' | includedByState)}">
-                            روش‌های شخصیت‌شناسی
+                        <li ui-sref="home.detection.introduction"
+                            ng-class="{'li-selected': ('home.detection.introduction' | includedByState)}">
+                            برآورد انیاگرامی
                         </li>
-                        <li ui-sref="home.library.types"
-                            ng-class="{'li-selected': ('home.library.types' | includedByState) || ('home.library.typeTpl' | includedByState)}">
-                            گروه‌ها
-                        </li>
-                        <li ui-sref="home.detection"
-                            ng-class="{'li-selected': ('home.detection' | includedByState) && !('home.detection.exams.enterExamResults' | includedByState)}">
-                            شناسایی
+                        <li ui-sref="home.detection.exams" uib-dropdown dropdown-append-to-body
+                            is-open="status.isopen" ng-mouseenter="status.isopen = true"
+                            ng-class="{'li-selected': ('home.detection.exams' | includedByState) && !('home.detection.exams.enterExamResults' | includedByState)}">
+                                <span uib-dropdown-toggle class="dropdown-title">آزمون
+                                    <span class="caret"></span>
+                                </span>
+                            <ul ng-mouseleave="status.isopen = false" class="dropdown-menu" uib-dropdown-menu
+                                role="menu" aria-labelledby="btn-append-to-body">
+                                <li ui-sref="home.library.personality">شخصیت</li>
+                                <li ui-sref="home.library.systems">روش‌ها</li>
+                                <li ui-sref="home.library.basics">مبانی انیاگرام</li>
+                                <li ui-sref="home.library.types">گروه‌ها</li>
+                            </ul>
                         </li>
                         <li ui-sref="home.detection.exams.enterExamResults"
-                            ng-class="{'li-selected': ('home.detection.exams.enterExamResults' | includedByState)}">
-                            مقایسه
+                            ng-class="{'li-selected': ('home.detection.exams.enterExamResults' | includedByState) && !('home.detection.exams.enterExamResults.comparison' | includedByState)}">
+                            ورود نتایج
+                        </li>
+                        <li ui-sref="home.detection.exams.enterExamResults.comparison"
+                            ng-class="{'li-selected': (('home.detection.exams.enterExamResults.comparison' | includedByState)), 'unactive-li': !Data.comparisonAvailable}">
+                            تجمیع مقایسه‌ای
+                        </li>
+                        <li ui-sref="home.library.types"
+                            ng-class="{'li-selected': (('home.library.types' | includedByState) || ('home.library.typeTpl' | includedByState)), 'unactive-li': !Data.comparisonAvailable}">
+                            تفسیر
+                        </li>
+                        <li ui-sref="home.library.types"
+                            ng-class="{'li-selected': (('home.library.types' | includedByState) || ('home.library.typeTpl' | includedByState)), 'unactive-li': !Data.comparisonAvailable}">
+                            توصیه‌ی بهبود
                         </li>
                     </ul>
                 </div>
@@ -65,7 +120,8 @@
                             نتایج حاصل و ارائه‌ی توصیه به منظور رشد فردی طراحی شده. در صورت تمایل برای شرکت در
                             این رویه گزینه‌ی شناسایی را انتخاب کنید.
                         </div>
-                        <div ng-click="Data.mode = 'personality'" class="card-link card-link-action btn btn-info card-link-full">
+                        <div ng-click="Data.mode = 'personality'"
+                             class="card-link card-link-action btn btn-info card-link-full">
                             شناسایی
                         </div>
                     </div>

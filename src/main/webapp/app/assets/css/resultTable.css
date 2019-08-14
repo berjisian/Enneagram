@@ -45,8 +45,8 @@
     background-color: rgba(0,0,0,.05);
 }
 .mbti-result .result-table .selected-mbti-group {
-    background-color: palevioletred;
-    border-radius: 10%;
+    background-color: palevioletred !important;
+    border-radius: 10% !important;
 }
 .big-result .result-table .rzslider.rz-vertical {
     min-height: 120px;
