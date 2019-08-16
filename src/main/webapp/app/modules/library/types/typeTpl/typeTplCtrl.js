@@ -13,6 +13,7 @@ angular.module('typeTplModule').controller('typeTplCtrl', function ($scope, $sta
             {title: "رهبر", value: 8, state: "eight"},
             {title: "میانجی", value: 9, state: "nine"},
         ],
+        numToWord: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"],
         entry: [],
         currentPage: -1,
         maxPageNum: 0
@@ -35,6 +36,10 @@ angular.module('typeTplModule').controller('typeTplCtrl', function ($scope, $sta
                 $scope.Data.currentPage += changeValue;
             }
             $("#type-content-div").html($scope.Data.entry[$scope.Data.currentPage]);
+        },
+        showBasics: function () {
+            let url = $state.href('home.library.basics', {selectedGroup: $scope.Data.numToWord[$scope.Data.currentGroup]});
+            window.open(url,"_self");
         }
     };
 

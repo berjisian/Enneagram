@@ -31,17 +31,16 @@
             <tr>
                 <th class="first-cell-header"></th>
                 <th class="result-group" ng-repeat="group in Data.introductionGroups"
-                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
-                    <a href="#/library/types/{{Data.numToWord[group.value - 1]}}" target="_blank">
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}" ng-click="Func.onGroupClick(group)">
                     {{group.title}}
                 </th>
             </tr>
             <tr>
                 <th class="first-cell-header"></th>
                 <th class="result-group result-images" ng-repeat="group in Data.introductionGroups"
-                    ng-class="{'inactive-result': !Data.activeResults[$index]}">
-                    <a href="#/library/types/{{Data.numToWord[group.value - 1]}}" target="_blank">
-                    <img src="/app/assets/images/{{group.value}}.png" alt="تعیین شخصیت"></a></th>
+                    ng-class="{'inactive-result': !Data.activeResults[$index]}" ng-click="Func.onGroupClick(group)">
+                    <img src="/app/assets/images/{{group.value}}.png" alt="تعیین شخصیت">
+                </th>
             </tr>
             </thead>
             <tbody>

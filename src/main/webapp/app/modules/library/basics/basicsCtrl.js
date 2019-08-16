@@ -30,9 +30,6 @@ angular.module('basicsModule').controller('basicsCtrl', function ($scope, $state
                 $scope.Data.currentPage += changeValue;
             }
             $("#basics-content-div").html($scope.Data.entry[$scope.Data.currentPage]);
-        },
-        goToSelectedGroup: function () {
-            window.location.href = "#/library/types/" + $scope.Data.selectedGroup;
         }
     };
 

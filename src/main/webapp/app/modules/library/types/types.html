@@ -3,7 +3,7 @@
     <div class="card-description">
         <div class="row images-block">
             <div class="group-images" ng-repeat="group in Data.groups"
-                 ng-click="Func.onGroupSelect(group.value)">
+                 ui-sref="home.library.typeTpl.{{Data.numToWord[group.value - 1]}}">
                 <img src="/app/assets/images/{{group.value}}.png" alt="{{group.title}}">
                 <p class="group-name">
                     {{group.value}}
@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <div ui-sref="home.detection" class="card-link card-link-action btn btn-info card-link-full">
-        شناسایی
+    <div ui-sref="home.library" class="card-link card-link-action btn btn-info card-link-full">
+        دانشنامه
     </div>
 </div>

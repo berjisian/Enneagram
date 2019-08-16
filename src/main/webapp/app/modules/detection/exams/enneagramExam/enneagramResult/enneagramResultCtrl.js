@@ -48,6 +48,10 @@ angular.module('enneagramResultModule').controller('enneagramResultCtrl', functi
                 possibleGroups: $state.params.possibleGroups,
                 enneagramResultGroups: $state.params.enneagramResultGroups
             });
+        },
+        onGroupClick: function (selectedGroup) {
+            let url = $state.href('home.library.typeTpl.' + $scope.Data.numToWord[selectedGroup.value - 1]);
+            window.open(url,'_blank');
         }
     };
 

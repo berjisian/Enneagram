@@ -1,7 +1,7 @@
 <div class="row home">
     <div class="col-md-12 col-sm-12 header">
         <div class="row">
-            <div class="col-md-2 col-sm-3 link" ui-sref="home">
+            <div class="col-md-2 col-sm-3 link" ui-sref="home" ng-click="Data.mode = 'initial'">
                 <span class="title link">شخصیت‌شناس</span>
             </div>
             <div class="col-md-2 header-bar-start">بازگشت به:</div>
@@ -77,6 +77,11 @@
                  ng-if="('home.detection.exams.enterExamResults.comparison' | includedByState)">
                 تجمیع
             </div>
+            <div class="col-md-1 header-progress-bar header-bar-six"
+                 ui-sref="home.detection.exams.enterExamResults.comparison.interpretation"
+                 ng-if="('home.detection.exams.enterExamResults.comparison.interpretation' | includedByState)">
+                تفسیر
+            </div>
         </div>
     </div>
     <div class="col-md-12 col-sm-12">
@@ -84,7 +89,6 @@
             <div class="col-sm-2">
                 <div id="home-navigation-bar">
                     <ul>
-                        <!--TODO: Update interpretation Page and add node && sideMenuLink for it.-->
                         <li ui-sref="home.library"
                             ng-class="{'li-selected': ('home.library' | includedByState) && !('home.library.types' | includedByState)}">
                             دانشنامه
@@ -112,11 +116,11 @@
                             ورود نتایج
                         </li>
                         <li ui-sref="home.detection.exams.enterExamResults.comparison"
-                            ng-class="{'li-selected': (('home.detection.exams.enterExamResults.comparison' | includedByState)), 'unactive-li': !Data.comparisonAvailable}">
+                            ng-class="{'li-selected': (('home.detection.exams.enterExamResults.comparison' | includedByState) && !('home.detection.exams.enterExamResults.comparison.interpretation' | includedByState)), 'unactive-li': !Data.comparisonAvailable}">
                             تجمیع قیاسی
                         </li>
-                        <li ui-sref="home.library.types"
-                            ng-class="{'li-selected': (('home.library.types' | includedByState) || ('home.library.typeTpl' | includedByState)), 'unactive-li': !Data.comparisonAvailable}">
+                        <li ui-sref="home.detection.exams.enterExamResults.comparison.interpretation"
+                            ng-class="{'li-selected': ('home.detection.exams.enterExamResults.comparison.interpretation' | includedByState), 'unactive-li': !Data.comparisonAvailable}">
                             تفسیر
                         </li>
                         <li ui-sref="home.library.types"
@@ -126,7 +130,9 @@
                     </ul>
                 </div>
                 <div ng-if="('home.detection.exams.enterExamResults.comparison' | isState)"
-                     ui-sref="home.detection.exams.enterExamResults.comparison.interpretation">
+                     ng-class="{'unactive-li': !Data.comparisonAvailable}"
+                     ui-sref="home.detection.exams.enterExamResults.comparison.interpretation"
+                     class="btn btn-danger col-md-12">
                     تفسیر نتایج
                 </div>
             </div>

@@ -7,7 +7,7 @@ angular.module('comparisonModule').config(['$stateProvider', function($stateProv
             controller : 'comparisonCtrl'
         },{
             name: "home.detection.exams.enterExamResults.comparison.interpretation",
-            url: "/comparison/interpretation",
+            url: "/interpretation",
             templateUrl : "app/modules/detection/exams/enterExamResults/comparison/interpretation.html",
             controller : 'comparisonCtrl'
         }

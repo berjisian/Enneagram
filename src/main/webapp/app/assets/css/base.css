@@ -240,6 +240,26 @@ body {
     right: 66.66%;
     width: 33.34%;
 }
+.card .card-link-fourth-first {
+    bottom: 0;
+    right: 0;
+    width: 25%;
+}
+.card .card-link-fourth-second {
+    bottom: 0;
+    right: 25%;
+    width: 25%;
+}
+.card .card-link-fourth-third {
+    bottom: 0;
+    right: 50%;
+    width: 25%;
+}
+.card .card-link-fourth-fourth {
+    bottom: 0;
+    right: 75%;
+    width: 25%;
+}
 .card .systems-img {
     max-width: 120px;
     height: auto;

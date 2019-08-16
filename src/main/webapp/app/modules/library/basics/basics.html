@@ -5,8 +5,8 @@
          class="card-link card-link-yes btn btn-success card-link-third-first">صفحه‌ی بعد
     </div>
     <div ng-if="Data.selectedGroup" class="card-link card-link-action btn btn-info card-link-third-second"
-         ng-click="Func.goToSelectedGroup()">
-        مشاهده‌ی گروه منتخب
+         ui-sref="home.library.typeTpl.{{Data.selectedGroup}}">
+        بازگشت به گروه منتخب
     </div>
     <div ng-if="!Data.selectedGroup" class="card-link card-link-action btn btn-info card-link-third-second" ui-sref="home.library">دانشنامه
     </div>

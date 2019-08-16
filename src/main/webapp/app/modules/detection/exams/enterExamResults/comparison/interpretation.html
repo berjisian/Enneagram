@@ -1,10 +1,21 @@
 <div class="interpretation-card">
     <h2 class="card-header">تفسیر</h2>
     <div class="card-description">
-        <!--TODO: Fill it with group interpretation per page.-->
+        <h4>{{Data.currentInterpretation.title}}</h4>
+        <p ng-if="Data.currentInterpretation.userSelection">به تشخیص <b>خود</b>، شما {{Data.currentInterpretation.userSelection}}</p>
+        <p ng-if="Data.currentInterpretation.bigFive">به تشخیص <b>Big 5</b>، شما {{Data.currentInterpretation.bigFive}}</p>
+        <p ng-if="Data.currentInterpretation.disc">به تشخیص <b>Disc</b>، شما {{Data.currentInterpretation.disc}}</p>
+        <p ng-if="Data.currentInterpretation.enneagram">به تشخیص <b>Enneagram</b>، شما {{Data.currentInterpretation.enneagram}}</p>
+        <p ng-if="Data.currentInterpretation.mbti">به تشخیص <b>MBTI</b>، شما {{Data.currentInterpretation.mbti}}</p>
     </div>
-    <div ui-sref="home.detection.exams.enterExamResults.comparison.interpretation"
-         class="card-link card-link-action btn btn-info card-link-full">
+    <div ng-if="Data.currentPage < Data.maxPageNum" ng-click="Func.changePage('next')"
+         class="card-link card-link-yes btn btn-success card-link-third-first">صفحه‌ی بعد
+    </div>
+    <div ui-sref="home.detection.exams.enterExamResults.comparison"
+         class="card-link card-link-action btn btn-info card-link-third-second">
         بازگشت به نتیجه‌ی تجمیعی
+    </div>
+    <div ng-if="Data.currentPage > 0" ng-click="Func.changePage('previous')"
+         class="card-link card-link-no btn btn-danger card-link-third-third">صفحه‌ی قبل
     </div>
 </div>

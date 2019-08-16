@@ -1,4 +1,4 @@
-angular.module('comparisonModule').controller('comparisonCtrl', function ($scope, $state, $uibModal, detectionSrvc) {
+angular.module('comparisonModule').controller('comparisonCtrl', function ($scope, $state) {
 
     $scope.Data = {
         mode: "comparisonExplanationCard",
@@ -31,8 +31,10 @@ angular.module('comparisonModule').controller('comparisonCtrl', function ($scope
         quantizedDiscResults: [],
         bigResultGroups: [],
         mbtiResultGroup: "",
-        viewEnneagramBasics: true,
-        interpretations: []
+        interpretations: [],
+        currentInterpretation: {},
+        currentPage: -1,
+        maxPageNum: 8
     };
 
     $scope.Func = {
@@ -217,60 +219,55 @@ angular.module('comparisonModule').controller('comparisonCtrl', function ($scope
         },
         findActiveResults: function () {
             for (let i = 0; i < 9; i++) {
-                if (!$scope.Data.enneagramResultGroups[i] &&
+                if ((!$scope.Data.enneagramResultGroups[i]
+                    || $scope.Data.enneagramResultGroups[i] < 5) &&
                     !$scope.Data.possibleGroups[i] &&
                     !$scope.Data.transferredMbtiResult[i] &&
                     !$scope.Data.transferredDiscResult[i] &&
                     !$scope.Data.transferredBigResult[i]) {
                     $scope.Data.activeResults[i] = 0;
+                    $scope.Data.maxPageNum--;
                 }
             }
         },
         interpretResults: function () {
             for (let i = 0; i < 9; i++) {
-                let interpretation = {};
-                let num = $scope.Data.numToWord($scope.Data.introductionGroups[i].value);
-                let title = $scope.Data.introductionGroups[i].title;
-                interpretation.title = "گروه " + num + " - " + title;
-                switch ($scope.Data.enneagramResultGroups[i]) {
-                    case 0:
-                    case 1:
-                        interpretation.enneagram = "هیچ شباهتی به " + title + "‌ها ندارید.";
-                        break;
-                    case 2:
-                    case 3:
-                    case 4:
-                        interpretation.enneagram = "شباهت چندانی به " + title + "‌ها ندارید.";
-                        break;
-                    case 5:
-                    case 6:
-                        interpretation.enneagram = "شباهت معناداری به " + title + "‌ها دارید.";
-                        break;
-                    case 7:
-                    case 8:
-                        interpretation.enneagram = "شباهات بالایی به " + title + "‌ها دارید.";
-                        break;
+                if ($scope.Data.activeResults[i]) {
+                    let interpretation = {};
+                    let num = $scope.Data.introductionGroups[i].value;
+                    let title = $scope.Data.introductionGroups[i].title;
+                    interpretation.title = "گروه " + num + " - " + title;
+                    switch ($scope.Data.enneagramResultGroups[i]) {
+                        case 5:
+                        case 6:
+                            interpretation.enneagram = "شباهت معناداری به " + title + "‌ها دارید.";
+                            break;
+                        case 7:
+                        case 8:
+                            interpretation.enneagram = "شباهت بالایی به " + title + "‌ها دارید.";
+                            break;
+                    }
+                    if ($scope.Data.possibleGroups[i])
+                        interpretation.userSelection = "به " + title + "‌ها شباهت دارید.";
+                    if ($scope.Data.transferredMbtiResult[i])
+                        interpretation.mbti = "به " + title + "‌ها شباهت دارید.";
+                    if ($scope.Data.transferredBigResult[i])
+                        interpretation.bigFive = "به " + title + "‌ها شباهت دارید.";
+                    if ($scope.Data.transferredDiscResult[i])
+                        interpretation.disc = "به " + title + "‌ها شباهت دارید.";
+                    $scope.Data.interpretations.push(interpretation);
                 }
-                if ($scope.Data.possibleGroups[i])
-                    interpretation.userSelection = "به " + title + "‌ها شباهت دارید.";
-                if ($scope.Data.transferredMbtiResult[i])
-                    interpretation.mbti = "به " + title + "‌ها شباهت دارید.";
-                if ($scope.Data.transferredBigResult[i])
-                    interpretation.big = "به " + title + "‌ها شباهت دارید.";
-                if ($scope.Data.transferredDiscResult[i])
-                    interpretation.disc = "به " + title + "‌ها شباهت دارید.";
-                $scope.Data.interpretations.push(interpretation);
             }
+            $scope.Func.changePage("next");
+        },
+        changePage: function (direction) {
+            let changeValue = (direction === "next") ? 1 : -1;
+            $scope.Data.currentPage += changeValue;
+            $scope.Data.currentInterpretation = $scope.Data.interpretations[$scope.Data.currentPage];
         },
         onGroupClick: function (selectedGroup) {
-            if ($scope.Data.viewEnneagramBasics) {
-                $scope.Data.viewEnneagramBasics = false;
-                let url = $state.href('home.library.basics', {selectedGroup: $scope.Data.numToWord[selectedGroup.value - 1]});
-                window.open(url,'_blank');
-            } else {
-                let url = $state.href('home.library.typeTpl.' + $scope.Data.numToWord[selectedGroup.value - 1]);
-                window.open(url,'_blank');
-            }
+            let url = $state.href('home.library.typeTpl.' + $scope.Data.numToWord[selectedGroup.value - 1]);
+            window.open(url,'_blank');
         }
     };
 

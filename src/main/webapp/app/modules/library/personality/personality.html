@@ -1,13 +1,18 @@
 <div class="personality-card">
     <h2 class="card-header">شخصیت چیست؟</h2>
     <div class="card-description" id="personality-content-div"></div>
-    <div ng-if="Data.currentPage < Data.maxPageNum" ng-click="Func.changePage('next')"
-         class="card-link card-link-yes btn btn-success card-link-third-first">صفحه‌ی بعد
-    </div>
-    <div ui-sref="home" ng-click="Data.mode = 'initial'" class="card-link card-link-action btn btn-info card-link-third-second">
+    <div ui-sref="home" ng-click="Data.mode = 'initial'"
+         class="card-link card-link-action btn btn-info card-link-fourth-first">
         صفحه‌ی اول
     </div>
+    <div ng-if="Data.currentPage < Data.maxPageNum" ng-click="Func.changePage('next')"
+         class="card-link card-link-yes btn btn-success card-link-fourth-second">صفحه‌ی بعد
+    </div>
     <div ng-if="Data.currentPage > 0" ng-click="Func.changePage('previous')"
-         class="card-link card-link-no btn btn-danger card-link-third-third">صفحه‌ی قبل
+         class="card-link card-link-no btn btn-danger card-link-fourth-third">صفحه‌ی قبل
+    </div>
+    <div ui-sref="home.library" ng-click="Data.mode = 'initial'"
+         class="card-link card-link-action btn btn-info card-link-fourth-fourth">
+        دانشنامه
     </div>
 </div>
