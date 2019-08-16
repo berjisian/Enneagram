@@ -12,37 +12,32 @@
         </div>
         <div class="row">
             <div class="col-md-2 col-md-offset-right-2">
-                <a href="https://www.truity.com/test/big-five-personality-test" target="_blank">
-                    <img class="systems-img" style="margin-top: 4px;" src="/app/assets/images/Big.png">
-                </a>
-                <div class="systems-btn btn btn-info">
-                    <a href="https://www.truity.com/test/big-five-personality-test" target="_blank">Big 5</a>
+                <img ui-sref="home.detection.exams.bigExam" class="systems-img" style="margin-top: 4px;"
+                     src="/app/assets/images/Big.png">
+                <div ui-sref="home.detection.exams.bigExam" class="systems-btn btn btn-info">
+                    Big 5
                 </div>
             </div>
             <div class="col-md-2">
-                <a href="https://www.16personalities.com/free-personality-test" target="_blank">
-                    <img class="systems-img" src="/app/assets/images/MBTI.jpg">
-                </a>
-                <div class="systems-btn btn btn-info">
-                    <a href="https://www.16personalities.com/free-personality-test" target="_blank">MBTI</a>
+                <img ui-sref="home.detection.exams.mbtiExam" class="systems-img" src="/app/assets/images/MBTI.jpg">
+                <div ui-sref="home.detection.exams.mbtiExam" class="systems-btn btn btn-info">
+                    MBTI
                 </div>
             </div>
             <div class="col-md-2">
-                <a href="https://www.truity.com/test/disc-behavior-inventory" target="_blank">
-                    <img class="systems-img" src="/app/assets/images/DISC.png">
-                </a>
-                <div class="systems-btn btn btn-info">
-                    <a href="https://www.truity.com/test/disc-behavior-inventory" target="_blank">DISC</a>
+                <img ui-sref="home.detection.exams.discExam" class="systems-img" src="/app/assets/images/DISC.png">
+                <div ui-sref="home.detection.exams.discExam" class="systems-btn btn btn-info">
+                    DISC
                 </div>
             </div>
             <div class="col-md-2">
-                <img ng-click="Func.goToEnneagramExam()" class="systems-img"
+                <img ui-sref="home.detection.exams.enneagramExam" class="systems-img"
                      src="/app/assets/images/Enneagram.png">
-                <div ng-click="Func.goToEnneagramExam()" class="systems-btn btn btn-info">
+                <div ui-sref="home.detection.exams.enneagramExam" class="systems-btn btn btn-info">
                     Enneagram
                 </div>
             </div>
-            <div ng-click="Func.goToEnterResultsPage()" class="card-link card-link-action btn btn-info card-link-full">ورود نتایج</div>
+            <div ui-sref="home.detection.exams.enterExamResults" class="card-link card-link-action btn btn-info card-link-full">ورود نتایج</div>
         </div>
     </div>
 </div>

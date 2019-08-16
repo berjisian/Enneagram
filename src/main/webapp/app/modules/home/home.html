@@ -52,6 +52,22 @@
                  ui-sref="home.library.typeTpl.{{group.state}}"
                  ng-if="('home.library.typeTpl.' + group.state) | includedByState">{{group.title}}
             </div>
+            <div class="col-md-1 header-progress-bar header-bar-four" ui-sref="home.detection.exams.mbtiExam"
+                 ng-if="('home.detection.exams.mbtiExam' | includedByState)">
+                آزمون MBTI
+            </div>
+            <div class="col-md-1 header-progress-bar header-bar-four" ui-sref="home.detection.exams.discExam"
+                 ng-if="('home.detection.exams.discExam' | includedByState)">
+                آزمون DISC
+            </div>
+            <div class="col-md-1 header-progress-bar header-bar-four" ui-sref="home.detection.exams.bigExam"
+                 ng-if="('home.detection.exams.bigExam' | includedByState)">
+                آزمون Big 5
+            </div>
+            <div class="col-md-1 header-progress-bar header-bar-four" ui-sref="home.detection.exams.enneagramExam"
+                 ng-if="('home.detection.exams.enneagramExam' | includedByState)">
+                آزمون انیاگرام
+            </div>
             <div class="col-md-1 header-progress-bar header-bar-four" ui-sref="home.detection.exams.enterExamResults"
                  ng-if="('home.detection.exams.enterExamResults' | includedByState)">
                 ورود نتایج
@@ -61,7 +77,6 @@
                  ng-if="('home.detection.exams.enterExamResults.comparison' | includedByState)">
                 تجمیع
             </div>
-            <!--TODO: Add states && nodes && sideMenuLinks for each exam.-->
         </div>
     </div>
     <div class="col-md-12 col-sm-12">
@@ -69,7 +84,7 @@
             <div class="col-sm-2">
                 <div id="home-navigation-bar">
                     <ul>
-                        <!--TODO: Update interpretation Page.-->
+                        <!--TODO: Update interpretation Page and add node && sideMenuLink for it.-->
                         <li ui-sref="home.library"
                             ng-class="{'li-selected': ('home.library' | includedByState) && !('home.library.types' | includedByState)}">
                             دانشنامه
@@ -86,10 +101,10 @@
                                 </span>
                             <ul ng-mouseleave="status.isopen = false" class="dropdown-menu" uib-dropdown-menu
                                 role="menu" aria-labelledby="btn-append-to-body">
-                                <li ui-sref="home.library.personality">شخصیت</li>
-                                <li ui-sref="home.library.systems">روش‌ها</li>
-                                <li ui-sref="home.library.basics">مبانی انیاگرام</li>
-                                <li ui-sref="home.library.types">گروه‌ها</li>
+                                <li ui-sref="home.detection.exams.bigExam">Big 5</li>
+                                <li ui-sref="home.detection.exams.discExam">DISC</li>
+                                <li ui-sref="home.detection.exams.enneagramExam">Enneagram</li>
+                                <li ui-sref="home.detection.exams.mbtiExam">MBTI</li>
                             </ul>
                         </li>
                         <li ui-sref="home.detection.exams.enterExamResults"
@@ -98,7 +113,7 @@
                         </li>
                         <li ui-sref="home.detection.exams.enterExamResults.comparison"
                             ng-class="{'li-selected': (('home.detection.exams.enterExamResults.comparison' | includedByState)), 'unactive-li': !Data.comparisonAvailable}">
-                            تجمیع مقایسه‌ای
+                            تجمیع قیاسی
                         </li>
                         <li ui-sref="home.library.types"
                             ng-class="{'li-selected': (('home.library.types' | includedByState) || ('home.library.typeTpl' | includedByState)), 'unactive-li': !Data.comparisonAvailable}">
@@ -109,6 +124,10 @@
                             توصیه‌ی بهبود
                         </li>
                     </ul>
+                </div>
+                <div ng-if="('home.detection.exams.enterExamResults.comparison' | isState)"
+                     ui-sref="home.detection.exams.enterExamResults.comparison.interpretation">
+                    تفسیر نتایج
                 </div>
             </div>
             <div class="col-sm-10">
@@ -134,10 +153,12 @@
                             انتخاب کنید.
                         </div>
                         <div ng-click="Data.mode = 'systems'"
-                             class="card-link card-link-yes btn btn-success card-link-half-first">بله
+                             class="card-link card-link-yes btn btn-success card-link-half-first">بله، با مفهوم شخصیت
+                            آشنا هستم
                         </div>
                         <div ui-sref="home.library.personality" ng-click="Data.mode = 'initial'"
-                             class="card-link card-link-no btn btn-danger card-link-half-second">خیر
+                             class="card-link card-link-no btn btn-danger card-link-half-second">خیر و دوست دارم بیشتر
+                            از شخصیت بدانم
                         </div>
                     </div>
                     <div class="if-know-about-personality-systems-card" ng-if="Data.mode === 'systems'">
@@ -148,10 +169,12 @@
                             در غیر این صورت گزینه‌ی <b>بله</b> را انتخاب کنید.
                         </div>
                         <div ui-sref="home.detection" ng-click="Data.mode = 'initial'"
-                             class="card-link card-link-yes btn btn-success card-link-half-first">بله
+                             class="card-link card-link-yes btn btn-success card-link-half-first">بله، با روش‌های مختلف
+                            شخصیت‌شناسی آشنا هستم
                         </div>
                         <div ui-sref="home.library.systems" ng-click="Data.mode = 'initial'"
-                             class="card-link card-link-no btn btn-danger card-link-half-second">خیر
+                             class="card-link card-link-no btn btn-danger card-link-half-second">خیر و دوست دارم بیشتر
+                            راجع به این روش‌ها بدانم
                         </div>
                     </div>
                 </div>

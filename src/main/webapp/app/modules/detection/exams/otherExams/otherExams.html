@@ -1,0 +1,22 @@
+<div class="otherExamsPage">
+    <div class="other-exams-card">
+        <h2 class="card-header">آزمون {{Data.display.name}}</h2>
+        <div class="card-description row">
+            <div class="col-md-6" ng-bind-html="Data.display.description"></div>
+            <div class="col-md-6">
+                <img class="card-img" src="/app/assets/images/{{Data.display.image}}">
+            </div>
+        </div>
+        <div ui-sref="home.detection.exams.enterExamResults"
+             class="card-link card-link-yes btn btn-success card-link-third-first">ورود نتیجه
+        </div>
+        <div class="card-link card-link-action btn btn-info card-link-third-second">
+            <a href="{{Data.display.address}}" target="_blank">
+                شرکت در آزمون
+            </a>
+        </div>
+        <div ui-sref="home.detection.exams"
+             class="card-link card-link-no btn btn-danger card-link-third-third">بازگشت به باقی آزمون‌ها
+        </div>
+    </div>
+</div>

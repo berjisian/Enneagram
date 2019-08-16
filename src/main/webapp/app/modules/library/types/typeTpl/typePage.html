@@ -2,13 +2,13 @@
     <h2 class="card-header">گروه شخصیتی {{Data.currentGroup + 1}} - {{Data.groups[Data.currentGroup].title}}</h2>
     <div class="card-description" id="type-content-div"></div>
     <div ng-if="Data.currentPage < Data.maxPageNum" ng-click="Func.changePage('next')"
-         class="card-link card-link-yes btn btn-success card-link-third-first">بعد
+         class="card-link card-link-yes btn btn-success card-link-third-first">صفحه‌ی بعد
     </div>
     <div ui-sref="home.library.types"
          class="card-link card-link-action btn btn-info card-link-third-second">
         گروه‌ها
     </div>
     <div ng-if="Data.currentPage > 0" ng-click="Func.changePage('previous')"
-         class="card-link card-link-no btn btn-danger card-link-third-third">قبل
+         class="card-link card-link-no btn btn-danger card-link-third-third">صفحه‌ی قبل
     </div>
 </div>

@@ -1,6 +1,7 @@
 angular.module('enneagramExamModule').controller('enneagramExamCtrl', function ($scope, $state, enneagramExamSrvc) {
 
     $scope.Data = {
+        mode: "enneagramExamExplanation",
         allQuestions: "",
         questions: [],
         currentQuestions: [],

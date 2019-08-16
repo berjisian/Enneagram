@@ -2,7 +2,7 @@
     <h2 class="card-header">معرفی اصول پایه‌ی انیاگرام</h2>
     <div class="card-description" id="basics-content-div"></div>
     <div ng-if="Data.currentPage < Data.maxPageNum" ng-click="Func.changePage('next')"
-         class="card-link card-link-yes btn btn-success card-link-third-first">بعد
+         class="card-link card-link-yes btn btn-success card-link-third-first">صفحه‌ی بعد
     </div>
     <div ng-if="Data.selectedGroup" class="card-link card-link-action btn btn-info card-link-third-second"
          ng-click="Func.goToSelectedGroup()">
@@ -11,6 +11,6 @@
     <div ng-if="!Data.selectedGroup" class="card-link card-link-action btn btn-info card-link-third-second" ui-sref="home.library">دانشنامه
     </div>
     <div ng-if="Data.currentPage > 0" ng-click="Func.changePage('previous')"
-         class="card-link card-link-no btn btn-danger card-link-third-third">قبل
+         class="card-link card-link-no btn btn-danger card-link-third-third">صفحه‌ی قبل
     </div>
 </div>

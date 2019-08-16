@@ -6,7 +6,7 @@
             نیست
             نتیجه‌ی تک‌تک آزمون‌ها را وارد کنید. بعد از این که نتایج آزمون‌هایی را که در آن‌ها شرکت کرده‌اید،‌ وارد
             نمودید،
-            با انتخاب گزینه‌ی <b>مقایسه و تجمیع</b> حاصل جمع‌بندی نتایج آزمون‌های خود را بررسی کرده و برمبنای آن‌ها
+            با انتخاب گزینه‌ی <b>تجمیع قیاسی</b> حاصل جمع‌بندی نتایج آزمون‌های خود را بررسی کرده و برمبنای آن‌ها
             توصیه‌های انیاگرام را مشاهده کنید.
         </div>
         <div class="row">
@@ -40,9 +40,9 @@
                     Enneagram
                 </div>
             </div>
-            <div ng-click="Func.calculateResults()" class="card-link card-link-action btn btn-info card-link-full">
-                مقایسه و
-                تجمیع
+            <div ng-click="Func.calculateResults()" class="card-link card-link-action btn btn-info card-link-full"
+                 ng-class="{'inactive-btn-info': !Data.activeBigResult && !Data.activeDiscResult && !Data.activeMbtiResult && !Data.activeEnneagramResult}">
+                تجمیع قیاسی
             </div>
         </div>
     </div>

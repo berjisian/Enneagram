@@ -1,5 +1,18 @@
 <div class="enneagramExamPage" ui-view>
-    <div class="enneagram-exam-card">
+    <div class="enneagram-exam-explanation-card" ng-if="Data.mode === 'enneagramExamExplanation'">
+        <h2 class="card-header">آزمون انیاگرام</h2>
+        <div class="card-description">
+            این آزمون از ۱۸ صفحه‌ی ۲ پرسشی تشکیل شده و هرپرسش شامل دو گزاره است. گزاره‌ای را که بیشتر با آن موافق هستید، انتخاب کنید.
+        </div>
+        <div class="card-link card-link-yes btn btn-success card-link-half-first"
+             ng-click = "Data.mode = 'enneagramExam'">
+            شرکت در آزمون
+        </div>
+        <div ui-sref="home.detection.exams"
+             class="card-link card-link-no btn btn-danger card-link-half-second">بازگشت به باقی آزمون‌ها
+        </div>
+    </div>
+    <div class="enneagram-exam-card" ng-if="Data.mode === 'enneagramExam'">
         <h2 class="card-header">آزمون انیاگرام</h2>
         <div class="card-description">
             <div class="question-part">
@@ -14,6 +27,7 @@
                              ng-class="{'selected-answer': question.answer == question.first.value}"
                              ng-click="Func.onAnswerSelect(question, question.first.value)">
                             {{question.first.phrase}}
+                            <span class="float-right" style="color: crimson">{{question.num + 1}}</span>
                         </div>
                         <div class="col-sm-6 question-phrase"
                              ng-class="{'selected-answer': question.answer == question.second.value}"
@@ -28,14 +42,14 @@
              class="card-link card-link-yes btn btn-success card-link-third-first">اتمام
         </div>
         <div ng-if="Data.currentPage < Data.maxPageNum" ng-click="Func.changePage('next')"
-             class="card-link card-link-yes btn btn-success card-link-third-first">بعد
+             class="card-link card-link-yes btn btn-success card-link-third-first">صفحه‌ی بعد
         </div>
         <div ui-sref="home.detection.exams" ng-click="Data.mode = 'initial'"
              class="card-link card-link-action btn btn-info card-link-third-second">
             آزمون‌ها
         </div>
         <div ng-if="Data.currentPage > 0" ng-click="Func.changePage('previous')"
-             class="card-link card-link-no btn btn-danger card-link-third-third">قبل
+             class="card-link card-link-no btn btn-danger card-link-third-third">صفحه‌ی قبل
         </div>
     </div>
 </div>
