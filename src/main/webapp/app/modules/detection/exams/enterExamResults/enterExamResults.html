@@ -40,9 +40,12 @@
                     Enneagram
                 </div>
             </div>
-            <div ng-click="Func.calculateResults()" class="card-link card-link-action btn btn-info card-link-full"
-                 ng-class="{'inactive-btn-info': !Data.activeBigResult && !Data.activeDiscResult && !Data.activeMbtiResult && !Data.activeEnneagramResult}">
-                ثبت نهایی نتایج و تجمیع قیاسی
+            <div ng-click="Func.calculateResults('exams')" class="card-link card-link-action btn btn-info card-link-fourth-first">
+                بازگشت به آزمون‌ها
+            </div>
+            <div ng-click="Func.calculateResults('results')" class="card-link card-link-action btn btn-info card-link-fourth-fourth"
+                 ng-class="{'inactive-btn-info': !Data.possibleGroups && !Data.activeBigResult && !Data.activeDiscResult && !Data.activeMbtiResult && !Data.activeEnneagramResult}">
+                تجمیع قیاسی
             </div>
         </div>
     </div>

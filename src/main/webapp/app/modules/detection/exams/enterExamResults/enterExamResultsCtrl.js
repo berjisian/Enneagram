@@ -30,6 +30,7 @@ angular.module('enterExamResultsModule').controller('enterExamResultsCtrl', func
             {title: "Agreeableness", farsi: "توافق‌گرایی"},
             {title: "Neuroticism", farsi: "روان‌رنجورخویی"}
         ],
+        possibleGroups: "",
         enneagramResultGroups: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         discResultGroups: [0, 0, 0, 0],
         mbtiResultGroup: "",
@@ -42,6 +43,9 @@ angular.module('enterExamResultsModule').controller('enterExamResultsCtrl', func
 
     $scope.Func = {
         prepareResults: function () {
+            if ($state.params.possibleGroups) {
+                $scope.Data.possibleGroups = $state.params.possibleGroups;
+            }
             if ($state.params.enneagramResultGroups) {
                 $scope.Data.enneagramResultGroups = $state.params.enneagramResultGroups.split("X");
                 for (let i = 0; i < 9; i++)
@@ -61,7 +65,7 @@ angular.module('enterExamResultsModule').controller('enterExamResultsCtrl', func
                 $scope.Data.mbtiResultGroup = $state.params.mbtiResultGroup;
             }
         },
-        calculateResults: function () {
+        calculateResults: function (mode) {
             let enneagramResultsString = "";
             let discResultsString = "";
             let bigResultsString = "";
@@ -83,13 +87,30 @@ angular.module('enterExamResultsModule').controller('enterExamResultsCtrl', func
                     if (i < 4)
                         bigResultsString += "X";
                 }
-            $state.go('home.detection.exams.enterExamResults.comparison', {
-                possibleGroups: $state.params.possibleGroups,
-                enneagramResultGroups: enneagramResultsString,
-                discResultGroups: discResultsString,
-                bigResultGroups: bigResultsString,
-                mbtiResultGroup: $scope.Data.mbtiResultGroup
-            });
+            if (mode === 'results')
+                $state.go('home.detection.exams.enterExamResults.comparison', {
+                    possibleGroups: $state.params.possibleGroups,
+                    enneagramResultGroups: enneagramResultsString,
+                    discResultGroups: discResultsString,
+                    bigResultGroups: bigResultsString,
+                    mbtiResultGroup: $scope.Data.mbtiResultGroup
+                });
+            else if (mode === 'exams')
+                $state.go('home.detection.exams', {
+                    possibleGroups: $state.params.possibleGroups,
+                    enneagramResultGroups: enneagramResultsString,
+                    discResultGroups: discResultsString,
+                    bigResultGroups: bigResultsString,
+                    mbtiResultGroup: $scope.Data.mbtiResultGroup
+                });
+            else
+                $state.go('home.detection.exams.enterExamResults', {
+                    possibleGroups: $state.params.possibleGroups,
+                    enneagramResultGroups: enneagramResultsString,
+                    discResultGroups: discResultsString,
+                    bigResultGroups: bigResultsString,
+                    mbtiResultGroup: $scope.Data.mbtiResultGroup
+                });
         },
         checkActiveResults: function () {
             if (!$scope.Data.enneagramResultGroups.every(item => item === 0))
@@ -101,6 +122,7 @@ angular.module('enterExamResultsModule').controller('enterExamResultsCtrl', func
             if (!$scope.Data.bigResultGroups.every(item => item === 0))
                 $scope.Data.activeBigResult = true;
             $scope.Data.mode = 'enterExamResults';
+            $scope.Func.calculateResults('enterResults');
         }
     };
 

@@ -52,7 +52,7 @@
                 </th>
             </tr>
             <tr ng-if="Data.possibleGroups && Data.possibleGroups.length">
-                <th>انتخابی کاربر</th>
+                <th>برآورد کاربر</th>
                 <th ng-repeat="group in Data.possibleGroups track by $index"
                     ng-class="{'inactive-result': !Data.activeResults[$index]}">
                     <span class="result-marker" ng-show="group">&#10004;</span>
