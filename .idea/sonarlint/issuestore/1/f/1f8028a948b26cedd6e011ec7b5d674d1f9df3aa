@@ -1,0 +1,34 @@
+
+_javascript:S2259¯"BTypeError can be thrown as "root" might be null or undefined here.(º²ÎÓ
+ljavascript:S3403‘*"JRemove this "!==" check; it will always be true. Did you mean to use "!="?(ïÖÇâüÿÿÿÿ
+^javascript:S4043«"<Move this array "reverse" operation to a separate statement.(‹­¸æøÿÿÿÿ
+‚javascript:S4165˜"eReview this useless assignment: "current" already holds the assigned value along all execution paths.(²àôÊ
+Šjavascript:S2583„'"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(üÜ¿á
+javascript:S2583ö?"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(‰Úôæÿÿÿÿÿ
+javascript:S2583İ?"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(‡ÿŸ×üÿÿÿÿ
+Šjavascript:S2583¾?"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(ü°Å¨
+Šjavascript:S2583ñ"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(¢‚é
+Šjavascript:S2583À?"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(÷áñ»
+Šjavascript:S2583ß?"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(÷áñ»
+Šjavascript:S2583ø?"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(÷áñ»
+hjavascript:S2589"LRefactor this code so that this expression does not always evaluate to true.(ğ‘öB
+ijavascript:S2589ñ"LRefactor this code so that this expression does not always evaluate to true.(¢‚é
+njavascript:S2589‘*"LRefactor this code so that this expression does not always evaluate to true.(ïÖÇâüÿÿÿÿ
+njavascript:S2589˜*"LRefactor this code so that this expression does not always evaluate to true.(ì‡¼Äùÿÿÿÿ
+njavascript:S2589¥+"LRefactor this code so that this expression does not always evaluate to true.(²¦ßÛøÿÿÿÿ
+ajavascript:S2814¥"ERename "key" as this name is already used in declaration at line 800.(àˆãH
+yjavascript:S3973‡'"WUse curly braces or indentation to denote the code conditionally executed by this "if".(±Òö¼üÿÿÿÿ
+[javascript:S4030j"?Either use this collection's contents or remove the collection.(æÎ®Î
+>javascript:S878""Remove use of this comma operator.(Ğù•
+Cjavascript:S878˜""Remove use of this comma operator.(úğö¯úÿÿÿÿ
+>javascript:S878ä""Remove use of this comma operator.(òşÊ²
+Cjavascript:S878â""Remove use of this comma operator.(¥¼¦Šúÿÿÿÿ
+Vjavascript:S878÷
+"5Remove use of all comma operators in this expression.(Ê“™Ïıÿÿÿÿ
+>javascript:S878Å?""Remove use of this comma operator.(‡°¸
+>javascript:S878ä?""Remove use of this comma operator.(‡°¸
+>javascript:S878ı?""Remove use of this comma operator.(‡°¸
+>javascript:S878ÈL""Remove use of this comma operator.(’ÊŸì
+djavascript:UnusedVariable²H"9Remove the declaration of the unused 'mod_cmpt' variable.(Ô…ÿÿÿÿÿ
+]javascript:S1854²H";Remove this useless assignment to local variable "mod_cmpt"(Ô…ÿÿÿÿÿ
+djavascript:S1854ø""BRemove this useless assignment to local variable "surroundPattern"(÷ô¤æşÿÿÿÿ

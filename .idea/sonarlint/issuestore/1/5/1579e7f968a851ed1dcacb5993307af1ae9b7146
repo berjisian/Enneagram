@@ -1,0 +1,16 @@
+
+njavascript:S930º	"M"createParser" declared at line 1050 expects 1 argument, but 2 were provided.(ò˜ßÙÿÿÿÿÿ
+hjavascript:S2589š."LRefactor this code so that this expression does not always evaluate to true.(ØÜž
+ejavascript:UnusedVariableà"?Remove the declaration of the unused 'selectedOption' variable.(®ÃŸ
+\javascript:UnusedVariableÆ"6Remove the declaration of the unused 'cache' variable.(ˆº”Œ
+Njavascript:UnusedVariableÝ")Remove unused function 'getSlideByIndex'.(¯ÜÜj
+jjavascript:UnusedVariable»
+"?Remove the declaration of the unused 'dataPerTracked' variable.(€®éÜúÿÿÿÿ
+djavascript:UnusedVariableÃ
+">Remove the declaration of the unused 'lastActivated' variable.(®çÑ˜
+Kjavascript:UnusedVariableÕ"%Remove unused function 'cameltoDash'.(´Õ‡Ð
+Wjavascript:S1854û":Remove this useless assignment to local variable "stopped"(ª“’­
+Wjavascript:S1854Œ":Remove this useless assignment to local variable "stopped"(ª“’­
+`javascript:S1854ä"CRemove this useless assignment to local variable "backdropScopeRef"(¦ÁŒë
+ejavascript:S1854æ"CRemove this useless assignment to local variable "backdropScopeRef"(Í‡²¥úÿÿÿÿ
+Yjavascript:S1854ñ&"7Remove this useless assignment to local variable "last"(Û®·ˆúÿÿÿÿ
